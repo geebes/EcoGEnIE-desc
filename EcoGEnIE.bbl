@@ -1,0 +1,420 @@
+\begin{thebibliography}{65}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{{\tt #1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem[{Anderson(2005)}]{Anderson:2005}
+Anderson, T.~R.: Plankton functional type modelling: {R}unning before we can
+  walk?, Journal of Plankton Research, 27, 1073--1081, 2005.
+
+\bibitem[{Anderson and Pondaven(2003)}]{Anderson:2003}
+Anderson, T.~R. and Pondaven, P.: Non-{R}edfield carbon and nitrogen cycling in
+  the {S}argasso {S}ea: pelagic imbalances and export flux, Deep-Sea Research
+  I, 50, 573--591, 2003.
+
+\bibitem[{Armstrong et~al.(2002)Armstrong, Lee, Hedges, Honjo, and
+  Wakeham}]{Armstrong:2002}
+Armstrong, R.~A., Lee, C., Hedges, J.~I., Honjo, S., and Wakeham, S.~G.: A new,
+  mechanistic model for organic carbon fluxes in the ocean based on the
+  quantitative association of {POC} with ballast materials, Deep-Sea Research
+  II, 49, 219--236, 2002.
+
+\bibitem[{Aumont et~al.(2003)Aumont, Maier-Reimer, Blain, and
+  Pondaven}]{Aumont:2003}
+Aumont, O., Maier-Reimer, E., Blain, S., and Pondaven, P.: An ecosystem model
+  of the global ocean including {F}e, {S}i, {P} co-limitations, Global
+  Biogeochemical Cycles, 17, doi:10.1029/2001GB001\,745, 2003.
+
+\bibitem[{Baas-Becking(1934)}]{BaasBecking:1934}
+Baas-Becking, L. G.~M.: Geobiologie of Inleiding Tot de Milieukunde, Van
+  Stockum \& Zoon, The Hague, 1934.
+
+\bibitem[{Bacastow and Maier-Reimer(1990)}]{Bacastow:1990}
+Bacastow, R. and Maier-Reimer, E.: Ocean-circulation model of the carbon cycle,
+  Climate Dynamics, 4, 95--125, 1990.
+
+\bibitem[{Behrenfeld and Falkowski(1997)}]{Behrenfeld:1997}
+Behrenfeld, M.~J. and Falkowski, P.~G.: Photosynthetic rates derived from
+  satellite-based chlorophyll concentration, Limnology and Oceanography, 42,
+  1--20, 1997.
+
+\bibitem[{Billet et~al.(1983)Billet, Lampitt, Rice, and Mantoura}]{Billet:1983}
+Billet, D. S.~M., Lampitt, R.~S., Rice, A.~L., and Mantoura, R. F.~C.: Seasonal
+  sedimentation of phytoplankton to the deep sea benthos, Nature, 302, 1983.
+
+\bibitem[{Bruggeman and Kooijman(2007)}]{Bruggeman:2007}
+Bruggeman, J. and Kooijman, S. A. L.~M.: A biodiversity-inspired approach to
+  aquatic ecosystem modeling, Limnology and Oceanography, 52, 1533--1544, 2007.
+
+\bibitem[{Cao et~al.(2009)Cao, Eby, Ridgwell, Caldeira, Archer, Ishida, Joos,
+  Matsumoto, Mikolajewicz, Mouchet, Orr, Plattner, Schlitzer, Tokos,
+  Totterdell, Tschumi, Yamanaka, and Yool}]{Cao:2009}
+Cao, L., Eby, M., Ridgwell, A., Caldeira, K., Archer, D., Ishida, A., Joos, F.,
+  Matsumoto, K., Mikolajewicz, U., Mouchet, A., Orr, J.~C., Plattner, G.-K.,
+  Schlitzer, R., Tokos, K., Totterdell, I., Tschumi, T., Yamanaka, Y., and
+  Yool, A.: The role of ocean transport in the uptake of anthropogenic
+  {CO}$_{2}$, Biogeosciences, 6, 375--390, \doi{10.5194/bg-6-375-2009},
+  \urlprefix\url{http://www.biogeosciences.net/6/375/2009/}, 2009.
+
+\bibitem[{Caperon(1968)}]{Caperon:1968}
+Caperon, J.: Growth response of \textit{{I}sochrysis galbana} to nitrate
+  variation at limiting concentrations, Ecology, 49, 886--872, 1968.
+
+\bibitem[{Carr et~al.(2006)Carr, Friedrichs, Schmeltz, Aita, Antoine, Arrigo,
+  Asanuma, Aumont, Barber, Behrenfeld, Bidigare, Buitenhuis, Campbell, Ciotti,
+  Dierssen, Dowell, Dunne, Esaias, Gentili, Gregg, Groom, Hoepffner, Ishizaka,
+  Kameda, le~Qu{\'e}r{\'e}, Lohrenz, Marra, M{\'e}lin, Moore, Morel, Reddy,
+  Ryan, Scardi, Smyth, Turpie, Tilstone, Waters, and Yamanaka}]{Carr:2006}
+Carr, M.-E., Friedrichs, M. A.~M., Schmeltz, M., Aita, M.~N., Antoine, D.,
+  Arrigo, K.~R., Asanuma, I., Aumont, O., Barber, R., Behrenfeld, M., Bidigare,
+  R., Buitenhuis, E.~T., Campbell, J., Ciotti, A., Dierssen, H., Dowell, M.,
+  Dunne, J., Esaias, W., Gentili, B., Gregg, W., Groom, S., Hoepffner, N.,
+  Ishizaka, J., Kameda, T., le~Qu{\'e}r{\'e}, C., Lohrenz, S., Marra, J.,
+  M{\'e}lin, F., Moore, K., Morel, A., Reddy, T.~E., Ryan, J., Scardi, M.,
+  Smyth, T., Turpie, K., Tilstone, G., Waters, K., and Yamanaka, Y.: A
+  comparison of global estimates of marine primary production from ocean color,
+  Deep-Sea Research II, 53, 541--770, 2006.
+
+\bibitem[{Dierssen(2010)}]{Dierssen:2010}
+Dierssen, H.~M.: Perspectives on empirical approaches for ocean color remote
+  sensing of chlorophyll in a changing climate, Proceedings of the National
+  Academy of Sciences of the United States of America, 107, 17\,073--17\,078,
+  2010.
+
+\bibitem[{Droop(1968)}]{Droop:1968}
+Droop, M.~R.: Vitamin {B}12 and {M}arine {E}cology, {IV}. {T}he kinetics of
+  uptake, growth and inhibition in \textit{{M}onochrysis lutheri}, Journal of
+  the Marine Biological Association of the United Kingdom, 48, 689--733, 1968.
+
+\bibitem[{Edwards and Marsh(2005)}]{EdwardsMarsh:2005}
+Edwards, N. and Marsh, R.: Uncertainties due to transport-parameter sensitivity
+  in an efficient 3-{D} ocean-climate model, Climate Dynamics, 24, 415--433,
+  2005.
+
+\bibitem[{Fasham et~al.(1990)Fasham, Ducklow, and McKelvie}]{Fasham:1990}
+Fasham, M. J.~R., Ducklow, H.~W., and McKelvie, S.~M.: A nitrogen-based model
+  of plankton dynamics in the oceanic mixed layer, Journal of Marine Research,
+  48, 591--639, 1990.
+
+\bibitem[{Flynn(2008)}]{Flynn:2008}
+Flynn, K.~J.: The importance of the form of the quota curve and control of
+  non-limiting nutrient transport in phytoplankton models, Journal of Plankton
+  Research, 30, 423--438, 2008.
+
+\bibitem[{Follows et~al.(2007)Follows, Dutkiewicz, Grant, and
+  Chisholm}]{Follows:2007}
+Follows, M.~J., Dutkiewicz, S., Grant, S., and Chisholm, S.~W.: Emergent
+  Biogeography of Microbial Communities in a Model Ocean, Science, 315,
+  1843--1846, 2007.
+
+\bibitem[{Friedrichs et~al.(2006)Friedrichs, Hood, and
+  Wiggert}]{Friedrichs:2006}
+Friedrichs, M. A.~M., Hood, R.~R., and Wiggert, J.~D.: Ecosystem model
+  complexity versus physical forcing: {Q}uantification of their relative impact
+  with assimilated {A}rabian {S}ea data, Deep-Sea Research II, 53, 576--600,
+  2006.
+
+\bibitem[{Friedrichs et~al.(2007)Friedrichs, Dusenberry, Anderson, Armstrong,
+  Chai, Christian, Doney, Dunne, Fujii, Hood, McGillicuddy, Moore, Schartau,
+  Spitz, and Wiggert}]{Friedrichs:2007}
+Friedrichs, M. A.~M., Dusenberry, J.~A., Anderson, L.~A., Armstrong, R., Chai,
+  F., Christian, J.~R., Doney, S.~C., Dunne, J., Fujii, M., Hood, R.~R.,
+  McGillicuddy, D., Moore, J.~K., Schartau, M., Spitz, Y.~H., and Wiggert,
+  J.~D.: Assessment of skill and portability in regional marine biogeochemical
+  models: the role of multiple planktonic groups, Journal of Geophysical
+  Research, 112, 2007.
+
+\bibitem[{Geider et~al.(1998)Geider, MacIntyre, and Kana}]{Geider:1998}
+Geider, R.~J., MacIntyre, H.~L., and Kana, T.~M.: A dynamic regulatory model of
+  phytoacclimation to light, nutrients and temperature, Limnology and
+  Oceanography, 43, 679--694, 1998.
+
+\bibitem[{Gibbs et~al.(2015)Gibbs, Bown, Ridgwell, Young, Poulton, and
+  O'Dea}]{Gibbs:2015}
+Gibbs, S.~J., Bown, P.~R., Ridgwell, A., Young, J.~R., Poulton, A.~J., and
+  O'Dea, S.~A.: Ocean warming, not acidification, controlled coccolithophore
+  response during past greenhouse climate change., Geology, 44, 59 -- 62,
+  \doi{10.1130/G37273.1}, 2015.
+
+\bibitem[{Guidi et~al.(2009)Guidi, Stemmann, Jackson, Ibanez, Claustre,
+  Legendre, Picheral, and Gorsky}]{Guidi:2009}
+Guidi, L., Stemmann, L., Jackson, G.~A., Ibanez, F., Claustre, H., Legendre,
+  L., Picheral, M., and Gorsky, G.: Effects of phytoplankton community on
+  production, size and export of large aggregates: A world-ocean analysis,
+  Limnology and Oceanography, 54, 1951--1963, 2009.
+
+\bibitem[{Hain et~al.(2014)Hain, Sigman, and Haug}]{Hain:2014}
+Hain, M.~P., Sigman, D.~M., and Haug, G.~H.: The biological pump in the past,
+  in: Treatise on Geochemistry, vol.~8, pp. 485--517, Elsevier, 2nd edn., 2014.
+
+\bibitem[{Hansen et~al.(1997)Hansen, Bj$\o$rnsen, and Hansen}]{Hansen:1997a}
+Hansen, P.~J., Bj$\o$rnsen, P.~K., and Hansen, B.~W.: Zooplankton grazing and
+  growth: {S}caling with the 2-2,000-$\mu$m body size range, Limnology and
+  Oceanography, 42, 678--704, 1997.
+
+\bibitem[{Hargreaves et~al.(2004)Hargreaves, Annan, Edwards, and
+  Marsh}]{Hargreaves:2004}
+Hargreaves, J.~C., Annan, J.~D., Edwards, N.~R., and Marsh, R.: An efficient
+  climate forecasting method using an intermediate complexity Earth System
+  Model and the ensemble Kalman filter, Climate Dynamics, 23, 745--760,
+  \doi{10.1007/s00382-004-0471-4},
+  \urlprefix\url{http://dx.doi.org/10.1007/s00382-004-0471-4}, 2004.
+
+\bibitem[{Hollowed et~al.(2013)Hollowed, Barange, Beamish, Brander, Cochrane,
+  Drinkwater, Foreman, Hare, Holt, Ito, Kim, King, Loeng, MacKenzie, Mueter,
+  Okey, Peck, Radchenko, Rice, Schirripa, Yatsu, and Yamanaka}]{Hollowed:2013}
+Hollowed, A.~B., Barange, M., Beamish, R.~J., Brander, K., Cochrane, K.,
+  Drinkwater, K., Foreman, M. G.~G., Hare, J.~A., Holt, J., Ito, S., Kim, S.,
+  King, J., Loeng, H., MacKenzie, B.~R., Mueter, F.~J., Okey, T.~A., Peck,
+  M.~A., Radchenko, V.~I., Rice, J.~C., Schirripa, M.~J., Yatsu, A., and
+  Yamanaka, Y.: Projected impacts of climate change on marine fish and
+  fisheries, ICES Journal of Marine Science, 5, 1023--1037, 2013.
+
+\bibitem[{Hood et~al.(2006)Hood, Laws, Armstrong, Bates, Brown, Carlson, Chai,
+  Doney, Falkowski, Feely, Friedrichs, Landry, Moore, Nelson, Richardson,
+  Salihoglu, Schartau, Toole, and Wiggert}]{Hood:2006}
+Hood, R.~R., Laws, E.~A., Armstrong, R.~A., Bates, N.~R., Brown, C.~W.,
+  Carlson, C.~A., Chai, F., Doney, S.~C., Falkowski, P.~G., Feely, R.~A.,
+  Friedrichs, M. A.~M., Landry, M.~R., Moore, J.~K., Nelson, D.~M., Richardson,
+  T.~L., Salihoglu, B., Schartau, M., Toole, D.~A., and Wiggert, J.~D.: Pelagic
+  functional group modelling: {P}rogress, challenges and prospects, Deep-Sea
+  Research II, 53, 459--512, 2006.
+
+\bibitem[{John et~al.(2014)John, Wilson, Pearson, and Ridgwell}]{John:2014}
+John, E., Wilson, J., Pearson, P., and Ridgwell, A.: Temperature-dependent
+  remineralization and carbon cycling in the warm {E}ocene oceans,
+  Palaeogeography, Palaeoclimatology, Palaeoecology, 413, 158 -- 166,
+  \doi{http://dx.doi.org/10.1016/j.palaeo.2014.05.019},
+  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0031018214002685},
+  selected Papers, Geologic Problem Solving with Microfossils3, 2014.
+
+\bibitem[{Kraus and Turner(1967)}]{Kraus:1967b}
+Kraus, E.~B. and Turner, J.~S.: A one-dimensional model of the seasonal
+  thermocline II. The general theory and its consequences, Tellus, 19, 98--106,
+  1967.
+
+\bibitem[{Kwiatkowski et~al.(2014)Kwiatkowski, Yool, Allen, Anderson, Barciela,
+  Buitenhuis, Butensch{\"o}n, Enright, Halloran, Qu{\'e}r{\'e}, de~Mora,
+  Racault, Sinha, Totterdell, , and Cox}]{Kwiatkowski:2014}
+Kwiatkowski, L., Yool, A., Allen, J.~I., Anderson, T.~R., Barciela, R.,
+  Buitenhuis, E.~T., Butensch{\"o}n, M., Enright, C., Halloran, P.~R.,
+  Qu{\'e}r{\'e}, C.~L., de~Mora, L., Racault, M.-F., Sinha, B., Totterdell,
+  I.~J., , and Cox, P.~M.: {iMarNet}: an ocean biogeochemistry model
+  intercomparison project within a common physical ocean modelling framework,
+  Biogeosciences, 11, 7291--7304, 2014.
+
+\bibitem[{Le~Qu{\'e}r{\'e} et~al.(2005)Le~Qu{\'e}r{\'e}, Harrison, Prentice,
+  Buitenhuis, Aumont, Bopp, Claustre, Cotrim~da Cunha, Geider, Giraud, Klaas,
+  Kohfeld, Legendre, Manizza, Platt, Rivkin, Sathyendranath, Uitz, Watson, and
+  Wolf-Gladrow}]{LeQuere:2005}
+Le~Qu{\'e}r{\'e}, C., Harrison, S.~P., Prentice, I.~C., Buitenhuis, E.~T.,
+  Aumont, O., Bopp, L., Claustre, H., Cotrim~da Cunha, L., Geider, R., Giraud,
+  X., Klaas, C., Kohfeld, K.~E., Legendre, L., Manizza, M., Platt, T., Rivkin,
+  R.~B., Sathyendranath, S., Uitz, J., Watson, A.~J., and Wolf-Gladrow, D.:
+  Ecosystem dynamics based on plankton functional types for global ocean
+  biogeochemistry models, Global Change Biology, 11, 2016--2040, 2005.
+
+\bibitem[{Litchman et~al.(2007)Litchman, Klausmeier, Schofield, and
+  Falkowski}]{Litchman:2007}
+Litchman, E., Klausmeier, C.~A., Schofield, O.~M., and Falkowski, P.~G.: The
+  role of functional traits and trade-offs in structuring phytoplankton
+  communities: scalling from cellular to ecosystem level, Ecology Letters, 10,
+  1170--1181, 2007.
+
+\bibitem[{Maier-Reimer(1993)}]{Maier-Reimer:1993}
+Maier-Reimer, E.: Geochemical cycles in an ocean general circulation model.
+  Preindustrial tracer distributions, Global Biogeochemical Cycles, 7,
+  645--677, 1993.
+
+\bibitem[{Marsh et~al.(2011)Marsh, M\"uller, Yool, and Edwards}]{Marsh:2011}
+Marsh, R., M\"uller, S.~A., Yool, A., and Edwards, N.~R.: Incorporation of the
+  {C}-{GOLDSTEIN} efficient climate model into the GENIE framework:
+  ``eb\_go\_gs'' configurations of {GENIE}, Geoscientific Model Development, 4,
+  957--992, \doi{10.5194/gmd-4-957-2011},
+  \urlprefix\url{http://www.geosci-model-dev.net/4/957/2011/}, 2011.
+
+\bibitem[{Martin et~al.(1987)Martin, Knauer, Karl, and Broenkow}]{Martin:1987}
+Martin, J.~H., Knauer, G.~A., Karl, D.~M., and Broenkow, W.~W.: Vertex: carbon
+  cycling in the northeast {P}acific, Deep-Sea Research, 34, 267--285, 1987.
+
+\bibitem[{Meyer et~al.(2016)Meyer, Ridgwell, and Payne}]{Meyer:2016}
+Meyer, K.~M., Ridgwell, A., and Payne, J.~L.: The influence of the biological
+  pump on ocean chemistry: implications for long-term trends in marine redox
+  chemistry, the global carbon cycle, and marine animal ecosystems, Geobiology,
+  14, 207--219, \doi{10.1111/gbi.12176},
+  \urlprefix\url{http://dx.doi.org/10.1111/gbi.12176}, 2016.
+
+\bibitem[{Monteiro et~al.(2010)Monteiro, Follows, and
+  Dutkiewicz}]{Monteiro:2010}
+Monteiro, F.~M., Follows, M.~J., and Dutkiewicz, S.: Distribution of diverse
+  nitrogen fixers in the global ocean., Global Biogeochemical Cycles, 24,
+  doi:10.1029/2009GB003\,731, 2010.
+
+\bibitem[{Monteiro et~al.(2012)Monteiro, Pancost, Ridgwell, and
+  Donnadieu}]{Monteiro:2012}
+Monteiro, F.~M., Pancost, R.~D., Ridgwell, A., and Donnadieu, Y.: Nutrients as
+  the dominant control on the spread of anoxia and euxinia across the
+  {C}enomanian-{T}uronian oceanic anoxic event ({OAE}2): Model-data comparison,
+  Paleoceanography, 27, n/a--n/a, \doi{10.1029/2012PA002351},
+  \urlprefix\url{http://dx.doi.org/10.1029/2012PA002351}, pA4209, 2012.
+
+\bibitem[{Monteiro et~al.(2016)Monteiro, Bach, Brownlee, Bown, Rickaby,
+  Tyrrell, Beaufort, Dutkiewicz, Gibbs, Gutowska, Lee, Poulton, Riebesell,
+  Young, and Ridgwell}]{Monteiro:2016}
+Monteiro, F.~M., Bach, L.~T., Brownlee, C., Bown, P., Rickaby, R. E.~M.,
+  Tyrrell, T., Beaufort, L., Dutkiewicz, S., Gibbs, S., Gutowska, M.~A., Lee,
+  R., Poulton, A.~J., Riebesell, U., Young, J., and Ridgwell, A.: Calcification
+  in marine phytoplankton: Physiological costs and ecological benefits, Science
+  Advances, 2016.
+
+\bibitem[{Moore et~al.(2013)Moore, Mills, Arrigo, Berman-Frank, Bopp, Boyd,
+  Galbraith, Geider, Guieu, Jaccard, Jickells, Roche, Lenton, Mahowald,
+  Mara{\~n}{\'o}n, Marinov, Moore, Nakatsuka, Oschlies, Saito, Thingstad,
+  Tsuda, and Ulloa}]{Moore:2013}
+Moore, C.~M., Mills, M.~M., Arrigo, K.~R., Berman-Frank, I., Bopp, L., Boyd,
+  P.~W., Galbraith, E.~D., Geider, R.~J., Guieu, C., Jaccard, S.~L., Jickells,
+  T.~D., Roche, J.~L., Lenton, T.~M., Mahowald, N.~M., Mara{\~n}{\'o}n, E.,
+  Marinov, I., Moore, J.~K., Nakatsuka, T., Oschlies, A., Saito, M.~A.,
+  Thingstad, T.~F., Tsuda, A., and Ulloa, O.: Processes and patterns of oceanic
+  nutrient limitation, Nature Geoscience, 2013.
+
+\bibitem[{Moore et~al.(2002)Moore, Doney, Kleypas, Glover, and
+  Fung}]{Moore:2002}
+Moore, J.~K., Doney, S.~C., Kleypas, J.~A., Glover, D.~M., and Fung, I.~Y.: An
+  intermediate complexity marine ecosystem model for the global domain,
+  Deep-Sea Research II, 49, 403--462, 2002.
+
+\bibitem[{Najjar et~al.(1992)Najjar, Sarmiento, and Toggweiler}]{Najjar:1992}
+Najjar, R.~G., Sarmiento, J.~L., and Toggweiler, J.~R.: Downward transport and
+  fate of organic matter in the ocean: {S}imulations with a general circulation
+  model, Global Biogeochemical Cycles, 6, 45--76, 1992.
+
+\bibitem[{Norris et~al.(2013)Norris, Kirtland~Turner, Hull, and
+  Ridgwell}]{Norris:2013}
+Norris, R., Kirtland~Turner, S., Hull, P., and Ridgwell, A.: Marine ecosystem
+  responses to {C}enozoic global change., Science, 341, \doi{DOI:
+  10.1126/science.1240543}, 2013.
+
+\bibitem[{Oschlies(2001)}]{Oschlies:2001}
+Oschlies, A.: Model-derived estimates of new production: New results point to
+  lower values, Deep-Sea Research II, 48, 2173--2197, 2001.
+
+\bibitem[{Oschlies(2006)}]{Oschlies:2006}
+Oschlies, A.: Ocean Weather Forecasting, chap. On the use of data assimilation
+  in biogeochemical modelling, pp. 525--557, Springer, 2006.
+
+\bibitem[{Padis\'ak et~al.(2003)Padis\'ak, Sor\'oczki-Pint\'er, and
+  Rezner}]{Padisak:2003}
+Padis\'ak, J., Sor\'oczki-Pint\'er, E., and Rezner, Z.: Sinking properties of
+  phytoplankton shapes and the relation of form resistance to morphological
+  diversity of plankton - {A}n experimental study, Hydrobiologia, 500,
+  243--257, 2003.
+
+\bibitem[{Palmer and Totterdell(2001)}]{Palmer:2001}
+Palmer, J.~R. and Totterdell, I.~J.: Production and export in a global ocean
+  ecosystem model, Deep-Sea Research I, 48, 1169--1198, 2001.
+
+\bibitem[{Parekh et~al.(2006)Parekh, Follows, Dutkiewicz, and
+  Ito}]{Parekh:2006}
+Parekh, P., Follows, M.~J., Dutkiewicz, S., and Ito, T.: Physical and
+  biological regulation of the soft tissue carbon pump, Paleoceanography, 21,
+  doi:10.1029/2005PA001\,258, 2006.
+
+\bibitem[{Ridgwell and De'Ath(in prep.)}]{Ridgwell:prep}
+Ridgwell, A. and De'Ath, R.: Iron limitation in an efficient model of global
+  carbon cycling and climate, in prep.
+
+\bibitem[{Ridgwell and Schmidt(2010)}]{Ridgwell:2010}
+Ridgwell, A. and Schmidt, D.~N.: Past constraints on the vulnerability of
+  marine calcifiers to massive carbon dioxide release, Nature Geoscience, 3,
+  196--200, \urlprefix\url{http://dx.doi.org/10.1038/ngeo755}, 2010.
+
+\bibitem[{Ridgwell et~al.(2007)Ridgwell, Hargreaves, Edwards, Annan, Lenton,
+  Marsh, Yool, and Watson}]{Ridgwell:2007}
+Ridgwell, A., Hargreaves, J.~C., Edwards, N.~R., Annan, J.~D., Lenton, T.~M.,
+  Marsh, R., Yool, A., and Watson, A.: Marine geochemical data assimilation in
+  an efficient Earth System Model of global biogeochemical cycling,
+  Biogeosciences, 4, 87--104, \doi{10.5194/bg-4-87-2007},
+  \urlprefix\url{http://www.biogeosciences.net/4/87/2007/}, 2007.
+
+\bibitem[{Schartau and Oschlies(2003)}]{Schartau:2003pt2}
+Schartau, M. and Oschlies, A.: Simultaneous data-based optimization of a
+  1{D}-ecosystem model at three locations in the {N}orth {A}tlantic: {P}art
+  {II} - {S}tanding stocks and nitrogen fluxes, Journal of Marine Research, 61,
+  795--821, 2003.
+
+\bibitem[{Smayda(1970)}]{Smayda:1970}
+Smayda, T.~J.: The suspension and sinking of phytoplankton in the sea,
+  Oceanography and Marine Biology: An Annual Review, 8, 1970.
+
+\bibitem[{Spitz et~al.(2001)Spitz, Moisan, and Abbot}]{Spitz:2001}
+Spitz, Y.~H., Moisan, J.~R., and Abbot, M.~R.: Configuring an ecosystem model
+  using data from the {B}ermuda {A}tlantic {T}ime {S}eries ({BATS}), Deep-Sea
+  Research II, 48, 1733--1768, 2001.
+
+\bibitem[{Tagliabue et~al.(2012)Tagliabue, Mtshali, Aumont, Bowie, Klunder,
+  Roychoudhury, and Swart}]{Tagliabue:2012}
+Tagliabue, A., Mtshali, T., Aumont, O., Bowie, A.~R., Klunder, M.~B.,
+  Roychoudhury, A.~N., and Swart, S.: A global compilation of dissolved iron
+  measurements: focus on distributions and processes in the Southern Ocean,
+  Biogeosciences, 9, 233--2349, 2012.
+
+\bibitem[{Tagliabue et~al.(2016)Tagliabue, Aumont, DeAth, Dunne, Dutkiewicz,
+  Galbraith, Misumi, Moore, Ridgwell, Sherman, Stock, Vichi, V{\"o}lker, and
+  Yool}]{Tagliabue:2016}
+Tagliabue, A., Aumont, O., DeAth, R., Dunne, J.~P., Dutkiewicz, S., Galbraith,
+  E., Misumi, K., Moore, J.~K., Ridgwell, A., Sherman, E., Stock, C., Vichi,
+  M., V{\"o}lker, C., and Yool, A.: How well do global ocean biogeochemistry
+  models simulate dissolved iron distributions?, Global Biogeochemical Cycles,
+  30, 149--174, \doi{10.1002/2015GB005289},
+  \urlprefix\url{http://dx.doi.org/10.1002/2015GB005289}, 2015GB005289, 2016.
+
+\bibitem[{Tang(1995)}]{Tang:1995}
+Tang, E. P.~Y.: The allometry of algal growth rates, Journal of Plankton
+  Research, 17, 1325--1335, 1995.
+
+\bibitem[{Tyrrell(1999)}]{Tyrrell:1999}
+Tyrrell, T.: The relative influences of nitrogen and phosphorous on oceanic
+  primary production, Nature, 400, 525--531, 1999.
+
+\bibitem[{Ward and Follows(2016)}]{Ward:2016}
+Ward, B.~A. and Follows, M.~J.: Marine mixotrophy increases trophic transfer
+  efficiency, net community production and carbon export, Proceedings of the
+  National Academy of Sciences of the United States of America, 113,
+  2958--2963, 2016.
+
+\bibitem[{Ward et~al.(2010)Ward, Friedrichs, Anderson, and
+  Oschlies}]{Ward:2010}
+Ward, B.~A., Friedrichs, M. A.~M., Anderson, T.~R., and Oschlies, A.: Parameter
+  optimisation and the problem of underdetermination in marine biogeochemical
+  models, Journal of Marine Systems, 81, 34--43, 2010.
+
+\bibitem[{Ward et~al.(2012)Ward, Dutkiewicz, Jahn, and Follows}]{Ward:2012}
+Ward, B.~A., Dutkiewicz, S., Jahn, O., and Follows, M.~J.: A size structured
+  food-web model for the global ocean, Limnology and Oceanography, 57,
+  1877--1891, 2012.
+
+\bibitem[{Westberry et~al.(2008)Westberry, Behrenfeld, Siegel, and
+  Boss}]{Westberry:2008}
+Westberry, T., Behrenfeld, M.~J., Siegel, D.~A., and Boss, E.: Carbon-based
+  primary productivity modeling with vertically resolved photoacclimation,
+  Global Biogeochemical Cycles, 22, GB2024, 2008.
+
+\bibitem[{Wroblewski et~al.(1988)Wroblewski, Sarmiento, and
+  Flierl}]{Wroblewski:1988}
+Wroblewski, J.~S., Sarmiento, J.~L., and Flierl, G.~R.: An ocean basin scale
+  model of plankton dynamics in the {N}orth {A}tlantic. 1. {S}olutions for the
+  climatological oceanographic conditions in {M}ay, Global Biogeochemical
+  Cycles, 2, 199--218, 1988.
+
+\bibitem[{Yool et~al.(2013)Yool, Popova, and Anderson}]{Yool:2013a}
+Yool, A., Popova, E.~E., and Anderson, T.~R.: {MEDUSA-2.0: an intermediate
+  complexity biogeochemical model of the marine carbon cycle for climate change
+  and ocean acidification studies}, Geoscientific Model Development, 6,
+  1767--1811, 2013.
+
+\end{thebibliography}
