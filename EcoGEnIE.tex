@@ -43,8 +43,8 @@
 
 \Author[1]{}{B. A.~Ward}
 \Author[1]{}{J. D.~Wilson}
-\Author[1]{}{R.~De'Ath}
-\Author[1]{}{F.~Monteiro}
+\Author[1]{}{R.~Death}
+\Author[1]{}{F.~M.~Monteiro}
 \Author[2]{}{A.~Yool}
 \Author[1,3]{}{A.~J.~Ridgwell}
 
@@ -79,7 +79,7 @@
 
 
 \begin{abstract}
-We present an extension to the GEnIE Earth System model that explicitly accounts for the growth and interaction of an arbitrary number of plankton species. EcoGEnIE comprises the GOLDSTEIN ocean circulation model, the BIOGEM `BIOGeochemistry Model', and a new package, called ECOGEM. The new package replaces the implicit, flux-based, parameterisation of the plankton community employed by BIOGEM, with explicitly resolved plankton populations. Runtime configuration of the model is used to incorporate any number of plankton species, with ecophysiological traits (e.g. growth and grazing rates) assigned according to organism size and functional group (e.g. phytoplankton and zooplankton). We compare results from one configuration of ECOGEM (with eight generic phytoplankton and zooplankton size classes) to climatological and seasonal observations. We also compare the results to a previous iteration of GEnIE with all biological fluxes accounted for by BIOGEM. Global-scale distributions of phosphate, iron, dissolved inorganic carbon, alkalinity and oxygen are similar for both iterations of the model, although a slight deterioration in some fields, relative to the data is observed. The new ecological components of the model show good agreement with both global-scale climatological and local-scale seasonal data. The increased capabilities of the model in this regard will enable future exploration of the ecological community on much longer timescales than have previously been examined in global ocean ecosystem models.
+We present an extension to the GEnIE Earth System model that explicitly accounts for the growth and interaction of an arbitrary number of plankton species. EcoGEnIE comprises the GOLDSTEIN ocean circulation model, the BIOGEM `BIOGeochemistry Model', and a new package, called ECOGEM. The new package replaces the implicit parameterisation of plankton-mediated fluxes used in BIOGEM with an explicitly resolved plankton community. Runtime configuration of the model is used to incorporate any number of plankton species, with ecophysiological traits (e.g. growth and grazing rates) assigned according to organism size and functional group (e.g. phytoplankton and zooplankton). We compare results from one configuration of ECOGEM (with eight generic phytoplankton and zooplankton size classes) to climatological and seasonal observations. We also compare the results to a previous iteration of GEnIE with all biological fluxes accounted for by BIOGEM. Global-scale distributions of phosphate, iron, dissolved inorganic carbon, alkalinity and oxygen are similar for both iterations of the model, although a slight deterioration in some fields, relative to the data is observed. The new ecological components of the model show good agreement with both global-scale climatological and local-scale seasonal data. The increased capabilities of the model in this regard will enable future exploration of the ecological community on much longer timescales than have previously been examined in global ocean ecosystem models.
 \end{abstract}
 
 %\clearpage
@@ -91,7 +91,7 @@ We present an extension to the GEnIE Earth System model that explicitly accounts
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \introduction  %% \introduction[modified heading if necessary]
 
-The marine ecosystem is an integral component of the Earth system. Photosynthetic plankton support almost all life in the ocean, including the vital fisheries providing essential nutrition to more than half the human population \citep{Hollowed:2013}. In addition, the oceans sequester massive amounts of carbon away from the atmosphere, playing a key role in moderating the climate. Photosynthetic uptake of carbon in the well-lit ocean surface, followed by the downward transport and deep remineralisation of organic matter result in net increase in in the partial pressure of CO$_2$ at depth, and a net decrease in the ocean surface and atmosphere. This ``biological carbon pump'' has been estimated to reduce atmospheric carbon concentrations by approximately 200 ppm \citep{Parekh:2006}, and variations in its magnitude have also been cited as possible drivers of glacial-interglacial climate oscillations \citep{Hain:2014}.
+The marine ecosystem is an integral component of the Earth system. Photosynthetic plankton support almost all life in the ocean, including the vital fisheries providing essential nutrition to more than half the human population \citep{Hollowed:2013}. In addition, the oceans sequester massive amounts of carbon away from the atmosphere, playing a key role in moderating the climate. Photosynthetic uptake of carbon in the well-lit ocean surface, followed by the downward transport and deep remineralisation of organic matter result in net increase in the partial pressure of CO$_2$ at depth, and a net decrease in the ocean surface and atmosphere. This ``biological carbon pump'' has been estimated to reduce atmospheric carbon concentrations by approximately 200 ppm \citep{Parekh:2006}, and variations in its magnitude have also been cited as possible drivers of glacial-interglacial climate oscillations \citep{Hain:2014}.
 
 \subsection{Modelling the marine ecosystem}\label{Model complexity}
 
@@ -149,7 +149,7 @@ The ocean model is configured on a 36 $\times$ 36 equal-area horizontal grid wit
 %
 \subsection{Biogeochemical model - BIOGEM}\label{BIOGEM}
 
-The BIOGEM module accounts for the transformation and spatial redistribution of biogeochemical compounds by the marine ecosystem, as well as air-sea gas exchange. A full description can be found in \citep{Ridgwell:prep}. In place of an explicit representation of living microbial community, the biological (soft-tissue) pump is driven by an implicit (i.e. unresolved) biological community. The biological uptake of carbon and nutrients (such as phosphorus and iron) is limited by light, temperature and nutrient availability. Any uptake is directly and instantly returned either to dissolved organic matter (DOM), or to inorganic nutrients in the ocean interior according to an attenuating vertical flux \citep{Ridgwell:2007}.
+The BIOGEM module accounts for the transformation and spatial redistribution of biogeochemical compounds by the marine ecosystem, as well as air-sea gas exchange. A full description can be found in \citep{Ridgwell:prep}. In place of an explicit representation of living microbial community, the biological (soft-tissue) pump is driven by an implicit (i.e. unresolved) biological community. The biological uptake of carbon and nutrients (such as phosphorus and iron) is limited by light, temperature and nutrient availability. The associated production of organic matter is directly and instantly returned either to dissolved organic matter (DOM), or to inorganic nutrients in the ocean interior according to an attenuating vertical flux \citep{Ridgwell:2007}.
 
 \begin{itemize}
 \item[$\bullet$] surface inorganic nutrients $\xrightarrow[\rm and~export]{\rm production}$ DOM and deep inorganic nutrients
@@ -161,14 +161,14 @@ Parameters governing biogeochemistry in BIOGEM were previously calibrated agains
 %
 \section{Ecological model - ECOGEM}\label{ECOGEM}
 
-The BIOGEM module does not explicitly resolve the biological community. This simplicity facilitates the efficient modelling of the carbon cycle over long time scales, but the parameterised biological processes are dependent solely on local environmental conditions. In ECOGEM, biological uptake is again limited by light, temperature and nutrient availability, but here it must pass through an explicit and dynamic intermediary plankton biomass pool, before being returned to DOM or dissolved inorganic nutrients.
+The BIOGEM module does not explicitly resolve the biological community. This simplicity facilitates the efficient modelling of the carbon cycle over long time scales, but the parameterised biological processes are dependent solely on local environmental conditions. In the new ECOGEM module, biological uptake is again limited by light, temperature and nutrient availability, but here it must pass through an explicit and dynamic intermediary plankton biomass pool, before being returned to DOM or dissolved inorganic nutrients.
 
 
 \begin{itemize}
 \item[$\bullet$] {surface inorganic nutrients} $\xrightarrow[]{\rm production}$ {plankton biomass} $\xrightarrow[]{\rm export}$ {DOM and deep inorganic nutrients}
 \end{itemize}
 
-The explicit plankton community is held entirely within the ECOGEM module, and is not subject to advection by the physical model. Concentrations of inorganic tracers and details of the physical environment are passed from BIOGEM, and the ecological community responds by transforming inorganic compounds into living biomass through photosynthesis. The ecological community is also subject to respiration, mortality and internal trophic interactions, and will produce both inorganic compounds and organic matter. At the end of each time step, rates of change in inorganic and organic matter attributable to the ecological community are passed back to BIOGEM. This structure is illustrated in Figure~\ref{BIOECOGEM}. (Note that concentrations of non-living organic matter in BIOGEM are not made available to ECOGEM, and so the ecological community cannot consume this component of the ecosystem.)
+The explicit plankton community is held entirely within the ECOGEM module, and is not (at present) subject to advection by the physical model. Concentrations of inorganic tracers and details of the physical environment are passed from BIOGEM to ECOGEM, and the ecological community responds by transforming inorganic compounds into living biomass through photosynthesis. The ecological community is also subject to respiration, mortality and internal trophic interactions, and produces both inorganic compounds and organic matter. At the end of each time step, rates of change in inorganic and organic matter attributable to the ecological community are passed back to BIOGEM. This structure is illustrated in Figure~\ref{BIOECOGEM}. (Note that concentrations of non-living organic matter in BIOGEM are not currently made available to ECOGEM, and so the ecological community cannot consume this component of the ecosystem.)
 
 \begin{figure}[htp!]
 \includegraphics[width=6cm]{Figures/CouplingSchematic.pdf}
@@ -229,7 +229,7 @@ $\matr{B}$ is a $I_b\times J$ matrix, where $I_b$ is the number of cellular quot
 							B_{Chl,1} & B_{Chl,2} & \dots & B_{Chl,J} \end{array}\right]
 \end{equation}
 %
-Each population and element is denoted by an appropriate subscript. For example, the total carbon biomass of plankton population $j$ is denoted $B_{C,j}$, while the chlorophyll biomass of that population is denoted $B_{Chl,j}$. The vector describing the the carbon content of all plankton populations is denoted $\matr{B}_{C}$.
+Each population and element is denoted by an appropriate subscript. For example, the total carbon biomass of plankton population $j$ is denoted $B_{C,j}$, while the chlorophyll biomass of that population is denoted $B_{Chl,j}$. The vector describing the carbon content of all plankton populations is denoted $\matr{B}_{C}$.
 
 This framework can account for competition between (in theory) any number of different plankton populations. The model equations (below) are written in terms of an `ideal' planktonic form, with the potential to exhibit the full range of ecophysiological traits (among those that are included in the model). Individual populations may take on a realistic subset of these traits, according to their assigned `plankton functional type' (PFT) (see Section~\ref{community_structure}). Each population is also assigned a characteristic size, in terms of equivalent spherical diameter (ESD) or cell volume. Organism size plays a key role in determining each population's ecophysiological traits (see Section~\ref{size_dep_traits}).
 
@@ -358,7 +358,7 @@ V_{{\rm Chl},j} = \rho_{{\rm Chl},j} \cdot 16V_{{\rm P},j}
 
 \subsubsection{Light attenuation}
 
-ECOGEM uses a slightly more complex light attenuation scheme than BIOGEM, which simply uses the mean level of photosynthetically available radiation ($I$) in the surface layer. In ECOGEM, productivity is also restricted to the surface layer, but the light level is calculated as the mean level of photosynthetically available radiation within the mixed layer, as if the biological population was evenly distributed across the mixed layer \citep[with depth calculated according to][]{Kraus:1967b} \textbf{[NOT SURE IF THIS IS THE RIGHT REF - HAS THIS BEEN USED IN A PUBLISHED VERSION OF GENIE?]}.
+ECOGEM uses a slightly more complex light attenuation scheme than BIOGEM, which simply uses the mean level of photosynthetically available radiation ($I$) in the surface layer. In ECOGEM, productivity is also restricted to the surface layer, but the light level is calculated as the mean level of photosynthetically available radiation within the mixed layer, as if the biological population was evenly distributed across the mixed layer \citep[with depth calculated according to][]{Kraus:1967b} \textbf{\color{red} [NOT SURE IF THIS IS THE RIGHT REF - HAS THIS BEEN USED IN A PUBLISHED VERSION OF GENIE?]}.
 
 If $Chl_{tot}$ is the total chlorophyll concentration in the surface layer, $Z_1$ is the thickness of the surface grid box and $Z_{ML}$ is the mixed-layer depth, the  virtual chlorophyll concentration distributed across the mixed layer is given by
 %
@@ -424,7 +424,7 @@ G_{{\rm i_b},j_{\rm pred},j_{\rm prey}} = G_{{\rm C},j_{\rm pred},j_{\rm prey}} 
 
 \subsubsection{Prey assimilation} 
 
-Prey biomass is assimilated into predator biomass with an efficiency of $\lambda_{i_b,j_{pred}}$ ($i_b \ne $ Chl). This has a maximum value of $\lambda^{\rm max}$ that is modified according the the quota status of the predator. For elements $i_b$ = P or Fe, prey biomass is assimilated as a function of the respective predator quota. If the quota is full, the element is not assimilated. If the quota is empty, the element is assimilated with maximum efficiency ($\lambda^{\rm max}$). 
+Prey biomass is assimilated into predator biomass with an efficiency of $\lambda_{i_b,j_{pred}}$ ($i_b \ne $ Chl). This has a maximum value of $\lambda^{\rm max}$ that is modified according the quota status of the predator. For elements $i_b$ = P or Fe, prey biomass is assimilated as a function of the respective predator quota. If the quota is full, the element is not assimilated. If the quota is empty, the element is assimilated with maximum efficiency ($\lambda^{\rm max}$). 
 %
 \begin{equation}
 \lambda_{i_b,j_{\rm pred}} = \lambda^{\rm max} Q_{i_b,j}^{\rm stat}
@@ -616,7 +616,7 @@ Here $V_0$ is a reference value of $V_0$ = 1 $\mu$m$^3$. The value of $p$ at $V=
 
 \begin{table*}[htp!]
 \footnotesize
-\caption{Size-dependent ecophysiological parameters ($p$) and power-law parameters ($a$ and $b$), such that ${p=a\Big(\frac{V}{V_0}\Big)^b}$.}
+\caption{Size-dependent ecophysiological parameters ($p$) and power-law parameters ($a$ and $b$), such that ${p=a\Big(\frac{V}{V_0}\Big)^b}$ \citep{Ward:2016}.}
 \begin{tabular*}{1.0\textwidth}{@{\extracolsep{\fill}}llllll}
 \hline \\ [-2ex]
 \multicolumn{2}{l}{Parameter}				& Symbol						& \multicolumn{2}{l}{Power-law parameters} 		& Units 			 			\\ 
@@ -676,7 +676,7 @@ A list of size-independent model parameters are listed in Table~\ref{Size_indepe
 
 \begin{table*}[htp!]
 \footnotesize
-\caption{Size-independent model parameters.}
+\caption{Size-independent model parameters \citep{Ward:2016}.}
 \begin{tabular*}{1.0\textwidth}{@{\extracolsep{\fill}}lllll}
 \hline \\ [-2ex]
 \multicolumn{2}{l}{{Parameter}}				&{Symbol}				& {Value}				& {Units}	\\  [+2ex]
@@ -717,16 +717,14 @@ A list of size-independent model parameters are listed in Table~\ref{Size_indepe
 
 \subsection{Parameter modifications}
 
-As far as possible, the parameter values applied in BIOGEM and ECOGEM were kept as close as possible to previously published versions of the model \citep{Ridgwell:2007,Ward:2016}. There were however a few modifications that were required to bring ECOGEM into first order agreement with observations and previous iterations of BIOGEM. In comparison to the biogeochemical model used in \citet{Ward:2016}, the amount of soluble iron supplied to cGENIE by atmospheric deposition is considerably less. With a smaller source of iron, it was necessary to reduce the iron demand of the plankton community, and this was achieved by reducing $Q^{\rm max}_{\rm Fe}$ and $Q^{\rm min}_{\rm Fe}$ by five-fold ($Q^{\rm max}_{\rm Fe}$ from 20 to 4 nmol Fe (mmol C)$^{-1}$, and $Q^{\rm min}_{\rm Fe}$ from 5 to 1 nmol Fe (mmol C)$^{-1}$).
-
-We also found that the flexible stoichiometry of ECOGEM led to excessive export of carbon from the surface ocean, attributable to higher C:P ratios in organic matter (BIOGEM assumes a Redfieldian C:P of 106). This effect was moderated by adding the respiration term, which returns a fraction of carbon biomass directly to DIC (it is assumed that other elements are not lost in this way). The additional production of POC also led to increased production of calcium carbonate. This was counteracted by reducing the PIC:POC production ratio from \textbf{[X to Y]}.
+As far as possible, the parameter values applied in BIOGEM and ECOGEM were kept as close as possible to previously published versions of the model \citep{Ridgwell:2007,Ward:2016}. Most of the ecosystem model parameters were taken directly from \citet{Ward:2016}, but a few modifications were required to bring ECOGEM into first order agreement with observations and previous iterations of BIOGEM. Firstly, the amount of soluble iron supplied to cGENIE by atmospheric deposition is considerably less than was available in \citet{Ward:2016}. With a smaller source of iron, it was necessary to reduce the iron demand of the plankton community, and this was achieved by reducing $Q^{\rm max}_{\rm Fe}$ and $Q^{\rm min}_{\rm Fe}$ by five-fold ($Q^{\rm max}_{\rm Fe}$ from 20 to 4 nmol Fe (mmol C)$^{-1}$, and $Q^{\rm min}_{\rm Fe}$ from 5 to 1 nmol Fe (mmol C)$^{-1}$). We also found that the flexible stoichiometry of ECOGEM led to excessive export of carbon from the surface ocean, attributable to higher C:P ratios in organic matter (BIOGEM assumes a Redfieldian C:P of 106). This effect was moderated by adding the respiration term, which returns a fraction of carbon biomass directly to DIC (it is assumed that other elements are not lost in this way). The additional production of POC also led to increased production of calcium carbonate. This was counteracted by reducing the PIC:POC production ratio from \textbf{\color{red} [X to Y]}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Simulations and Data}\label{SimData}
 
 \subsection{10,000 year spin-up}
 
-We ran BIOGEM and ECOGEM each for period of 10,000 years. These runs were initialised from a homogenous and static ocean, with an imposed constant atmospheric CO$_2$ concentration of 278 ppm. This configuration is identical to that of Ridgwell and De'ath (in prep.), with the exception of a few modifications. Most importantly, the implicit  biological production invoked by BIOGEM is replaced with the explicit scheme of ECOGEM, as outlined in the preceding sections. 
+We ran BIOGEM and ECOGEM each for a period of 10,000 years. These runs were initialised from a homogenous and static ocean, with an imposed constant atmospheric CO$_2$ concentration of 278 ppm. This configuration is identical to that of \citet{Ridgwell:prep}, with the exception of a few modifications, as described above. Most importantly, the implicit  biological production invoked by BIOGEM is replaced with the explicit scheme of ECOGEM, as outlined in the preceding sections. 
 
 \subsection{Observations}
 
@@ -745,13 +743,13 @@ We start by describing the global distributions of key biogeochemical tracers th
 
 \subsubsection{Global surface values}
 
-Annual mean global distributions are presented for the upper 80.8~m of the water column, corresponding to the model surface layer. In Figure~\ref{fig:nutrients} we compare output from the two models to observations of dissolved phosphate and iron. Surface phosphate concentrations are broadly similar between the two versions of the model, except that ECOGEM slightly underestimates concentrations in the Southern Ocean. Both versions strongly underestimate surface phosphate in the equatorial and north Pacific, and to a lesser extent in the north and east Atlantic, the Arctic and the Arabian Sea. This is likely attributable in part to the model underestimating the strength of upwelling in these regions. It should also be noted that the observations may in some cases be unrepresentative of the true surface layer, when this is significantly less than 80.8 m. In such cases the observed value will be affected by measurements from below the surface layer. Iron distributions are also broadly similar between the two models, with ECOGEM showing slightly lower iron concentrations over most of the ocean. 
+Annual mean global distributions are presented for the upper 80.8~m of the water column, corresponding to the model surface layer. In Figure~\ref{fig:nutrients} we compare output from the two models to observations of dissolved phosphate and iron. Surface phosphate concentrations are broadly similar between the two versions of the model, except that ECOGEM slightly underestimates concentrations in the Southern Ocean. Both versions strongly underestimate surface phosphate in the equatorial and north Pacific, and to a lesser extent in the north and east Atlantic, the Arctic and the Arabian Sea. This is likely attributable in part to the model underestimating the strength of upwelling in these regions. It should also be noted that the observations may in some cases be unrepresentative of the true surface layer, when this is significantly less than the model surface layer of 80.8 m. In such cases the observed value will be affected by higher concentrations found above 80.8 m but below the surface mixed layer. Iron distributions are also broadly similar between the two models, with ECOGEM showing slightly lower iron concentrations over most of the ocean. 
 
 Figure~\ref{fig:carbon} shows observed and modelled values of inorganic carbon, alkalinity and oxygen. The two models yield very similar surface distributions of the three tracers. DIC and alkalinity are both broadly underestimated relative to observations, while oxygen shows higher fidelity, albeit with artificially high estimates in the equatorial Pacific. This is likely attributable to artificially weak upwelling in this region. 
 
-Surface $\Delta$pCO$_2$ from the two models is shown in Figure~\ref{fig:dpCO2}. ECOGEM shows weaker CO$_2$ outgassing in tropical band, with a much stronger ocean-to-atmosphere flux in the Western Arctic. 
+The ocean-to-atmosphere difference in the partial pressure of CO$_2$ ($\Delta$pCO$_2$) from the two models is shown in Figure~\ref{fig:dpCO2}. ECOGEM shows weaker CO$_2$ outgassing in tropical band, with a much stronger ocean-to-atmosphere flux in the Western Arctic. 
 
-In Figure~\ref{fig:particulates} we show the annual mean rate of particulate organic matter production in the surface layer. In comparison to BIOGEM, ECOGEM shows elevated POC production in all regions. \textbf{[NEED TO PLOT RATIOS of ECOGEM:BIOGEM, as differences will probably be clearer...]}. Production of CaCO$_3$ is globally less variable in ECOGEM than BIOGEM, with notable higher fluxes in the oligotrophic gyres and polar regions. 
+In Figure~\ref{fig:particulates} we show the annual mean rate of particulate organic matter production in the surface layer. In comparison to BIOGEM, ECOGEM shows elevated POC production in all regions. Production of CaCO$_3$ is globally less variable in ECOGEM than BIOGEM, with notable higher fluxes in the oligotrophic gyres and polar regions. 
 
 The relative proportions in which these elements and compounds are exported from the surface ocean are regulated by the stoichiometry of biological production. In BIOGEM, carbon and phosphorus production are rigidly coupled through a fixed ratio of 106:1, while POFe:POC and CaCO$_3$:POC production ratios are regulated as a function of environmental conditions. In ECOGEM, phosphorus, iron and carbon production are all decoupled through the flexible quota physiology, which depends on both environmental conditions, and the status of the food-web. Only CaCO$_3$:POC production ratios are regulated via the same mechanism in the two models (although we reduced the average CaCO$_3$:POC ratio in BIOGEM to compensate for the elevated POC production relative to POP). 
 
@@ -1371,7 +1369,7 @@ BIOGEM correctly captures the invasion of O$_2$ into the ocean interior through 
 \clearpage
 \subsubsection{Time-series}
 
-Figures~\ref{fig:jgofs_po4} and~\ref{fig:jgofs_fe} we compare the seasonal cycles of surface nutrients (phosphate and iron) at nine Joint Global Ocean Flux Study (JGOFS) sites.
+Figures~\ref{fig:jgofs_po4} and~\ref{fig:jgofs_fe} we compare the seasonal cycles of surface nutrients (phosphate and iron) at nine Joint Global Ocean Flux Study (JGOFS) sites. ECOGEM mostly shows lower PO$_4$ and Fe concentrations at the ocean surface, with greater seasonal variability.
 
 \begin{figure}[htbp]
 \begin{center}
@@ -1400,7 +1398,7 @@ Moving on from the core components that are common to both models, we present a 
 
 Figure~\ref{fig:chl_prpr} reveals that ECOGEM shows some limited agreement with the satellite-derived estimate of global chlorophyll. As expected, chlorophyll biomass is elevated in the high-latitude oceans relative to lower latitudes. The sub-tropical gyres show low biomass, but the distinction with higher latitudes is not as clear as in the satellite estimate. The model also shows a clear lack of chlorophyll in equatorial and coastal upwelling regions, relative to the satellite estimate. The model predicts higher chlorophyll concentrations in the Southern Ocean, although this may, in part, be related to the satellite algorithm overestimating concentrations in these regions \citep{Dierssen:2010}.
 
-Modelled primary production correctly increases from the oligotrophic gyres towards high latitudes and upwelling regions, but variability is much lower than in the satellite estimate. Specifically, the model and satellite estimates yield broadly similar estimates in the oligotrophic gyres, but the model does not attain the high values seen at higher latitudes and in coastal areas.
+Modelled primary production correctly increases from the oligotrophic gyres towards high latitudes and upwelling regions, but variability is much lower than in the satellite estimate. Specifically, the model and satellite estimates yield broadly similar estimates in the oligotrophic gyres, but the model does not attain the high values seen at higher latitudes and in coastal areas. This latter mismatch is most likely due to the low spatial resolution of GEnIE.
 
 \begin{figure}[htbp]
 \begin{subfigure}{.5\textwidth}

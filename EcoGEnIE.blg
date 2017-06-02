@@ -1,13 +1,13 @@
-This is BibTeX, Version 0.99d (TeX Live 2013)
+This is BibTeX, Version 0.99d (TeX Live 2016)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: EcoGEnIE.aux
 The style file: copernicus.bst
-Database file #1: ../biblio1.bib
+Database file #1: biblio1.bib
 Warning--can't use both author and editor fields in Oschlies:2006
 Warning--empty journal in Ridgwell:prep
 You've used 65 entries,
             2811 wiz_defined-function locations,
-            1443 strings with 24334 characters,
+            1443 strings with 24330 characters,
 and the built_in function-call counts, 76010 in all, are:
 = -- 8413
 > -- 3456
