@@ -33,6 +33,7 @@
 \usepackage{subcaption}
 
 \newcommand{\matr}[1]{\mathbf{#1}}
+\usepackage{color}
 
 \begin{document}
 
@@ -41,12 +42,12 @@
 \title{EcoGEnIE 0.1: Plankton \underline{Eco}logy in a \underline{G}rid \underline{En}abled \underline{I}ntegrated \underline{E}arth systems model}
 
 
-\Author[1]{}{B. A.~Ward}
+\Author[1,2]{}{B. A.~Ward}
 \Author[1]{}{J. D.~Wilson}
 \Author[1]{}{R.~De'Ath}
 \Author[1]{}{F.~Monteiro}
 \Author[2]{}{A.~Yool}
-\Author[1,3]{}{A.~J.~Ridgwell}
+\Author[1,3]{}{A.~Ridgwell}
 
 \affil[1]{\small{School of Geographical Sciences, University of Bristol, Bristol BS8 1SS, UK}}
 \affil[2]{\small{National Oceanography Centre, European Way, Southampton SO14 3ZH, UK}}
@@ -54,7 +55,7 @@
 %% The [] brackets identify the author with the corresponding affiliation. 1, 2, 3, etc. should be inserted.
 
 
-	
+        
 \runningtitle{~}
 
 \runningauthor{B.A. Ward \textit{et al.}}
@@ -79,7 +80,7 @@
 
 
 \begin{abstract}
-We present an extension to the GEnIE Earth System model that explicitly accounts for the growth and interaction of an arbitrary number of plankton species. EcoGEnIE comprises the GOLDSTEIN ocean circulation model, the BIOGEM `BIOGeochemistry Model', and a new package, called ECOGEM. The new package replaces the implicit, flux-based, parameterisation of the plankton community employed by BIOGEM, with explicitly resolved plankton populations. Runtime configuration of the model is used to incorporate any number of plankton species, with ecophysiological traits (e.g. growth and grazing rates) assigned according to organism size and functional group (e.g. phytoplankton and zooplankton). We compare results from one configuration of ECOGEM (with eight generic phytoplankton and zooplankton size classes) to climatological and seasonal observations. We also compare the results to a previous iteration of GEnIE with all biological fluxes accounted for by BIOGEM. Global-scale distributions of phosphate, iron, dissolved inorganic carbon, alkalinity and oxygen are similar for both iterations of the model, although a slight deterioration in some fields, relative to the data is observed. The new ecological components of the model show good agreement with both global-scale climatological and local-scale seasonal data. The increased capabilities of the model in this regard will enable future exploration of the ecological community on much longer timescales than have previously been examined in global ocean ecosystem models.
+We present an extension to the GEnIE Earth System model that explicitly accounts for the growth and interaction of an arbitrary number of plankton species. EcoGEnIE comprises the GOLDSTEIN ocean circulation model, the BIOGEM `BIOGeochemistry Model', and a new package, called ECOGEM. The new package replaces the implicit, flux-based, parameterisation of the plankton community employed by BIOGEM, with explicitly resolved plankton populations. Runtime configuration of the model is used to incorporate any number of plankton species, with ecophysiological traits (e.g. growth and grazing rates) assigned according to organism size and functional group (e.g. phytoplankton and zooplankton). We compare results from one configuration of EcoGEnIE (with eight generic phytoplankton and zooplankton size classes) to climatological and seasonal observations. We also compare the results to a previous iteration of GEnIE with all biological fluxes accounted for by BIOGEM. Global-scale distributions of phosphate, iron, dissolved inorganic carbon, alkalinity and oxygen are similar for both iterations of the model, although a slight deterioration in some fields, relative to the data is observed. The new ecological components of the model show good agreement with both global-scale climatological and local-scale seasonal data. The increased capabilities of the model in this regard will enable future exploration of the ecological community on much longer timescales than have previously been examined in global ocean ecosystem models.
 \end{abstract}
 
 %\clearpage
@@ -91,17 +92,13 @@ We present an extension to the GEnIE Earth System model that explicitly accounts
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \introduction  %% \introduction[modified heading if necessary]
 
-The marine ecosystem is an integral component of the Earth system. Photosynthetic plankton support almost all life in the ocean, including the vital fisheries providing essential nutrition to more than half the human population \citep{Hollowed:2013}. In addition, the oceans sequester massive amounts of carbon away from the atmosphere, playing a key role in moderating the climate. Photosynthetic uptake of carbon in the well-lit ocean surface, followed by the downward transport and deep remineralisation of organic matter result in net increase in in the partial pressure of CO$_2$ at depth, and a net decrease in the ocean surface and atmosphere. This ``biological carbon pump'' has been estimated to reduce atmospheric carbon concentrations by approximately 200 ppm \citep{Parekh:2006}, and variations in its magnitude have also been cited as possible drivers of glacial-interglacial climate oscillations \citep{Hain:2014}.
+The marine ecosystem is an integral component of the Earth system and its dynamics. Photosynthetic plankton ultimately support almost all life in the ocean, including the the fisheries that provide essential nutrition to more than half the human population \citep{Hollowed:2013}. In addition, the oceans provide a key sink for carbon released into the atmosphere, playing a key role in moderating the climate, and with the strength of this sink modulated by the activity of marine ecosystems.  In this -- photosynthetic uptake of carbon occurs in the well-lit ocean surface, followed by the downward transport and deep remineralisation of organic matter, resulting in a net increase in in the partial pressure of CO$_2$ at depth and decrease in the ocean surface and atmosphere. The existence of this ``biological carbon pump' has been estimated to equate to a reduction in atmospheric carbon concentrations of approximately 200 ppm \citep{Parekh:2006}, with variations in its magnitude being cited as playing a key role in e.g. the late Quaternary glacial-interglacial climate oscillations \citep{Hain:2014} [\textcolor{red}{Ridgwell and Watson, 2002}].
 
-\subsection{Modelling the marine ecosystem}\label{Model complexity}
+A variety of different marine biogeochemical modelling approaches have been developed in an attempt to understand  how the marine carbon cycle functions and its dynamical interaction with climate and make both past and future projections. In the  simplest of these approaches, the  biological pump is incorporated into an ocean circulation (or box) model without  explicitly   including any state-variables for  'biota'. Such models have been described as models of 'biogenically induced chemical fluxes' (rather than of the biology (and ecology) itself) ' \citep{Maier-Reimer:1993,Ridgwell:2007}. They vary considerably in complexity, but can be broadly divided into two categories. In the first of these --  `nutrient-restoring' -- models calculate the biological uptake of nutrients at any one point at the ocean surface as the flux required to  maintain surface nutrient concentrations at observed values \cite[e.g.][]{Bacastow:1990,Najjar:1992}. The vertical flux is then remineralised at depth according to some attenuating profile, such as that of \citet{Martin:1987}.  Within this framework, carbon export is typically calculated from the nutrient flux according to a fixed stoichiometric ratio. In addition to the observed surface ocean nutrient field, nutrient restoring models inherently only require a single parameter -- the restoring time-scale, and even this parameter is not critical (as long as the time-scale is sufficient short). Their simplicity lends itself to being able to focus on a very specific part of the ecosystem dynamics, namely the downward transport of organic matter. However, because they are based on observations, they are only primarily suitable for diagnostic applications and are unable to model any deviations in nutrient cycling from the current ocean state. 
 
-A number of marine biogeochemical models have been developed in an attempt to understand and predict the way the marine carbon cycle functions. The simplest of these ignore the role of biology altogether, treating carbon as an inorganic tracer \citep{Bacastow:1990}. Other, more sophisticated models have attempted to incorporate the biological pump, either in terms of a parameterised flux \citep[e.g.][]{Najjar:1992}, or by explicitly including representations of the marine biota \citep[e.g.][]{Wroblewski:1988,Fasham:1990,Anderson:2003,Aumont:2003}. 
+More sophisticated ('nutrient-limitation') models of biogenically induced chemical fluxes do away with a direct observational constraint and instead estimate the organic matter export term on the basis of limiting factors, such as temperature, light and the availability of nutrients such as nitrogen, phosphorous and iron. A prescribed fraction of this production is then usually passed to dissolved and particulate forms, with sinking and the subsequent remineralisation of particulate organic matter again accounted for by an attenuating vertical flux. Without the same dependence on observed nutrient distributions, these more advanced models gain a degree of predictive capability that is not available with nutrient restoring models. 
 
-\subsubsection{Biogeochemical fluxes}\label{Biogeochemical flux models}
-
-The biological pump can be incorporated into ocean circulation models without the need to explicitly include state-variables for the biota. Such models of ``biogenically induced chemical fluxes'' \citep{Maier-Reimer:1993,Ridgwell:2007} vary in complexity, but can be broadly divided into two categories. Simpler ``nutrient-restoring'' models quantify the biological uptake of nutrients in terms of the vertical flux required to maintain surface nutrients at observed levels, against the homogenising effects of the ocean circulation \cite[e.g.][]{Bacastow:1990,Najjar:1992}. The vertical flux is then remineralised at depth according to some attenuating profile, such as that of \citet{Martin:1987}.  Within this framework, carbon export is typically calculated from the nutrient flux according to a fixed stoichiometric ratio. Nutrient restoring models typically have between two and four parameters, and in their simplicity they are able to focus on a very specific part of the ecosystem dynamics, namely the downward transport of organic matter. However, because they are based on observations, they are only suitable for diagnostic applications and are unable to model any deviations from the current ocean state. 
-
-More sophisticated models of biogenically induced chemical fluxes estimate biological production on the basis of limiting factors, such as temperature, light and the availability of nutrients such as nitrogen, phosphorous and iron. A prescribed fraction of this production is then usually passed to dissolved and particulate forms, with sinking and the subsequent remineralisation of particulate organic matter again accounted for by an attenuating vertical flux. Without the same dependence on observed nutrient distributions, these more advanced models gain a degree of predictive capability that is not available with nutrient restoring models. However, neither type of model is able to represent interactions between any other parts of the ecosystem, simply because they are not resolved. 
+Neither variant of model of biogenically induced chemical fluxes is able to represent interactions between parts of the ecosystem such as grazing, simply because these processes are not resolved. They also suffer from being overly responsive to changes in nutrient availability -- in the case of restoring models simply because the target field changes. In the case of the nutrient-limitation models, because there is no explicit biomass term, export fluxes can change instantaneously whereas in the real world one must first build up sufficient biomass, such as in a bloom condition, in order to achieve maximum export. However, the advantage of nutrient-limitation models is that they make few specific and/or modern observational tied assumptions and often assume nothing about the particular organisms present. Hence, as long as one makes the assumption that the marine plankton that existed at some specific time in the past were relatively similar physiologically, particularly in terms of nutrient limitation, there is no reason why nutrient-limitation models cannot be applied. In addition to the recent glacial ocean (e.g. [\textcolor{red}{REF}]), marine biogeochmcial cycles have been simulated in this way for time periods such as the early Eocene [\textcolor{red}{REF}], mid and late Cretaceous [\textcolor{red}{REF}], and end Permian [\textcolor{red}{REF}].
 
 \subsubsection{Resolving ecological guilds}
 
@@ -191,15 +188,15 @@ ECOGEM state variables are organised into three matrices (Table~\ref{matrix_tabl
 \caption{State variable index notation.}
 \begin{tabular}{|l|l|c|c|c|}
 \hline 
-State variable 				& Dimensions 					&  Index	& Size 	&Available elements \\
+State variable                          & Dimensions                                    &  Index  & Size  &Available elements \\
 \hline 
-$\matr{R}$				& Resource element			 	&  $i_r$  	&  $I_r$  	&$\begin{array}{cccccc} DIC, & PO_4, & Fe 	\end{array}$ \\
+$\matr{R}$                              & Resource element                               &  $i_r$        &  $I_r$        &$\begin{array}{cccccc} DIC, & PO_4, & Fe    \end{array}$ \\
 \hline
-\multirow{2}{*}{$\matr{B}$}		& Plankton class				&  $j$ 	&  $J$  	&$\begin{array}{cccc} 1, & 2, & \dots, & $J$ 	\end{array}$ \\ 
-						& Cellular quota 				&  $i_b$ 	&  $I_b$  	&$\begin{array}{ccccc} C, & P, & Fe, & Chl 	\end{array}$ \\
+\multirow{2}{*}{$\matr{B}$}             & Plankton class                                &  $j$    &  $J$          &$\begin{array}{cccc} 1, & 2, & \dots, & $J$    \end{array}$ \\ 
+                                                & Cellular quota                                &  $i_b$  &  $I_b$        &$\begin{array}{ccccc} C, & P, & Fe, & Chl      \end{array}$ \\
 \hline
-\multirow{2}{*}{$\matr{D}$}	& Organic matter size class		&  $k$	&  $K$  	&$\begin{array}{cc} DOM, & POM 			\end{array}$ \\
-						& Detrital nutrient element			&  $i_d$ 	&  $I_d$  	&$\begin{array}{cccc} C, & P, & Fe 			\end{array}$ \\ 
+\multirow{2}{*}{$\matr{D}$}     & Organic matter size class             &  $k$    &  $K$          &$\begin{array}{cc} DOM, & POM                  \end{array}$ \\
+                                                & Detrital nutrient element                     &  $i_d$  &  $I_d$        &$\begin{array}{cccc} C, & P, & Fe                      \end{array}$ \\ 
 \hline
 \end{tabular} 
 \label{matrix_table}
@@ -223,10 +220,10 @@ An individual inorganic resource is denoted by the appropriate subscript. For ex
 $\matr{B}$ is a $I_b\times J$ matrix, where $I_b$ is the number of cellular quotas, including chlorophyll, and $J$ is the number of plankton populations.
 %
 \begin{equation}
-\matr{B}=\left[\begin{array}{cccccc}	B_{C,1} & B_{C,2} & \dots & B_{C,J} \\
-							B_{P,1} & B_{P,2} & \dots & B_{P,J} \\
-							B_{Fe,1} & B_{Fe,2} & \dots & B_{Fe,J} \\
-							B_{Chl,1} & B_{Chl,2} & \dots & B_{Chl,J} \end{array}\right]
+\matr{B}=\left[\begin{array}{cccccc}    B_{C,1} & B_{C,2} & \dots & B_{C,J} \\
+                                                        B_{P,1} & B_{P,2} & \dots & B_{P,J} \\
+                                                        B_{Fe,1} & B_{Fe,2} & \dots & B_{Fe,J} \\
+                                                        B_{Chl,1} & B_{Chl,2} & \dots & B_{Chl,J} \end{array}\right]
 \end{equation}
 %
 Each population and element is denoted by an appropriate subscript. For example, the total carbon biomass of plankton population $j$ is denoted $B_{C,j}$, while the chlorophyll biomass of that population is denoted $B_{Chl,j}$. The vector describing the the carbon content of all plankton populations is denoted $\matr{B}_{C}$.
@@ -238,9 +235,9 @@ This framework can account for competition between (in theory) any number of dif
 $\matr{D}$ is a $I_d\times K$ matrix, where $I_d$ is the number of detrital nutrient elements, and $K$ is the number of detrital size classes.
 %
 \begin{equation}
-\matr{D}=\left[\begin{array}{cc}	D_{C,1} & D_{C,2} 	\\
-						D_{P,1} & D_{P,2} 	\\
-						D_{Fe,1} & D_{Fe,2}	\end{array}\right]
+\matr{D}=\left[\begin{array}{cc}        D_{C,1} & D_{C,2}       \\
+                                                D_{P,1} & D_{P,2}       \\
+                                                D_{Fe,1} & D_{Fe,2}     \end{array}\right]
 \end{equation}
 %
 Each size class and element is denoted by an appropriate subscript. For example, dissolved organic phosphorus (size class $k=1$) is denoted $D_{1,P}$, while particulate organic iron (size class $k=2$) is denoted $D_{2,Fe}$.
@@ -280,7 +277,7 @@ Excessive accumulation of P or Fe biomass in relation to carbon is prevented as 
 %
 \begin{equation}
 \label{QstatN}
-Q_{i_b,j}^{\rm stat} 	= \bigg(\frac{Q^{\rm max}_{i_b,j}-Q_{i_b,j}}{Q_{i_b,j}^{\rm max}-Q_{i_b,j}^{\rm min}}\bigg)^h
+Q_{i_b,j}^{\rm stat}    = \bigg(\frac{Q^{\rm max}_{i_b,j}-Q_{i_b,j}}{Q_{i_b,j}^{\rm max}-Q_{i_b,j}^{\rm min}}\bigg)^h
 \end{equation}
 %
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -296,7 +293,7 @@ V_{i_r,j} =   \frac{V_{i_r,j}^{\rm max} \alpha_{i_r,j} {\rm [R_{i_r}]}}{V_{i_r,j
 This equation is effectively equivalent to the Michaelis-Menten type response, but replaces the half-saturation constant with the more mechanistic nutrient affinity, $\alpha_{i_r,j}$.
 
 %\begin{equation}
-%V_{i_r,j} = V_{i_r,j}^{\rm max} \frac{{\rm [R_{i_r}]}}{{\rm [R_{i_r}]}+k_{i_r,j}} Q^{\rm stat}_{i_b,j} \cdot \gamma_{\rm T}  		
+%V_{i_r,j} = V_{i_r,j}^{\rm max} \frac{{\rm [R_{i_r}]}}{{\rm [R_{i_r}]}+k_{i_r,j}} Q^{\rm stat}_{i_b,j} \cdot \gamma_{\rm T}               
 %\end{equation}
 %
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -320,7 +317,7 @@ The nutrient-limitation term is given as a minimum function of the internal nutr
 %
 \begin{equation}
 \label{gammaFeP}
-\gamma_{i_b,j} =  \frac{1 - Q^{\rm min}_{i_b,j} / Q_{i_b,j} }	{1 - Q^{\rm min}_{i_b,j} / Q^{\rm max}_{i_b,j}  },
+\gamma_{i_b,j} =  \frac{1 - Q^{\rm min}_{i_b,j} / Q_{i_b,j} }   {1 - Q^{\rm min}_{i_b,j} / Q^{\rm max}_{i_b,j}  },
 \end{equation}
 %
 The gross photosynthetic rate ($P_{{\rm C},j}$) is then modified from $P_{C,j}^{sat}$ by the light-limitation term.
@@ -433,7 +430,7 @@ Prey biomass is assimilated into predator biomass with an efficiency of $\lambda
 C assimilation is regulated according to the status of the most limiting nutrient element (P or Fe) modified by the same shape-parameter, $h$, that was applied in Equation~\ref{QstatN}. If all three quotas are full, C is assimilated at the maximum rate. If any are empty, C assimilation is down-regulated until sufficient quantities of the limiting element(s) are acquired. 
 %
 \begin{equation}
-Q_{i_b,j}^{\rm lim} 	= \bigg( \frac{Q_{i_b,j}-Q^{\rm min}_{i_b,j}}{Q_{i_b,j}^{\rm max}-Q_{i_b,j}^{\rm min}} \bigg)^h
+Q_{i_b,j}^{\rm lim}     = \bigg( \frac{Q_{i_b,j}-Q^{\rm min}_{i_b,j}}{Q_{i_b,j}^{\rm max}-Q_{i_b,j}^{\rm min}} \bigg)^h
 \end{equation}
 %
 \begin{equation}
@@ -474,9 +471,9 @@ The low biomass at which a population attains `immortality' is sufficiently smal
 Plankton mortality and grazing are the only two sources of organic matter, with partitioning between non-sinking dissolved and sinking particulate phases determined by the parameter $\beta_{j}$. 
 %
 \begin{align}
-S^{\rm D}_{i_d,1} 	= &	\underbrace{ \sum_{j=1}^{J}  [{\rm B}_{i_d,j}] \beta_{j} m_{\rm P} }_{\rm mortality} 							
-						+  	\underbrace{ \sum_{j_{\rm pred}=1}^{J} [{\rm B}_{{\rm C},j_{\rm pred}}] \sum_{j_{\rm prey}=1}^{J} \beta_{j_{\rm prey}} (1-\lambda_{i_b,j_{\rm pred}}) G_{i_d,j_{\rm pred},j_{\rm prey}}}_{\rm messy~feeding} 	\\
-S^{\rm D}_{i_d,2} 	= &	\underbrace{ \sum_{j=1}^{J} [{\rm B}_{i_d,j}] (1-\beta_{j}) m_{\rm P}}_{\rm mortality}					 		+ 	\underbrace{ \sum_{j_{\rm pred}=1}^{J} [{\rm B}_{{\rm C},j_{\rm pred}}] \sum_{j_{\rm prey}=1}^{J} (1-\beta_{j_{\rm prey}}) (1-\lambda_{i_b,j_{\rm pred}}) G_{i_d,j_{\rm pred},j_{\rm prey}}}_{\rm messy~feeding}
+S^{\rm D}_{i_d,1}       = &     \underbrace{ \sum_{j=1}^{J}  [{\rm B}_{i_d,j}] \beta_{j} m_{\rm P} }_{\rm mortality}                                                   
+                                                +       \underbrace{ \sum_{j_{\rm pred}=1}^{J} [{\rm B}_{{\rm C},j_{\rm pred}}] \sum_{j_{\rm prey}=1}^{J} \beta_{j_{\rm prey}} (1-\lambda_{i_b,j_{\rm pred}}) G_{i_d,j_{\rm pred},j_{\rm prey}}}_{\rm messy~feeding}  \\
+S^{\rm D}_{i_d,2}       = &     \underbrace{ \sum_{j=1}^{J} [{\rm B}_{i_d,j}] (1-\beta_{j}) m_{\rm P}}_{\rm mortality}                                                         +       \underbrace{ \sum_{j_{\rm pred}=1}^{J} [{\rm B}_{{\rm C},j_{\rm pred}}] \sum_{j_{\rm prey}=1}^{J} (1-\beta_{j_{\rm prey}}) (1-\lambda_{i_b,j_{\rm pred}}) G_{i_d,j_{\rm pred},j_{\rm prey}}}_{\rm messy~feeding}
 \end{align}
 %
 A fixed fraction (66\%) of the organic matter formed in the surface grid-boxes is partitioned directly into dissolved organic matter. This dissolved organic matter is an explicit tracer that is transported by the ocean circulation model and is degraded back to its constituent nutrients with a fixed turnover time of $\lambda$ (= 0.5 years).  
@@ -524,7 +521,7 @@ Note that while $\matr{R}$ and $\matr{OM}$ are transported by the physical compo
 For each inorganic resource, $i_r$, 
 %
 \begin{align}
-\frac{\partial {R_{i_r}}}{\partial t} 	= 	&- \underbrace{\matr{V}_{i_r} \cdot \matr{B}_C}_{\rm uptake}
+\frac{\partial {R_{i_r}}}{\partial t}   =       &- \underbrace{\matr{V}_{i_r} \cdot \matr{B}_C}_{\rm uptake}
                                                                      + \underbrace{\matr{r}_{i_r} \cdot \matr{B}_C}_{\rm respiration}  \label{dRdt}
 \end{align}
 %
@@ -534,11 +531,11 @@ For each inorganic resource, $i_r$,
 For each plankton class, $j$, and internal biomass quota, $i_b$,
 %
 \begin{align}
-\frac{\partial B_{i_b,j}}{\partial t} 	= 	&+ \underbrace{V_{i_b,j} B_{C,j}}_{\rm uptake} 	 
-								   - \underbrace{m_{j} B_{i_b,j}}_{\rm basal~mortality}		%\nonumber\\
-								 + \underbrace{B_{C,j}  (\boldsymbol{\lambda}_{i_b} \cdot \matr{G}_{i_b}^{\rm gain})	}_{\rm grazing~gains}  	
-								    - \underbrace{r_{i_b,j} B_{C,j}}_{\rm respiration}
-								    - \underbrace{\matr{B}_C \cdot \matr{G}_{i_b}^{\rm loss}		}_{\rm grazing~losses}   	\label{dBdt}
+\frac{\partial B_{i_b,j}}{\partial t}   =       &+ \underbrace{V_{i_b,j} B_{C,j}}_{\rm uptake}    
+                                                                   - \underbrace{m_{j} B_{i_b,j}}_{\rm basal~mortality}                %\nonumber\\
+                                                                 + \underbrace{B_{C,j}  (\boldsymbol{\lambda}_{i_b} \cdot \matr{G}_{i_b}^{\rm gain})   }_{\rm grazing~gains}         
+                                                                    - \underbrace{r_{i_b,j} B_{C,j}}_{\rm respiration}
+                                                                    - \underbrace{\matr{B}_C \cdot \matr{G}_{i_b}^{\rm loss}         }_{\rm grazing~losses}          \label{dBdt}
 \end{align}
 %
 \subsubsection{Organic detritus}
@@ -546,7 +543,7 @@ For each plankton class, $j$, and internal biomass quota, $i_b$,
 For each detrital nutrient element, $i_d$, and detritral size class, $k$
 %
 \begin{align}
-\frac{\partial {\rm D}_{i_d,k}}{\partial t} 	= 	&  	+ \underbrace{	\Big[\boldsymbol{\beta}_{k} \circ (1-\boldsymbol{\lambda}_{i_b})\Big] \matr{G}_{i_b} \matr{B}_C}_{\rm unassimilated~grazing}	 	+ \underbrace{	\Big[\boldsymbol{\beta}_{k} \circ \matr{m}\Big] \matr{B}_{i_b} }_{\rm other~mortality}	\label{dDdt}
+\frac{\partial {\rm D}_{i_d,k}}{\partial t}     =       &       + \underbrace{  \Big[\boldsymbol{\beta}_{k} \circ (1-\boldsymbol{\lambda}_{i_b})\Big] \matr{G}_{i_b} \matr{B}_C}_{\rm unassimilated~grazing}          + \underbrace{  \Big[\boldsymbol{\beta}_{k} \circ \matr{m}\Big] \matr{B}_{i_b} }_{\rm other~mortality}      \label{dDdt}
 \end{align}
 %
 The relative fraction of detrital matter passed to DOM is given by the parameter $\beta$, which is here assigned a constant value of 0.66 for all populations \citep{Ridgwell:2007}.
@@ -574,30 +571,30 @@ In this configuration we include 16 plankton populations across eight different 
 \caption{Plankton functional groups and sizes in the standard run.}
 \begin{tabular}{rlS[table-format=3.2]}
 \hline
-$j$	& PFT		  	& \multicolumn{1}{r}{ESD ($\mu$m)}  \\
+$j$     & PFT                   & \multicolumn{1}{r}{ESD ($\mu$m)}  \\
 \hline
-1   	& Phytoplankton  	& 0.6  \\
-2   	& Phytoplankton  	& 1.9  \\
-3   	& Phytoplankton  	& 6.0  \\
-4   	& Phytoplankton  	& 19.  \\
-5   	& Phytoplankton  	& 60.  \\
-6   	& Phytoplankton  	& 190.  \\
-7   	& Phytoplankton  	& 600.  \\
-8   	& Phytoplankton  	& 1900.  \\
+1       & Phytoplankton         & 0.6  \\
+2       & Phytoplankton         & 1.9  \\
+3       & Phytoplankton         & 6.0  \\
+4       & Phytoplankton         & 19.  \\
+5       & Phytoplankton         & 60.  \\
+6       & Phytoplankton         & 190.  \\
+7       & Phytoplankton         & 600.  \\
+8       & Phytoplankton         & 1900.  \\
 \hline 
 \end{tabular} 
 \begin{tabular}{rlS[table-format=3.2]}
 \hline
-$j$	& Functional Type  	& \multicolumn{1}{r}{ESD ($\mu$m)}  \\
+$j$     & Functional Type       & \multicolumn{1}{r}{ESD ($\mu$m)}  \\
 \hline
-11   	& Zooplankton  		& 0.6  \\
-12   	& Zooplankton  		& 1.9  \\
-13	& Zooplankton  		& 6.0  \\
-14	& Zooplankton  		& 19.  \\
-15	& Zooplankton  		& 60.  \\
-16	& Zooplankton  		& 190.  \\
-17	& Zooplankton  		& 600.  \\
-18	& Zooplankton  		& 1900.  \\
+11      & Zooplankton           & 0.6  \\
+12      & Zooplankton           & 1.9  \\
+13      & Zooplankton           & 6.0  \\
+14      & Zooplankton           & 19.  \\
+15      & Zooplankton           & 60.  \\
+16      & Zooplankton           & 190.  \\
+17      & Zooplankton           & 600.  \\
+18      & Zooplankton           & 1900.  \\
 \hline 
 \end{tabular} 
 \label{planktonconfig}
@@ -619,23 +616,23 @@ Here $V_0$ is a reference value of $V_0$ = 1 $\mu$m$^3$. The value of $p$ at $V=
 \caption{Size-dependent ecophysiological parameters ($p$) and power-law parameters ($a$ and $b$), such that ${p=a\Big(\frac{V}{V_0}\Big)^b}$.}
 \begin{tabular*}{1.0\textwidth}{@{\extracolsep{\fill}}llllll}
 \hline \\ [-2ex]
-\multicolumn{2}{l}{Parameter}				& Symbol						& \multicolumn{2}{l}{Power-law parameters} 		& Units 			 			\\ 
-&									& $p$						& $a$				& $b$ 		& 						 	\\ 
+\multicolumn{2}{l}{Parameter}                           & Symbol                                                & \multicolumn{2}{l}{Power-law parameters}                & Units                                                  \\ 
+&                                                                       & $p$                                             & $a$                           & $b$             &                                                       \\ 
 \multicolumn{5}{l}{{Inorganic nutrient uptake}}\\ 
-%&Maximum uptake rate					& $V^{\rm max}_{\rm NO_3}$		& 0.44				& -0.12		& mmol N (mmol C)$^{-1}$ d$^{-1}$	\\ 
-%&									& $V^{\rm max}_{\rm NO_2}$		& 0.44				& -0.12		& mmol N (mmol C)$^{-1}$ d$^{-1}$	\\ 
-%&									& $V^{\rm max}_{\rm NH_4}$		& 0.22				& -0.12		& mmol N (mmol C)$^{-1}$ d$^{-1}$	\\ 
-&Maximum uptake rates					& $V^{\rm max}_{\rm PO_4}$		& 4.4$\times10^{-2}$		& 0.06		& mmol P (mmol C)$^{-1}$ d$^{-1}$	\\ 
-&									& $V^{\rm max}_{\rm Fe}$			& 1.4$\times10^{-5}$		& -0.09		& mmol Fe (mmol C)$^{-1}$ d$^{-1}$	\\ 
-%&Half-saturation concentration				& $k_{\rm NO_3}$				& 0.14				& 0.33		& mmol N m$^{-3}$				\\ 
-%&									& $k_{\rm NO_2}$				& 0.14				& 0.33		& mmol N m$^{-3}$				\\ 
-%&									& $k_{\rm NH_4}$				& 0.07				& 0.33		& mmol N m$^{-3}$				\\ 
-&Half-saturation concentrations				& $k_{\rm PO_4}$				& 0.04				& 0.41		& mmol P m$^{-3}$				\\ 
-&									& $k_{\rm Fe}$					& 8.0$\times10^{-6}$		& 0.27		& mmol Fe m$^{-3}$				\\ 
-\multicolumn{6}{l}{{Carbon quotas}}		\\ 
-&Cell carbon content 					& $Q_{\rm C}$					& 1.45$\times10^{-11}$	& 0.88		& mmol C cell$^{-1}$				\\ 
+%&Maximum uptake rate                                   & $V^{\rm max}_{\rm NO_3}$          & 0.44                          & -0.12         & mmol N (mmol C)$^{-1}$ d$^{-1}$        \\ 
+%&                                                                      & $V^{\rm max}_{\rm NO_2}$                & 0.44                          & -0.12           & mmol N (mmol C)$^{-1}$ d$^{-1}$       \\ 
+%&                                                                      & $V^{\rm max}_{\rm NH_4}$                & 0.22                          & -0.12           & mmol N (mmol C)$^{-1}$ d$^{-1}$       \\ 
+&Maximum uptake rates                                   & $V^{\rm max}_{\rm PO_4}$          & 4.4$\times10^{-2}$            & 0.06          & mmol P (mmol C)$^{-1}$ d$^{-1}$        \\ 
+&                                                                       & $V^{\rm max}_{\rm Fe}$                  & 1.4$\times10^{-5}$            & -0.09           & mmol Fe (mmol C)$^{-1}$ d$^{-1}$      \\ 
+%&Half-saturation concentration                         & $k_{\rm NO_3}$                                & 0.14                            & 0.33          & mmol N m$^{-3}$                               \\ 
+%&                                                                      & $k_{\rm NO_2}$                          & 0.14                          & 0.33            & mmol N m$^{-3}$                               \\ 
+%&                                                                      & $k_{\rm NH_4}$                          & 0.07                          & 0.33            & mmol N m$^{-3}$                               \\ 
+&Half-saturation concentrations                         & $k_{\rm PO_4}$                                & 0.04                            & 0.41          & mmol P m$^{-3}$                               \\ 
+&                                                                       & $k_{\rm Fe}$                                    & 8.0$\times10^{-6}$            & 0.27            & mmol Fe m$^{-3}$                              \\ 
+\multicolumn{6}{l}{{Carbon quotas}}             \\ 
+&Cell carbon content                                    & $Q_{\rm C}$                                   & 1.45$\times10^{-11}$    & 0.88          & mmol C cell$^{-1}$                            \\ 
 \multicolumn{6}{l}{{Grazing}}\\
-&Maximum prey ingestion rate				& $G^{max}_{\rm C}$			& 21.9				& -0.16		& d$^{-1}$						\\ 
+&Maximum prey ingestion rate                            & $G^{max}_{\rm C}$                     & 21.9                            & -0.16         & d$^{-1}$                                              \\ 
 \hline\\  [-1ex]
 \end{tabular*}
 \label{Size_dependent}
@@ -644,7 +641,7 @@ Here $V_0$ is a reference value of $V_0$ = 1 $\mu$m$^3$. The value of $p$ at $V=
 %limited to values between 0 and 1. It is here assumed to be given by a sigmoidal function of organism ESD, according to three adjustable parameters ($\beta_a$, $\beta_b$, and $\beta_c$) as outlined in Table~\ref{tab:beta}. 
 
 %\begin{equation}
-%\beta_j 	= \beta_a - \frac{\beta_a - \beta_b}{1+\beta_c/{\rm ESD}_j}
+%\beta_j        = \beta_a - \frac{\beta_a - \beta_b}{1+\beta_c/{\rm ESD}_j}
 %\end{equation}
 %
 
@@ -653,10 +650,10 @@ Here $V_0$ is a reference value of $V_0$ = 1 $\mu$m$^3$. The value of $p$ at $V=
 %\caption{Parameters describing the size-dependent partitioning of detrital material between the dissolved and (implicit) particulate pools.}
 %\begin{tabular*}{1.0\textwidth}{@{\extracolsep{\fill}}lllll}
 %\hline \\ [-2ex]
-%Parameter		& Meaning									& $\beta_{mort}$	& $\beta_{graz}$	& Units 			\\
-%$\beta_a$		& Maximum fraction to DOM as $ESD\rightarrow0$		& 1.0				& 1.0				& dimensionless	\\
-%$\beta_b$		& Minimum fraction to DOM as $ESD\rightarrow\infty$	& 0.7				& 0.7				& dimensionless	\\
-%$\beta_c$		& Reference diameter at which $\beta=0.5$			& 10				& 100			& $\mu$m			\\
+%Parameter              & Meaning                                                                       & $\beta_{mort}$  & $\beta_{graz}$        & Units                         \\
+%$\beta_a$              & Maximum fraction to DOM as $ESD\rightarrow0$          & 1.0                             & 1.0                           & dimensionless \\
+%$\beta_b$              & Minimum fraction to DOM as $ESD\rightarrow\infty$     & 0.7                             & 0.7                           & dimensionless \\
+%$\beta_c$              & Reference diameter at which $\beta=0.5$                       & 10                              & 100                   & $\mu$m                        \\
 %\hline\\  [-1ex]
 %\end{tabular*}
 %\label{tab:beta}
@@ -679,36 +676,36 @@ A list of size-independent model parameters are listed in Table~\ref{Size_indepe
 \caption{Size-independent model parameters.}
 \begin{tabular*}{1.0\textwidth}{@{\extracolsep{\fill}}lllll}
 \hline \\ [-2ex]
-\multicolumn{2}{l}{{Parameter}}				&{Symbol}				& {Value}				& {Units}	\\  [+2ex]
+\multicolumn{2}{l}{{Parameter}}                         &{Symbol}                               & {Value}                         & {Units}       \\  [+2ex]
 %\multicolumn{5}{l}{{Nutrient uptake}} \\  
-%& Ammonium inhibition					& $\Psi$					& 4.6					& (mmol N m$^{-3})^{-1}$	\\  
+%& Ammonium inhibition                                  & $\Psi$                                        & 4.6                                     & (mmol N m$^{-3})^{-1}$        \\  
 \multicolumn{5}{l}{{Nutrient quotas}} \\  
-%& Minimum nitrogen:carbon quota			& $Q^{\rm min}_{\rm N}$		& 5.0$\times10^{-2}$		& mmol N (mmol C)$^{-1}$	\\  
-%& Maximum nitrogen:carbon quota			& $Q^{\rm max}_{\rm N}$		& 1.7$\times10^{-1}$		& mmol N (mmol C)$^{-1}$	\\ 
-& Minimum phosphate:carbon quota			& $Q^{\rm min}_{\rm P}$		& 2.1$\times10^{-3}$		& mmol P (mmol C)$^{-1}$	\\  
-& Maximum phosphate:carbon quota			& $Q^{\rm max}_{\rm P}$		& 1.1$\times10^{-2}$		& mmol P (mmol C)$^{-1}$	\\   
-& Minimum iron:carbon quota				& $Q^{\rm min}_{\rm Fe}$		& 1.0$\times10^{-6}$		& mmol Fe (mmol C)$^{-1}$	\\  
-& Maximum iron:carbon quota				& $Q^{\rm max}_{\rm Fe}$	& 4.0$\times10^{-6}$		& mmol Fe (mmol C)$^{-1}$	\\  
-\multicolumn{5}{l}{{Temperature}}		\\  
-& Reference temperature					& $T_{\rm ref}$				& 20					& $^\circ$C	\\  
-& Temperature dependence				& $A$					& 0.05				& -			\\  
-\multicolumn{5}{l}{{Photosynthesis}}	\\  
-& Maximum Chl-\textit{a}-to-nitrogen ratio		& $\theta^{\rm max}_{\rm N}$	& 3.0					& mg Chl \textit{a} (mmol N)$^{-1}$	\\  
-& Initial slope of P-I curve					& $\alpha$				& 3.83$\times10^{-7}$	& mmol C (mg Chl \textit{a})$^{-1}$($\mu$Ein m$^{-2}$)$^{-1}$ 	\\  
-& Cost of biosynthesis					& $\xi$					& 2.33				& mmol C (mmol N)$^{-1}$ 	\\ 
+%& Minimum nitrogen:carbon quota                        & $Q^{\rm min}_{\rm N}$             & 5.0$\times10^{-2}$            & mmol N (mmol C)$^{-1}$        \\  
+%& Maximum nitrogen:carbon quota                        & $Q^{\rm max}_{\rm N}$             & 1.7$\times10^{-1}$            & mmol N (mmol C)$^{-1}$        \\ 
+& Minimum phosphate:carbon quota                        & $Q^{\rm min}_{\rm P}$             & 2.1$\times10^{-3}$            & mmol P (mmol C)$^{-1}$        \\  
+& Maximum phosphate:carbon quota                        & $Q^{\rm max}_{\rm P}$             & 1.1$\times10^{-2}$            & mmol P (mmol C)$^{-1}$        \\   
+& Minimum iron:carbon quota                             & $Q^{\rm min}_{\rm Fe}$            & 1.0$\times10^{-6}$            & mmol Fe (mmol C)$^{-1}$       \\  
+& Maximum iron:carbon quota                             & $Q^{\rm max}_{\rm Fe}$    & 4.0$\times10^{-6}$            & mmol Fe (mmol C)$^{-1}$       \\  
+\multicolumn{5}{l}{{Temperature}}               \\  
+& Reference temperature                                 & $T_{\rm ref}$                         & 20                                      & $^\circ$C     \\  
+& Temperature dependence                                & $A$                                   & 0.05                            & -                     \\  
+\multicolumn{5}{l}{{Photosynthesis}}    \\  
+& Maximum Chl-\textit{a}-to-nitrogen ratio              & $\theta^{\rm max}_{\rm N}$     & 3.0                                   & mg Chl \textit{a} (mmol N)$^{-1}$       \\  
+& Initial slope of P-I curve                                    & $\alpha$                              & 3.83$\times10^{-7}$     & mmol C (mg Chl \textit{a})$^{-1}$($\mu$Ein m$^{-2}$)$^{-1}$         \\  
+& Cost of biosynthesis                                  & $\xi$                                 & 2.33                            & mmol C (mmol N)$^{-1}$        \\ 
 \multicolumn{5}{l}{{Grazing}}\\  
-& Optimum predator:prey length ratio		& $\vartheta_{\rm opt}$		& 10					& -	\\  
-& Geometric s.d. of $\vartheta$		 		& $\sigma_{\rm graz}$		& 2.0					& -	\\  
-& Total prey half-saturation				& $k^{\rm prey}_{\rm C}$		& 5.0					& mmol C m$^{-3}$	\\  
-& Maximum assimilation efficiency			& $\lambda^{\rm max}$		& 0.7					& -	\\  
-& Grazing refuge parameter				& $\Lambda$				& -1					& (mmol C m$^{-3}$)$^{-1}$	\\  
-& Assimilation shape parameter			& $h$					& 0.1					& -	\\  
+& Optimum predator:prey length ratio            & $\vartheta_{\rm opt}$         & 10                                      & -     \\  
+& Geometric s.d. of $\vartheta$                         & $\sigma_{\rm graz}$           & 2.0                                     & -     \\  
+& Total prey half-saturation                            & $k^{\rm prey}_{\rm C}$             & 5.0                                   & mmol C m$^{-3}$       \\  
+& Maximum assimilation efficiency                       & $\lambda^{\rm max}$           & 0.7                                     & -     \\  
+& Grazing refuge parameter                              & $\Lambda$                             & -1                                      & (mmol C m$^{-3}$)$^{-1}$      \\  
+& Assimilation shape parameter                  & $h$                                   & 0.1                                     & -     \\  
 \multicolumn{5}{l}{{Other loss terms}}\\  
-& Plankton mortality						& $m$					& 0.05				& d$^{-1}$	\\  
-& Plankton respiration					& $r_{DIC}$				& 0.05				& d$^{-1}$	\\  
-\multicolumn{4}{l}{{Light attenuation}}		\\  
-&Light attenuation by water				& $k_{\rm w}$				& 0.04				& m$^{-1}$					\\  
-&Light attenuation by chlorophyll			& $k_{\rm Chl}$				& 0.03				& m$^{-1}$(mg Chl)$^{-1}$		\\  [+1ex]
+& Plankton mortality                                            & $m$                                   & 0.05                            & d$^{-1}$      \\  
+& Plankton respiration                                  & $r_{DIC}$                             & 0.05                            & d$^{-1}$      \\  
+\multicolumn{4}{l}{{Light attenuation}}         \\  
+&Light attenuation by water                             & $k_{\rm w}$                           & 0.04                            & m$^{-1}$                                      \\  
+&Light attenuation by chlorophyll                       & $k_{\rm Chl}$                         & 0.03                            & m$^{-1}$(mg Chl)$^{-1}$               \\  [+1ex]
 \hline\\  [-1ex]
 \end{tabular*}
 \label{Size_independent}
@@ -1446,7 +1443,7 @@ Perhaps as expected, zooplankton size classes tend to mirror the biogeography of
 \begin{subfigure}{.66\textwidth}
   \centering
 \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/SizeClass_C_Biomass.png}
-\end{subfigure}	
+\end{subfigure} 
 \\[+0.2cm]
 \begin{subfigure}{.66\textwidth}
   \centering
