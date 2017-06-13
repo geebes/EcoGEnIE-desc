@@ -1,49 +1,17 @@
-This is BibTeX, Version 0.99d (TeX Live 2016)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is 8-bit Big BibTeX version 0.99c
+Implementation:  WIN32 Console, BaKoMa TNS bound.
+Release version: 3.71 (18 Aug 1996)
+
 The top-level auxiliary file: EcoGEnIE.aux
 The style file: copernicus.bst
 Database file #1: biblio1.bib
-Warning--can't use both author and editor fields in Oschlies:2006
 Warning--empty journal in Ridgwell:prep
-You've used 65 entries,
-            2811 wiz_defined-function locations,
-            1443 strings with 24330 characters,
-and the built_in function-call counts, 76010 in all, are:
-= -- 8413
-> -- 3456
-< -- 27
-+ -- 1543
-- -- 1095
-* -- 4800
-:= -- 7668
-add.period$ -- 65
-call.type$ -- 65
-change.case$ -- 499
-chr.to.int$ -- 65
-cite$ -- 197
-duplicate$ -- 7358
-empty$ -- 3601
-format.name$ -- 1288
-if$ -- 15074
-int.to.chr$ -- 1
-int.to.str$ -- 1
-missing$ -- 816
-newline$ -- 204
-num.names$ -- 260
-pop$ -- 3341
-preamble$ -- 1
-purify$ -- 495
-quote$ -- 0
-skip$ -- 4411
-stack$ -- 0
-substring$ -- 3131
-swap$ -- 6490
-text.length$ -- 4
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 579
-warning$ -- 2
-while$ -- 317
-width$ -- 0
-write$ -- 743
-(There were 2 warnings)
+
+Here's how much of BibTeX's memory you used:
+ Cites:                59 out of 7500
+ Fields:             1403 out of 125000
+ Hash table:        34705 out of 35000
+ Strings:            1402 out of 30000
+ String pool:       23296 out of 750000
+ Wizard functions:   2811 out of 10000
+(There was 1 warning)

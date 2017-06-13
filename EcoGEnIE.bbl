@@ -1,4 +1,4 @@
-\begin{thebibliography}{65}
+\begin{thebibliography}{59}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{{\tt #1}}
 \providecommand{\urlprefix}{URL }
@@ -10,11 +10,6 @@
 \bibitem[{Anderson(2005)}]{Anderson:2005}
 Anderson, T.~R.: Plankton functional type modelling: {R}unning before we can
   walk?, Journal of Plankton Research, 27, 1073--1081, 2005.
-
-\bibitem[{Anderson and Pondaven(2003)}]{Anderson:2003}
-Anderson, T.~R. and Pondaven, P.: Non-{R}edfield carbon and nitrogen cycling in
-  the {S}argasso {S}ea: pelagic imbalances and export flux, Deep-Sea Research
-  I, 50, 573--591, 2003.
 
 \bibitem[{Armstrong et~al.(2002)Armstrong, Lee, Hedges, Honjo, and
   Wakeham}]{Armstrong:2002}
@@ -41,10 +36,6 @@ Bacastow, R. and Maier-Reimer, E.: Ocean-circulation model of the carbon cycle,
 Behrenfeld, M.~J. and Falkowski, P.~G.: Photosynthetic rates derived from
   satellite-based chlorophyll concentration, Limnology and Oceanography, 42,
   1--20, 1997.
-
-\bibitem[{Billet et~al.(1983)Billet, Lampitt, Rice, and Mantoura}]{Billet:1983}
-Billet, D. S.~M., Lampitt, R.~S., Rice, A.~L., and Mantoura, R. F.~C.: Seasonal
-  sedimentation of phytoplankton to the deep sea benthos, Nature, 302, 1983.
 
 \bibitem[{Bruggeman and Kooijman(2007)}]{Bruggeman:2007}
 Bruggeman, J. and Kooijman, S. A. L.~M.: A biodiversity-inspired approach to
@@ -94,11 +85,6 @@ Droop, M.~R.: Vitamin {B}12 and {M}arine {E}cology, {IV}. {T}he kinetics of
 Edwards, N. and Marsh, R.: Uncertainties due to transport-parameter sensitivity
   in an efficient 3-{D} ocean-climate model, Climate Dynamics, 24, 415--433,
   2005.
-
-\bibitem[{Fasham et~al.(1990)Fasham, Ducklow, and McKelvie}]{Fasham:1990}
-Fasham, M. J.~R., Ducklow, H.~W., and McKelvie, S.~M.: A nitrogen-based model
-  of plankton dynamics in the oceanic mixed layer, Journal of Marine Research,
-  48, 591--639, 1990.
 
 \bibitem[{Flynn(2008)}]{Flynn:2008}
 Flynn, K.~J.: The importance of the form of the quota curve and control of
@@ -303,17 +289,6 @@ Norris, R., Kirtland~Turner, S., Hull, P., and Ridgwell, A.: Marine ecosystem
 Oschlies, A.: Model-derived estimates of new production: New results point to
   lower values, Deep-Sea Research II, 48, 2173--2197, 2001.
 
-\bibitem[{Oschlies(2006)}]{Oschlies:2006}
-Oschlies, A.: Ocean Weather Forecasting, chap. On the use of data assimilation
-  in biogeochemical modelling, pp. 525--557, Springer, 2006.
-
-\bibitem[{Padis\'ak et~al.(2003)Padis\'ak, Sor\'oczki-Pint\'er, and
-  Rezner}]{Padisak:2003}
-Padis\'ak, J., Sor\'oczki-Pint\'er, E., and Rezner, Z.: Sinking properties of
-  phytoplankton shapes and the relation of form resistance to morphological
-  diversity of plankton - {A}n experimental study, Hydrobiologia, 500,
-  243--257, 2003.
-
 \bibitem[{Palmer and Totterdell(2001)}]{Palmer:2001}
 Palmer, J.~R. and Totterdell, I.~J.: Production and export in a global ocean
   ecosystem model, Deep-Sea Research I, 48, 1169--1198, 2001.
@@ -346,10 +321,6 @@ Schartau, M. and Oschlies, A.: Simultaneous data-based optimization of a
   1{D}-ecosystem model at three locations in the {N}orth {A}tlantic: {P}art
   {II} - {S}tanding stocks and nitrogen fluxes, Journal of Marine Research, 61,
   795--821, 2003.
-
-\bibitem[{Smayda(1970)}]{Smayda:1970}
-Smayda, T.~J.: The suspension and sinking of phytoplankton in the sea,
-  Oceanography and Marine Biology: An Annual Review, 8, 1970.
 
 \bibitem[{Spitz et~al.(2001)Spitz, Moisan, and Abbot}]{Spitz:2001}
 Spitz, Y.~H., Moisan, J.~R., and Abbot, M.~R.: Configuring an ecosystem model
