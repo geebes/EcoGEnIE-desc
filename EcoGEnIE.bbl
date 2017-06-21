@@ -1,4 +1,4 @@
-\begin{thebibliography}{59}
+\begin{thebibliography}{67}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{{\tt #1}}
 \providecommand{\urlprefix}{URL }
@@ -10,6 +10,10 @@
 \bibitem[{Anderson(2005)}]{Anderson:2005}
 Anderson, T.~R.: Plankton functional type modelling: {R}unning before we can
   walk?, Journal of Plankton Research, 27, 1073--1081, 2005.
+
+\bibitem[{Archer and Johnson(2000)}]{Archer:2000}
+Archer, D.~E. and Johnson, K.: A model of the iron cycle in the ocean, Global
+  Biogeochemical Cycles, 14, 269--279, 2000.
 
 \bibitem[{Armstrong et~al.(2002)Armstrong, Lee, Hedges, Honjo, and
   Wakeham}]{Armstrong:2002}
@@ -150,6 +154,11 @@ Hargreaves, J.~C., Annan, J.~D., Edwards, N.~R., and Marsh, R.: An efficient
   \doi{10.1007/s00382-004-0471-4},
   \urlprefix\url{http://dx.doi.org/10.1007/s00382-004-0471-4}, 2004.
 
+\bibitem[{Heinze et~al.(1991)Heinze, Maier-Reimer, and Winn}]{Heinze:1991}
+Heinze, C., Maier-Reimer, E., and Winn, K.: {Glacial pCO$_2$ reduction by the
+  world ocean: Experiments with the Hamburg carbon cycle model},
+  Paleoceanography, 6, 395--430, 1991.
+
 \bibitem[{Hollowed et~al.(2013)Hollowed, Barange, Beamish, Brander, Cochrane,
   Drinkwater, Foreman, Hare, Holt, Ito, Kim, King, Loeng, MacKenzie, Mueter,
   Okey, Peck, Radchenko, Rice, Schirripa, Yatsu, and Yamanaka}]{Hollowed:2013}
@@ -175,8 +184,8 @@ John, E., Wilson, J., Pearson, P., and Ridgwell, A.: Temperature-dependent
   remineralization and carbon cycling in the warm {E}ocene oceans,
   Palaeogeography, Palaeoclimatology, Palaeoecology, 413, 158 -- 166,
   \doi{http://dx.doi.org/10.1016/j.palaeo.2014.05.019},
-  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/S00310182140%
-02685}, selected Papers, Geologic Problem Solving with Microfossils3, 2014.
+  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0031018214002685},
+  selected Papers, Geologic Problem Solving with Microfossils3, 2014.
 
 \bibitem[{Kraus and Turner(1967)}]{Kraus:1967b}
 Kraus, E.~B. and Turner, J.~S.: A one-dimensional model of the seasonal
@@ -215,6 +224,11 @@ Litchman, E., Klausmeier, C.~A., Schofield, O.~M., and Falkowski, P.~G.: The
 Maier-Reimer, E.: Geochemical cycles in an ocean general circulation model.
   Preindustrial tracer distributions, Global Biogeochemical Cycles, 7,
   645--677, 1993.
+
+\bibitem[{Marchal et~al.(1998)Marchal, Stocker, and Joos}]{Marchal:1998}
+Marchal, O., Stocker, T.~F., and Joos, F.: {A latitude-depth,
+  circulation-biogeochemical ocean modelfor paleoclimate studies. Development
+  and sensitivities}, Tellus, 50B, 290--316, 1998.
 
 \bibitem[{Marsh et~al.(2011)Marsh, M\"uller, Yool, and Edwards}]{Marsh:2011}
 Marsh, R., M\"uller, S.~A., Yool, A., and Edwards, N.~R.: Incorporation of the
@@ -279,6 +293,20 @@ Najjar, R.~G., Sarmiento, J.~L., and Toggweiler, J.~R.: Downward transport and
   fate of organic matter in the ocean: {S}imulations with a general circulation
   model, Global Biogeochemical Cycles, 6, 45--76, 1992.
 
+\bibitem[{Najjar et~al.(2007)Najjar, Jin, Louanchi, Aumont, Caldeira, Doney,
+  Dutay, Follows, Gruber, Joos, Lindsay, Maier-Reimer, Matear, Matsumoto,
+  Monfray, Mouchet, Orr, Plattner, Sarmiento, Schlitzer, Slater, Weirig,
+  Yamanaka, and Yool}]{Najjar:2007}
+Najjar, R.~G., Jin, X., Louanchi, F., Aumont, O., Caldeira, K., Doney, S.~C.,
+  Dutay, J.~C., Follows, M.~J., Gruber, N., Joos, F., Lindsay, K.,
+  Maier-Reimer, E., Matear, R.~J., Matsumoto, K., Monfray, P., Mouchet, A.,
+  Orr, J.~C., Plattner, G.~K., Sarmiento, J.~L., Schlitzer, R., Slater, R.~D.,
+  Weirig, M.~F., Yamanaka, Y., and Yool, A.: Impact of circulation on export
+  production, dissolved organic matter, and dissolved oxygen in the ocean:
+  {R}esults from {P}hase {II} of the {O}cean {C}arbon-cycle {M}odel
+  {I}ntercomparison {P}roject ({OCMIP}-2, Global Biogeochemical Cycles, 21,
+  doi:10.1029/2006GB002\,857, 2007.
+
 \bibitem[{Norris et~al.(2013)Norris, Kirtland~Turner, Hull, and
   Ridgwell}]{Norris:2013}
 Norris, R., Kirtland~Turner, S., Hull, P., and Ridgwell, A.: Marine ecosystem
@@ -299,6 +327,11 @@ Parekh, P., Follows, M.~J., Dutkiewicz, S., and Ito, T.: Physical and
   biological regulation of the soft tissue carbon pump, Paleoceanography, 21,
   doi:10.1029/2005PA001\,258, 2006.
 
+\bibitem[{Redfield(1934)}]{Redfield:1934}
+Redfield, A.~C.: On the proportions of organic derivatives in sea water and
+  their relation to the composition of plankton, vol. James Johnstone Memorial
+  Volume, Liverpool, pp. 176--192, 1934.
+
 \bibitem[{Ridgwell and Death(in prep.)}]{Ridgwell:prep}
 Ridgwell, A. and Death, R.: Iron limitation in an efficient model of global
   carbon cycling and climate, in prep.
@@ -308,13 +341,20 @@ Ridgwell, A. and Schmidt, D.~N.: Past constraints on the vulnerability of
   marine calcifiers to massive carbon dioxide release, Nature Geoscience, 3,
   196--200, \urlprefix\url{http://dx.doi.org/10.1038/ngeo755}, 2010.
 
-\bibitem[{Ridgwell et~al.(2007)Ridgwell, Hargreaves, Edwards, Annan, Lenton,
-  Marsh, Yool, and Watson}]{Ridgwell:2007}
+\bibitem[{Ridgwell et~al.(2007{\natexlab{a}})Ridgwell, Hargreaves, Edwards,
+  Annan, Lenton, Marsh, Yool, and Watson}]{Ridgwell:2007}
 Ridgwell, A., Hargreaves, J.~C., Edwards, N.~R., Annan, J.~D., Lenton, T.~M.,
   Marsh, R., Yool, A., and Watson, A.: Marine geochemical data assimilation in
   an efficient Earth System Model of global biogeochemical cycling,
   Biogeosciences, 4, 87--104, \doi{10.5194/bg-4-87-2007},
-  \urlprefix\url{http://www.biogeosciences.net/4/87/2007/}, 2007.
+  \urlprefix\url{http://www.biogeosciences.net/4/87/2007/}, 2007{\natexlab{a}}.
+
+\bibitem[{Ridgwell et~al.(2007{\natexlab{b}})Ridgwell, Zondervan, Hargreaves,
+  Bijma, and Lenton}]{Ridgwell:2007b}
+Ridgwell, A., Zondervan, I., Hargreaves, J.~C., Bijma, J., and Lenton, T.~M.:
+  Assessing the potential long-term increase of oceanic fossil fuel CO2 uptake
+  due to CO2-calcification feedback, Biogeosciences, 4, 481--492,
+  2007{\natexlab{b}}.
 
 \bibitem[{Schartau and Oschlies(2003)}]{Schartau:2003pt2}
 Schartau, M. and Oschlies, A.: Simultaneous data-based optimization of a
@@ -369,6 +409,12 @@ Ward, B.~A., Dutkiewicz, S., Jahn, O., and Follows, M.~J.: A size structured
   food-web model for the global ocean, Limnology and Oceanography, 57,
   1877--1891, 2012.
 
+\bibitem[{Watson et~al.(2000)Watson, Bakker, Ridgwell, Boyd, and
+  Law}]{Watson:2000}
+Watson, A.~J., Bakker, D. C.~E., Ridgwell, A.~J., Boyd, P.~W., and Law, C.~S.:
+  {Effect of iron supply on Southern Ocean CO$_2$ uptake and implications for
+  glacial atmospheric CO$_2$}, Nature, 407, 730--733, 2000.
+
 \bibitem[{Westberry et~al.(2008)Westberry, Behrenfeld, Siegel, and
   Boss}]{Westberry:2008}
 Westberry, T., Behrenfeld, M.~J., Siegel, D.~A., and Boss, E.: Carbon-based
@@ -387,5 +433,8 @@ Yool, A., Popova, E.~E., and Anderson, T.~R.: {MEDUSA-2.0: an intermediate
   complexity biogeochemical model of the marine carbon cycle for climate change
   and ocean acidification studies}, Geoscientific Model Development, 6,
   1767--1811, 2013.
+
+\bibitem[{Zeebe and Wolf-Gladrow(2001)}]{Zeebe:2001}
+Zeebe, R.~E. and Wolf-Gladrow, D.: CO$_2$ in seawater, Elsevier Science, 2001.
 
 \end{thebibliography}

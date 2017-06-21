@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.29)  9 JUN 2017 16:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.29)  21 JUN 2017 14:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1643,27 +1643,27 @@ LaTeX Warning: Label `fig:jgofs_chl' multiply defined.
 )
 \openout1 = `EcoGEnIE.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 39.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 37.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 39.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -1700,7 +1700,7 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box58
-Package hyperref Info: Link coloring OFF on input line 37.
+Package hyperref Info: Link coloring OFF on input line 39.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1710,9 +1710,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count189
 )
-LaTeX Info: Redefining \ref on input line 37.
-LaTeX Info: Redefining \pageref on input line 37.
-LaTeX Info: Redefining \nameref on input line 37.
+LaTeX Info: Redefining \ref on input line 39.
+LaTeX Info: Redefining \pageref on input line 39.
+LaTeX Info: Redefining \nameref on input line 39.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/translator/dicts/translato
 r-basic-dictionary/translator-basic-dictionary-English.dict
@@ -1722,1032 +1722,1157 @@ Dictionary: translator-basic-dictionary, Language: English
 File: siunitx-abbreviations.cfg 2016/03/01 v2.6q siunitx: Abbreviated units
 )
 \c__siunitx_mathsf_int=\count190
-LaTeX Font Info:    Try loading font information for U+msa on input line 37.
+LaTeX Font Info:    Try loading font information for U+msa on input line 39.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 37.
+LaTeX Font Info:    Try loading font information for U+msb on input line 39.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 \c__siunitx_mathtt_int=\count191
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 78.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 80.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 81.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 84.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 83.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 86.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.54997pt on input line 84.
+(Font)              scaled to size 8.54997pt on input line 86.
  [1
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
  [4] [5]
-[6] <Figures/CouplingSchematic.pdf, id=251, 375.804pt x 709.04903pt>
+[6] <Figures/CouplingSchematic.pdf, id=234, 375.804pt x 709.04903pt>
 File: Figures/CouplingSchematic.pdf Graphic file (type pdf)
 
 <use Figures/CouplingSchematic.pdf>
-Package pdftex.def Info: Figures/CouplingSchematic.pdf used on input line 174.
+Package pdftex.def Info: Figures/CouplingSchematic.pdf used on input line 163.
 (pdftex.def)             Requested size: 170.71652pt x 322.09848pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 175.
- [7 <./Figures/CouplingSchematic.pdf>]
-[8] [9] [10] [11] [12] [13] [14] [15]
-Overfull \hbox (4.62497pt too wide) detected at line 586
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 164.
+ [7] [8 <./Figures/CouplingSchematic.pdf>]
+[9] [10] [11] [12] [13] [14] [15] [16]
+Overfull \hbox (4.62497pt too wide) detected at line 574
  
  []
 
 
-Overfull \hbox (4.62497pt too wide) detected at line 600
+Overfull \hbox (4.62497pt too wide) detected at line 588
  
  []
 
-[16] [17] [18] [19] [20]
-<Figures/surface_p_an.png, id=514, 246.64624pt x 125.3122pt>
-File: Figures/surface_p_an.png Graphic file (type png)
-
-<use Figures/surface_p_an.png>
-Package pdftex.def Info: Figures/surface_p_an.png used on input line 760.
+[17] [18] [19] [20] [21]
+</Users/ward/cgenie_output/WOA_2009_data/surface_p_an.png, id=512, 246.64624pt 
+x 125.3122pt>
+File: /Users/ward/cgenie_output/WOA_2009_data/surface_p_an.png Graphic file (ty
+pe png)
+ <use /Users/ward/cgenie_output/WOA_2009_data/surface_p_an.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/WOA_2009_data/surface_p_an.p
+ng used on input line 752.
 (pdftex.def)             Requested size: 124.87943pt x 63.44754pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/ocn_PO4.png, id=516, 246.64624pt
- x 125.3122pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/ocn_PO4.png Graphic file (t
-ype png)
- <use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/ocn_PO4.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/ocn_PO4.
-png used on input line 766.
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/ocn_PO
+4.png, id=514, 246.64624pt x 125.3122pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/o
+cn_PO4.png Graphic file (type png)
+
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/oc
+n_PO4.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/ocn_PO4.png used on input line 758.
 (pdftex.def)             Requested size: 124.87943pt x 63.44754pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_PO4.png, id=517, 2
-46.64624pt x 125.3122pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_PO4.png Graph
-ic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/ocn_PO4.png, id=515, 246.64624pt x 125.3122pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/ocn_PO4.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_PO4.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/ocn_PO4.png used on input line 772.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/ocn_PO4.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/ocn_PO4.png used on input line 764.
 (pdftex.def)             Requested size: 124.87943pt x 63.44754pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_PO4_clrbr.png, id=
-518, 263.88495pt x 27.18413pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_PO4_clrbr.png
- Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/ocn_PO4_clrbr.png, id=516, 263.88495pt x 27.18413pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/ocn_PO4_clrbr.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_PO4_clrbr.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/ocn_PO4_clrbr.png used on input line 778.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/ocn_PO4_clrbr.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/ocn_PO4_clrbr.png used on input line 770.
 (pdftex.def)             Requested size: 189.2102pt x 19.49207pt.
 
-</Users/ward/cgenie_output/Tagliabue_data/surface_fe.png, id=523, 246.64624pt x
+</Users/ward/cgenie_output/Tagliabue_data/surface_fe.png, id=521, 246.64624pt x
  125.97523pt>
 File: /Users/ward/cgenie_output/Tagliabue_data/surface_fe.png Graphic file (typ
 e png)
  <use /Users/ward/cgenie_output/Tagliabue_data/surface_fe.png>
 Package pdftex.def Info: /Users/ward/cgenie_output/Tagliabue_data/surface_fe.pn
-g used on input line 783.
+g used on input line 775.
 (pdftex.def)             Requested size: 124.87943pt x 63.78325pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/ocn_TDFe.png, id=524, 246.64624p
-t x 125.97523pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/ocn_TDFe.png Graphic file (
-type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/ocn_TD
+Fe.png, id=522, 246.64624pt x 125.97523pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/o
+cn_TDFe.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/ocn_TDFe.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/ocn_TDFe
-.png used on input line 789.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/oc
+n_TDFe.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/ocn_TDFe.png used on input line 781.
 (pdftex.def)             Requested size: 124.87943pt x 63.78325pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_TDFe.png, id=525, 
-246.64624pt x 125.97523pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_TDFe.png Grap
-hic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/ocn_TDFe.png, id=523, 246.64624pt x 125.97523pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/ocn_TDFe.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_TDFe.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/ocn_TDFe.png used on input line 795.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/ocn_TDFe.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/ocn_TDFe.png used on input line 787.
 (pdftex.def)             Requested size: 124.87943pt x 63.78325pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_TDFe_clrbr.png, id
-=526, 261.89587pt x 40.44467pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_TDFe_clrbr.pn
-g Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/ocn_TDFe_clrbr.png, id=524, 261.89587pt x 40.44467pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/ocn_TDFe_clrbr.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_TDFe_clrbr.png
->
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/ocn_TDFe_clrbr.png used on input line 801.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/ocn_TDFe_clrbr.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/ocn_TDFe_clrbr.png used on input line 793.
 (pdftex.def)             Requested size: 189.2102pt x 29.22011pt.
- <Figures/surface_TCO2.png, id=527, 246.64624pt x 125.3122pt>
-File: Figures/surface_TCO2.png Graphic file (type png)
 
-<use Figures/surface_TCO2.png>
-Package pdftex.def Info: Figures/surface_TCO2.png used on input line 811.
+</Users/ward/cgenie_output/GLODAP_data/surface_TCO2.png, id=525, 246.64624pt x 
+125.3122pt>
+File: /Users/ward/cgenie_output/GLODAP_data/surface_TCO2.png Graphic file (type
+ png)
+ <use /Users/ward/cgenie_output/GLODAP_data/surface_TCO2.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/GLODAP_data/surface_TCO2.png
+ used on input line 803.
 (pdftex.def)             Requested size: 124.87943pt x 63.44754pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/ocn_DIC.png, id=528, 246.64624pt
- x 125.3122pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/ocn_DIC.png Graphic file (t
-ype png)
- <use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/ocn_DIC.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/ocn_DIC.
-png used on input line 817.
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/ocn_DI
+C.png, id=526, 246.64624pt x 125.3122pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/o
+cn_DIC.png Graphic file (type png)
+
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/oc
+n_DIC.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/ocn_DIC.png used on input line 809.
 (pdftex.def)             Requested size: 124.87943pt x 63.44754pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_DIC.png, id=529, 2
-46.64624pt x 125.3122pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_DIC.png Graph
-ic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/ocn_DIC.png, id=527, 246.64624pt x 125.3122pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/ocn_DIC.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_DIC.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/ocn_DIC.png used on input line 823.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/ocn_DIC.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/ocn_DIC.png used on input line 815.
 (pdftex.def)             Requested size: 124.87943pt x 63.44754pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_DIC_clrbr.png, id=
-530, 278.47156pt x 27.18413pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_DIC_clrbr.png
- Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/ocn_DIC_clrbr.png, id=528, 278.47156pt x 27.18413pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/ocn_DIC_clrbr.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_DIC_clrbr.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/ocn_DIC_clrbr.png used on input line 829.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/ocn_DIC_clrbr.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/ocn_DIC_clrbr.png used on input line 821.
 (pdftex.def)             Requested size: 189.2102pt x 18.47041pt.
-<Figures/surface_PALK.png, id=531, 246.64624pt x 125.3122pt>
-File: Figures/surface_PALK.png Graphic file (type png)
 
-<use Figures/surface_PALK.png>
-Package pdftex.def Info: Figures/surface_PALK.png used on input line 834.
+</Users/ward/cgenie_output/GLODAP_data/surface_PALK.png, id=529, 246.64624pt x 
+125.3122pt>
+File: /Users/ward/cgenie_output/GLODAP_data/surface_PALK.png Graphic file (type
+ png)
+ <use /Users/ward/cgenie_output/GLODAP_data/surface_PALK.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/GLODAP_data/surface_PALK.png
+ used on input line 826.
 (pdftex.def)             Requested size: 124.87943pt x 63.44754pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/ocn_ALK.png, id=532, 246.64624pt
- x 125.3122pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/ocn_ALK.png Graphic file (t
-ype png)
- <use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/ocn_ALK.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/ocn_ALK.
-png used on input line 840.
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/ocn_AL
+K.png, id=530, 246.64624pt x 125.3122pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/o
+cn_ALK.png Graphic file (type png)
+
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/oc
+n_ALK.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/ocn_ALK.png used on input line 832.
 (pdftex.def)             Requested size: 124.87943pt x 63.44754pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_ALK.png, id=533, 2
-46.64624pt x 125.3122pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_ALK.png Graph
-ic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/ocn_ALK.png, id=531, 246.64624pt x 125.3122pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/ocn_ALK.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_ALK.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/ocn_ALK.png used on input line 846.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/ocn_ALK.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/ocn_ALK.png used on input line 838.
 (pdftex.def)             Requested size: 124.87943pt x 63.44754pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_ALK_clrbr.png, id=
-534, 279.13458pt x 27.18413pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_ALK_clrbr.png
- Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/ocn_ALK_clrbr.png, id=532, 279.13458pt x 27.18413pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/ocn_ALK_clrbr.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_ALK_clrbr.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/ocn_ALK_clrbr.png used on input line 852.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/ocn_ALK_clrbr.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/ocn_ALK_clrbr.png used on input line 844.
 (pdftex.def)             Requested size: 189.2102pt x 18.42686pt.
-<Figures/surface_o_an.png, id=535, 246.64624pt x 125.3122pt>
-File: Figures/surface_o_an.png Graphic file (type png)
 
-<use Figures/surface_o_an.png>
-Package pdftex.def Info: Figures/surface_o_an.png used on input line 857.
-(pdftex.def)             Requested size: 124.87943pt x 63.44754pt.
-
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/ocn_O2.png, id=536, 246.64624pt 
+</Users/ward/cgenie_output/WOA_2009_data/surface_o_an.png, id=533, 246.64624pt 
 x 125.3122pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/ocn_O2.png Graphic file (ty
+File: /Users/ward/cgenie_output/WOA_2009_data/surface_o_an.png Graphic file (ty
 pe png)
- <use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/ocn_O2.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/ocn_O2.p
-ng used on input line 863.
+ <use /Users/ward/cgenie_output/WOA_2009_data/surface_o_an.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/WOA_2009_data/surface_o_an.p
+ng used on input line 849.
 (pdftex.def)             Requested size: 124.87943pt x 63.44754pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_O2.png, id=537, 24
-6.64624pt x 125.3122pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_O2.png Graphi
-c file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/ocn_O2
+.png, id=534, 246.64624pt x 125.3122pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/o
+cn_O2.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_O2.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/ocn_O2.png used on input line 869.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/oc
+n_O2.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/ocn_O2.png used on input line 855.
 (pdftex.def)             Requested size: 124.87943pt x 63.44754pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_O2_clrbr.png, id=5
-38, 269.18918pt x 27.18413pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_O2_clrbr.png 
-Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/ocn_O2.png, id=535, 246.64624pt x 125.3122pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/ocn_O2.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_O2_clrbr.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/ocn_O2_clrbr.png used on input line 875.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/ocn_O2.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/ocn_O2.png used on input line 861.
+(pdftex.def)             Requested size: 124.87943pt x 63.44754pt.
+
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/ocn_O2_clrbr.png, id=536, 269.18918pt x 27.18413pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/ocn_O2_clrbr.png Graphic file (type png)
+
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/ocn_O2_clrbr.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/ocn_O2_clrbr.png used on input line 867.
 (pdftex.def)             Requested size: 189.2102pt x 19.10713pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/atm_dpCO2.png, id=539, 246.64624
-pt x 125.3122pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/atm_dpCO2.png Graphic file 
-(type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/atm_dp
+CO2.png, id=537, 246.64624pt x 125.3122pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/a
+tm_dpCO2.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/atm_dpCO2.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/atm_dpCO
-2.png used on input line 886.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/at
+m_dpCO2.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/atm_dpCO2.png used on input line 878.
 (pdftex.def)             Requested size: 124.87943pt x 63.44754pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/atm_dpCO2.png, id=540,
- 246.64624pt x 125.3122pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/atm_dpCO2.png Gra
-phic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/atm_dpCO2.png, id=538, 246.64624pt x 125.3122pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/atm_dpCO2.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/atm_dpCO2.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/atm_dpCO2.png used on input line 892.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/atm_dpCO2.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/atm_dpCO2.png used on input line 884.
 (pdftex.def)             Requested size: 124.87943pt x 63.44754pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/atm_dpCO2_clrbr.png, i
-d=541, 275.81944pt x 27.18413pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/atm_dpCO2_clrbr.p
-ng Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/atm_dpCO2_clrbr.png, id=539, 275.81944pt x 27.18413pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/atm_dpCO2_clrbr.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/atm_dpCO2_clrbr.pn
-g>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/atm_dpCO2_clrbr.png used on input line 898.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/atm_dpCO2_clrbr.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/atm_dpCO2_clrbr.png used on input line 890.
 (pdftex.def)             Requested size: 189.2102pt x 18.64836pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_POC.png, id=542, 246.6
-4624pt x 125.3122pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_POC.png Graphic f
-ile (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fp
+art_POC.png, id=540, 246.64624pt x 125.3122pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/b
+io_fpart_POC.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_POC.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpar
-t_POC.png used on input line 912.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bi
+o_fpart_POC.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/bio_fpart_POC.png used on input line 904.
 (pdftex.def)             Requested size: 124.87943pt x 63.44754pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/bio_fpart_POC.png, id=
-543, 246.64624pt x 125.3122pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/bio_fpart_POC.png
- Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/bio_fpart_POC.png, id=541, 246.64624pt x 125.3122pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/bio_fpart_POC.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/bio_fpart_POC.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/bio_fpart_POC.png used on input line 918.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/bio_fpart_POC.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/bio_fpart_POC.png used on input line 910.
 (pdftex.def)             Requested size: 124.87943pt x 63.44754pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_POC_diff.png, id=544, 
-246.64624pt x 125.3122pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_POC_diff.png Grap
-hic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fp
+art_POC_diff.png, id=542, 246.64624pt x 125.3122pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/b
+io_fpart_POC_diff.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_POC_diff.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpar
-t_POC_diff.png used on input line 924.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bi
+o_fpart_POC_diff.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/bio_fpart_POC_diff.png used on input line 916.
 (pdftex.def)             Requested size: 124.87943pt x 63.44754pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/bio_fpart_POC_clrbr.pn
-g, id=545, 261.89587pt x 27.18413pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/bio_fpart_POC_clr
-br.png Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/bio_fpart_POC_clrbr.png, id=543, 261.89587pt x 27.18413pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/bio_fpart_POC_clrbr.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/bio_fpart_POC_clrb
-r.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/bio_fpart_POC_clrbr.png used on input line 932.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/bio_fpart_POC_clrbr.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/bio_fpart_POC_clrbr.png used on input line 924.
 (pdftex.def)             Requested size: 185.42807pt x 19.24692pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_POC_clrbr_diff.png, id
-=546, 267.20009pt x 27.18413pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_POC_clrbr_diff.pn
-g Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fp
+art_POC_clrbr_diff.png, id=544, 267.20009pt x 27.18413pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/b
+io_fpart_POC_clrbr_diff.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_POC_clrbr_diff.png
->
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpar
-t_POC_clrbr_diff.png used on input line 936.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bi
+o_fpart_POC_clrbr_diff.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/bio_fpart_POC_clrbr_diff.png used on input line 928.
 (pdftex.def)             Requested size: 185.42807pt x 18.86531pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_POP.png, id=547, 246.6
-4624pt x 125.3122pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_POP.png Graphic f
-ile (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fp
+art_POP.png, id=545, 246.64624pt x 125.3122pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/b
+io_fpart_POP.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_POP.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpar
-t_POP.png used on input line 944.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bi
+o_fpart_POP.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/bio_fpart_POP.png used on input line 936.
 (pdftex.def)             Requested size: 124.87943pt x 63.44754pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/bio_fpart_POP.png, id=
-548, 246.64624pt x 125.3122pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/bio_fpart_POP.png
- Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/bio_fpart_POP.png, id=546, 246.64624pt x 125.3122pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/bio_fpart_POP.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/bio_fpart_POP.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/bio_fpart_POP.png used on input line 950.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/bio_fpart_POP.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/bio_fpart_POP.png used on input line 942.
 (pdftex.def)             Requested size: 124.87943pt x 63.44754pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_POP_diff.png, id=549, 
-246.64624pt x 125.3122pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_POP_diff.png Grap
-hic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fp
+art_POP_diff.png, id=547, 246.64624pt x 125.3122pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/b
+io_fpart_POP_diff.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_POP_diff.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpar
-t_POP_diff.png used on input line 956.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bi
+o_fpart_POP_diff.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/bio_fpart_POP_diff.png used on input line 948.
 (pdftex.def)             Requested size: 124.87943pt x 63.44754pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/bio_fpart_POP_clrbr.pn
-g, id=550, 266.53706pt x 27.18413pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/bio_fpart_POP_clr
-br.png Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/bio_fpart_POP_clrbr.png, id=548, 266.53706pt x 27.18413pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/bio_fpart_POP_clrbr.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/bio_fpart_POP_clrb
-r.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/bio_fpart_POP_clrbr.png used on input line 964.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/bio_fpart_POP_clrbr.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/bio_fpart_POP_clrbr.png used on input line 956.
 (pdftex.def)             Requested size: 185.42807pt x 18.91176pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_POP_clrbr_diff.png, id
-=551, 267.20009pt x 27.18413pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_POP_clrbr_diff.pn
-g Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fp
+art_POP_clrbr_diff.png, id=549, 267.20009pt x 27.18413pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/b
+io_fpart_POP_clrbr_diff.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_POP_clrbr_diff.png
->
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpar
-t_POP_clrbr_diff.png used on input line 968.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bi
+o_fpart_POP_clrbr_diff.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/bio_fpart_POP_clrbr_diff.png used on input line 960.
 (pdftex.def)             Requested size: 185.42807pt x 18.86531pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_POFe.png, id=552, 246.
-64624pt x 125.3122pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_POFe.png Graphic 
-file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fp
+art_POFe.png, id=550, 246.64624pt x 125.3122pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/b
+io_fpart_POFe.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_POFe.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpar
-t_POFe.png used on input line 976.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bi
+o_fpart_POFe.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/bio_fpart_POFe.png used on input line 968.
 (pdftex.def)             Requested size: 124.87943pt x 63.44754pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/bio_fpart_POFe.png, id
-=553, 246.64624pt x 125.3122pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/bio_fpart_POFe.pn
-g Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/bio_fpart_POFe.png, id=551, 246.64624pt x 125.3122pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/bio_fpart_POFe.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/bio_fpart_POFe.png
->
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/bio_fpart_POFe.png used on input line 982.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/bio_fpart_POFe.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/bio_fpart_POFe.png used on input line 974.
 (pdftex.def)             Requested size: 124.87943pt x 63.44754pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_POFe_diff.png, id=554,
- 246.64624pt x 125.3122pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_POFe_diff.png Gra
-phic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fp
+art_POFe_diff.png, id=552, 246.64624pt x 125.3122pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/b
+io_fpart_POFe_diff.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_POFe_diff.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpar
-t_POFe_diff.png used on input line 988.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bi
+o_fpart_POFe_diff.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/bio_fpart_POFe_diff.png used on input line 980.
 (pdftex.def)             Requested size: 124.87943pt x 63.44754pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/bio_fpart_POFe_clrbr.p
-ng, id=555, 272.50432pt x 27.18413pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/bio_fpart_POFe_cl
-rbr.png Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/bio_fpart_POFe_clrbr.png, id=553, 272.50432pt x 27.18413pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/bio_fpart_POFe_clrbr.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/bio_fpart_POFe_clr
-br.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/bio_fpart_POFe_clrbr.png used on input line 996.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/bio_fpart_POFe_clrbr.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/bio_fpart_POFe_clrbr.png used on input line 988.
 (pdftex.def)             Requested size: 185.42807pt x 18.4978pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_POFe_clrbr_diff.png, i
-d=556, 267.20009pt x 27.18413pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_POFe_clrbr_diff.p
-ng Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fp
+art_POFe_clrbr_diff.png, id=554, 267.20009pt x 27.18413pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/b
+io_fpart_POFe_clrbr_diff.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_POFe_clrbr_diff.pn
-g>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpar
-t_POFe_clrbr_diff.png used on input line 1000.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bi
+o_fpart_POFe_clrbr_diff.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/bio_fpart_POFe_clrbr_diff.png used on input line 992.
 (pdftex.def)             Requested size: 185.42807pt x 18.86531pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_CaCO3.png, id=557, 246
-.64624pt x 125.3122pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_CaCO3.png Graphic
- file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fp
+art_CaCO3.png, id=555, 246.64624pt x 125.3122pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/b
+io_fpart_CaCO3.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_CaCO3.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpar
-t_CaCO3.png used on input line 1008.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bi
+o_fpart_CaCO3.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/bio_fpart_CaCO3.png used on input line 1000.
 (pdftex.def)             Requested size: 124.87943pt x 63.44754pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/bio_fpart_CaCO3.png, i
-d=558, 246.64624pt x 125.3122pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/bio_fpart_CaCO3.p
-ng Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/bio_fpart_CaCO3.png, id=556, 246.64624pt x 125.3122pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/bio_fpart_CaCO3.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/bio_fpart_CaCO3.pn
-g>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/bio_fpart_CaCO3.png used on input line 1014.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/bio_fpart_CaCO3.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/bio_fpart_CaCO3.png used on input line 1006.
 (pdftex.def)             Requested size: 124.87943pt x 63.44754pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_CaCO3_diff.png, id=559
-, 246.64624pt x 125.3122pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_CaCO3_diff.png Gr
-aphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fp
+art_CaCO3_diff.png, id=557, 246.64624pt x 125.3122pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/b
+io_fpart_CaCO3_diff.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_CaCO3_diff.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpar
-t_CaCO3_diff.png used on input line 1020.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bi
+o_fpart_CaCO3_diff.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/bio_fpart_CaCO3_diff.png used on input line 1012.
 (pdftex.def)             Requested size: 124.87943pt x 63.44754pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/bio_fpart_CaCO3_clrbr.
-png, id=560, 269.18918pt x 27.18413pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/bio_fpart_CaCO3_c
-lrbr.png Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/bio_fpart_CaCO3_clrbr.png, id=558, 269.18918pt x 27.18413pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/bio_fpart_CaCO3_clrbr.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/bio_fpart_CaCO3_cl
-rbr.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/bio_fpart_CaCO3_clrbr.png used on input line 1028.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/bio_fpart_CaCO3_clrbr.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/bio_fpart_CaCO3_clrbr.png used on input line 1020.
 (pdftex.def)             Requested size: 185.42807pt x 18.72552pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_CaCO3_clrbr_diff.png, 
-id=561, 267.20009pt x 27.18413pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_CaCO3_clrbr_diff.
-png Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fp
+art_CaCO3_clrbr_diff.png, id=559, 267.20009pt x 27.18413pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/b
+io_fpart_CaCO3_clrbr_diff.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_CaCO3_clrbr_diff.p
-ng>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpar
-t_CaCO3_clrbr_diff.png used on input line 1032.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bi
+o_fpart_CaCO3_clrbr_diff.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/bio_fpart_CaCO3_clrbr_diff.png used on input line 1024.
 (pdftex.def)             Requested size: 185.42807pt x 18.86531pt.
- [21 <./Figures/surface_p_an.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.S
-PIN/ocn_PO4.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn
-_PO4.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_PO4_cl
-rbr.png> </Users/ward/cgenie_output/Tagliabue_data/surface_fe.png> <./Figures/B
-ENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/ocn_TDFe.png> <./Figures/BENW.worjh2.PO4Fe
-TDTL_HYBRID_WF16_tgld_new.SPIN/ocn_TDFe.png> <./Figures/BENW.worjh2.PO4FeTDTL_H
-YBRID_WF16_tgld_new.SPIN/ocn_TDFe_clrbr.png>] [22 <./Figures/surface_TCO2.png> 
-<./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/ocn_DIC.png> <./Figures/BENW.w
-orjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_DIC.png> <./Figures/BENW.worjh2.P
-O4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_DIC_clrbr.png> <./Figures/surface_PALK.p
-ng> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/ocn_ALK.png> <./Figures/BE
-NW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_ALK.png> <./Figures/BENW.worj
-h2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_ALK_clrbr.png> <./Figures/surface_o_
-an.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/ocn_O2.png> <./Figures
-/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_O2.png> <./Figures/BENW.wo
-rjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_O2_clrbr.png> <./Figures/BENW.worj
-h2.PO4FeTDTL_HYBRID_new.SPIN/atm_dpCO2.png> <./Figures/BENW.worjh2.PO4FeTDTL_HY
-BRID_WF16_tgld_new.SPIN/atm_dpCO2.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_
-WF16_tgld_new.SPIN/atm_dpCO2_clrbr.png>] [23 <./Figures/BENW.worjh2.PO4FeTDTL_H
-YBRID_new.SPIN/bio_fpart_POC.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_
-tgld_new.SPIN/bio_fpart_POC.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SP
-IN/bio_fpart_POC_diff.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_ne
-w.SPIN/bio_fpart_POC_clrbr.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPI
-N/bio_fpart_POC_clrbr_diff.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPI
-N/bio_fpart_POP.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
-/bio_fpart_POP.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_
-POP_diff.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/bio_fp
-art_POP_clrbr.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_P
-OP_clrbr_diff.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_P
-OFe.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/bio_fpart_P
-OFe.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_POFe_diff.p
-ng> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/bio_fpart_POFe_c
-lrbr.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_POFe_clrbr
-_diff.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_CaCO3.png
-> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/bio_fpart_CaCO3.pn
-g> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_CaCO3_diff.png> <
-./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/bio_fpart_CaCO3_clrbr
-.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/bio_fpart_CaCO3_clrbr_di
-ff.png>] <Figures/3basins.png, id=623, 246.64624pt x 125.3122pt>
-File: Figures/3basins.png Graphic file (type png)
+ [22 </Users/ward/cgenie_output/WOA_2009_data/surface_p_an.png> </Users/ward/cg
+enie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/ocn_PO4.png> </Users/
+ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_
+PO4.png> </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.
+SPIN/figures/ocn_PO4_clrbr.png> </Users/ward/cgenie_output/Tagliabue_data/surfa
+ce_fe.png> </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/fig
+ures/ocn_TDFe.png> </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16
+_tgld_new.SPIN/figures/ocn_TDFe.png> </Users/ward/cgenie_output/BENW.worjh2.PO4
+FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_TDFe_clrbr.png>] [23 </Users/ward/
+cgenie_output/GLODAP_data/surface_TCO2.png> </Users/ward/cgenie_output/BENW.wor
+jh2.PO4FeTDTL_HYBRID_new.SPIN/figures/ocn_DIC.png> </Users/ward/cgenie_output/B
+ENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_DIC.png> </Users/war
+d/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_DIC
+_clrbr.png> </Users/ward/cgenie_output/GLODAP_data/surface_PALK.png> </Users/wa
+rd/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/ocn_ALK.png> </U
+sers/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures
+/ocn_ALK.png> </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld
+_new.SPIN/figures/ocn_ALK_clrbr.png> </Users/ward/cgenie_output/WOA_2009_data/s
+urface_o_an.png> </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SP
+IN/figures/ocn_O2.png> </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_
+WF16_tgld_new.SPIN/figures/ocn_O2.png> </Users/ward/cgenie_output/BENW.worjh2.P
+O4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_O2_clrbr.png> </Users/ward/cgeni
+e_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/atm_dpCO2.png> </Users/w
+ard/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/atm_d
+pCO2.png> </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new
+.SPIN/figures/atm_dpCO2_clrbr.png>] [24 </Users/ward/cgenie_output/BENW.worjh2.
+PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart_POC.png> </Users/ward/cgenie_output
+/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/bio_fpart_POC.png> </U
+sers/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart
+_POC_diff.png> </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgl
+d_new.SPIN/figures/bio_fpart_POC_clrbr.png> </Users/ward/cgenie_output/BENW.wor
+jh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart_POC_clrbr_diff.png> </Users/war
+d/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart_POP.png
+> </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/fi
+gures/bio_fpart_POP.png> </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRI
+D_new.SPIN/figures/bio_fpart_POP_diff.png> </Users/ward/cgenie_output/BENW.worj
+h2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/bio_fpart_POP_clrbr.png> </Users
+/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart_POP
+_clrbr_diff.png> </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SP
+IN/figures/bio_fpart_POFe.png> </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL
+_HYBRID_WF16_tgld_new.SPIN/figures/bio_fpart_POFe.png> </Users/ward/cgenie_outp
+ut/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart_POFe_diff.png> </Use
+rs/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/b
+io_fpart_POFe_clrbr.png> </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRI
+D_new.SPIN/figures/bio_fpart_POFe_clrbr_diff.png> </Users/ward/cgenie_output/BE
+NW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart_CaCO3.png> </Users/ward/c
+genie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/bio_fpart_
+CaCO3.png> </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/fig
+ures/bio_fpart_CaCO3_diff.png> </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL
+_HYBRID_WF16_tgld_new.SPIN/figures/bio_fpart_CaCO3_clrbr.png> </Users/ward/cgen
+ie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart_CaCO3_clrbr_d
+iff.png>]
+</Users/ward/cgenie_output/EXAMPLE.worjh2.PO4FeTDTL_HYBRID.SPIN/figures/3basins
+.png, id=623, 246.64624pt x 125.3122pt>
+File: /Users/ward/cgenie_output/EXAMPLE.worjh2.PO4FeTDTL_HYBRID.SPIN/figures/3b
+asins.png Graphic file (type png)
 
-<use Figures/3basins.png>
-Package pdftex.def Info: Figures/3basins.png used on input line 1055.
+<use /Users/ward/cgenie_output/EXAMPLE.worjh2.PO4FeTDTL_HYBRID.SPIN/figures/3ba
+sins.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/EXAMPLE.worjh2.PO4FeTDTL_HYB
+RID.SPIN/figures/3basins.png used on input line 1047.
 (pdftex.def)             Requested size: 199.16928pt x 101.19255pt.
 
-<Figures/Atlantic_p_an_profile.png, id=626, 291.06908pt x 153.15936pt>
-File: Figures/Atlantic_p_an_profile.png Graphic file (type png)
+</Users/ward/cgenie_output/WOA_2009_data/Atlantic_p_an_profile.png, id=626, 291
+.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/WOA_2009_data/Atlantic_p_an_profile.png Graphic
+ file (type png)
 
-<use Figures/Atlantic_p_an_profile.png>
-Package pdftex.def Info: Figures/Atlantic_p_an_profile.png used on input line 1
-064.
+<use /Users/ward/cgenie_output/WOA_2009_data/Atlantic_p_an_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/WOA_2009_data/Atlantic_p_an_
+profile.png used on input line 1056.
 (pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Atlantic_ocn_PO4_profile.png, id
-=627, 291.06908pt x 153.15936pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Atlantic_ocn_PO4_profile.pn
-g Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Atlant
+ic_ocn_PO4_profile.png, id=627, 291.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/A
+tlantic_ocn_PO4_profile.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Atlantic_ocn_PO4_profile.png
->
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Atlantic
-_ocn_PO4_profile.png used on input line 1070.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/At
+lantic_ocn_PO4_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/Atlantic_ocn_PO4_profile.png used on input line 1062.
 (pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Atlantic_ocn_PO4_profi
-le.png, id=628, 291.06908pt x 153.15936pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Atlantic_ocn_PO4_
-profile.png Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/Atlantic_ocn_PO4_profile.png, id=628, 291.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/Atlantic_ocn_PO4_profile.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Atlantic_ocn_PO4_p
-rofile.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/Atlantic_ocn_PO4_profile.png used on input line 1076.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/Atlantic_ocn_PO4_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/Atlantic_ocn_PO4_profile.png used on input line 106
+8.
 (pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
 
-<Figures/Indian_p_an_profile.png, id=629, 291.06908pt x 153.15936pt>
-File: Figures/Indian_p_an_profile.png Graphic file (type png)
+</Users/ward/cgenie_output/WOA_2009_data/Indian_p_an_profile.png, id=629, 291.0
+6908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/WOA_2009_data/Indian_p_an_profile.png Graphic f
+ile (type png)
 
-<use Figures/Indian_p_an_profile.png>
-Package pdftex.def Info: Figures/Indian_p_an_profile.png used on input line 108
+<use /Users/ward/cgenie_output/WOA_2009_data/Indian_p_an_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/WOA_2009_data/Indian_p_an_pr
+ofile.png used on input line 1074.
+(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
+
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Indian
+_ocn_PO4_profile.png, id=630, 291.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/I
+ndian_ocn_PO4_profile.png Graphic file (type png)
+
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/In
+dian_ocn_PO4_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/Indian_ocn_PO4_profile.png used on input line 1080.
+(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
+
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/Indian_ocn_PO4_profile.png, id=631, 291.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/Indian_ocn_PO4_profile.png Graphic file (type png)
+
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/Indian_ocn_PO4_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/Indian_ocn_PO4_profile.png used on input line 1086.
+
+(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
+
+</Users/ward/cgenie_output/WOA_2009_data/Pacific_p_an_profile.png, id=632, 291.
+06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/WOA_2009_data/Pacific_p_an_profile.png Graphic 
+file (type png)
+
+<use /Users/ward/cgenie_output/WOA_2009_data/Pacific_p_an_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/WOA_2009_data/Pacific_p_an_p
+rofile.png used on input line 1092.
+(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
+
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Pacifi
+c_ocn_PO4_profile.png, id=633, 291.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/P
+acific_ocn_PO4_profile.png Graphic file (type png)
+
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Pa
+cific_ocn_PO4_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/Pacific_ocn_PO4_profile.png used on input line 1098.
+(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
+
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/Pacific_ocn_PO4_profile.png, id=634, 291.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/Pacific_ocn_PO4_profile.png Graphic file (type png)
+
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/Pacific_ocn_PO4_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/Pacific_ocn_PO4_profile.png used on input line 1104
+.
+(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
+
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/ocn_PO4_profile_clrbr.png, id=635, 264.54799pt x 27.18413pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/ocn_PO4_profile_clrbr.png Graphic file (type png)
+
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/ocn_PO4_profile_clrbr.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/ocn_PO4_profile_clrbr.png used on input line 1110.
+(pdftex.def)             Requested size: 189.2102pt x 19.44229pt.
+
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Atlant
+ic_ocn_TDFe_profile.png, id=636, 291.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/A
+tlantic_ocn_TDFe_profile.png Graphic file (type png)
+
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/At
+lantic_ocn_TDFe_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/Atlantic_ocn_TDFe_profile.png used on input line 1122.
+(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
+
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/Atlantic_ocn_TDFe_profile.png, id=637, 291.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/Atlantic_ocn_TDFe_profile.png Graphic file (type png)
+
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/Atlantic_ocn_TDFe_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/Atlantic_ocn_TDFe_profile.png used on input line 11
+28.
+(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
+
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Indian
+_ocn_TDFe_profile.png, id=638, 291.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/I
+ndian_ocn_TDFe_profile.png Graphic file (type png)
+
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/In
+dian_ocn_TDFe_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/Indian_ocn_TDFe_profile.png used on input line 1134.
+(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
+
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/Indian_ocn_TDFe_profile.png, id=639, 291.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/Indian_ocn_TDFe_profile.png Graphic file (type png)
+
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/Indian_ocn_TDFe_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/Indian_ocn_TDFe_profile.png used on input line 1140
+.
+(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
+
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Pacifi
+c_ocn_TDFe_profile.png, id=640, 291.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/P
+acific_ocn_TDFe_profile.png Graphic file (type png)
+
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Pa
+cific_ocn_TDFe_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/Pacific_ocn_TDFe_profile.png used on input line 1146.
+(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
+
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/Pacific_ocn_TDFe_profile.png, id=641, 291.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/Pacific_ocn_TDFe_profile.png Graphic file (type png)
+
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/Pacific_ocn_TDFe_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/Pacific_ocn_TDFe_profile.png used on input line 115
 2.
 (pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Indian_ocn_PO4_profile.png, id=6
-30, 291.06908pt x 153.15936pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Indian_ocn_PO4_profile.png 
-Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/ocn_TDFe_profile_clrbr.png, id=642, 262.5589pt x 40.44467pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/ocn_TDFe_profile_clrbr.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Indian_ocn_PO4_profile.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Indian_o
-cn_PO4_profile.png used on input line 1088.
-(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/ocn_TDFe_profile_clrbr.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/ocn_TDFe_profile_clrbr.png used on input line 1158.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Indian_ocn_PO4_profile
-.png, id=631, 291.06908pt x 153.15936pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Indian_ocn_PO4_pr
-ofile.png Graphic file (type png)
-
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Indian_ocn_PO4_pro
-file.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/Indian_ocn_PO4_profile.png used on input line 1094.
-(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
-
-<Figures/Pacific_p_an_profile.png, id=632, 291.06908pt x 153.15936pt>
-File: Figures/Pacific_p_an_profile.png Graphic file (type png)
-
-<use Figures/Pacific_p_an_profile.png>
-Package pdftex.def Info: Figures/Pacific_p_an_profile.png used on input line 11
-00.
-(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
-
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Pacific_ocn_PO4_profile.png, id=
-633, 291.06908pt x 153.15936pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Pacific_ocn_PO4_profile.png
- Graphic file (type png)
-
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Pacific_ocn_PO4_profile.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Pacific_
-ocn_PO4_profile.png used on input line 1106.
-(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
-
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Pacific_ocn_PO4_profil
-e.png, id=634, 291.06908pt x 153.15936pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Pacific_ocn_PO4_p
-rofile.png Graphic file (type png)
-
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Pacific_ocn_PO4_pr
-ofile.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/Pacific_ocn_PO4_profile.png used on input line 1112.
-(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
-
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_PO4_profile_clrbr.
-png, id=635, 264.54799pt x 27.18413pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_PO4_profile_c
-lrbr.png Graphic file (type png)
-
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_PO4_profile_cl
-rbr.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/ocn_PO4_profile_clrbr.png used on input line 1118.
-(pdftex.def)             Requested size: 189.2102pt x 19.44229pt.
-
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Atlantic_ocn_TDFe_profile.png, i
-d=636, 291.06908pt x 153.15936pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Atlantic_ocn_TDFe_profile.p
-ng Graphic file (type png)
-
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Atlantic_ocn_TDFe_profile.pn
-g>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Atlantic
-_ocn_TDFe_profile.png used on input line 1130.
-(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
-
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Atlantic_ocn_TDFe_prof
-ile.png, id=637, 291.06908pt x 153.15936pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Atlantic_ocn_TDFe
-_profile.png Graphic file (type png)
-
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Atlantic_ocn_TDFe_
-profile.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/Atlantic_ocn_TDFe_profile.png used on input line 1136.
-(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
-
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Indian_ocn_TDFe_profile.png, id=
-638, 291.06908pt x 153.15936pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Indian_ocn_TDFe_profile.png
- Graphic file (type png)
-
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Indian_ocn_TDFe_profile.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Indian_o
-cn_TDFe_profile.png used on input line 1142.
-(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
-
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Indian_ocn_TDFe_profil
-e.png, id=639, 291.06908pt x 153.15936pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Indian_ocn_TDFe_p
-rofile.png Graphic file (type png)
-
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Indian_ocn_TDFe_pr
-ofile.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/Indian_ocn_TDFe_profile.png used on input line 1148.
-(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
-
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Pacific_ocn_TDFe_profile.png, id
-=640, 291.06908pt x 153.15936pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Pacific_ocn_TDFe_profile.pn
-g Graphic file (type png)
-
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Pacific_ocn_TDFe_profile.png
->
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Pacific_
-ocn_TDFe_profile.png used on input line 1154.
-(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
-
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Pacific_ocn_TDFe_profi
-le.png, id=641, 291.06908pt x 153.15936pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Pacific_ocn_TDFe_
-profile.png Graphic file (type png)
-
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Pacific_ocn_TDFe_p
-rofile.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/Pacific_ocn_TDFe_profile.png used on input line 1160.
-(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
-
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_TDFe_profile_clrbr
-.png, id=642, 262.5589pt x 40.44467pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_TDFe_profile_
-clrbr.png Graphic file (type png)
-
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_TDFe_profile_c
-lrbr.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/ocn_TDFe_profile_clrbr.png used on input line 1166.
 (pdftex.def)             Requested size: 189.2102pt x 29.14667pt.
 
-<Figures/Atlantic_TCO2_profile.png, id=643, 291.06908pt x 153.15936pt>
-File: Figures/Atlantic_TCO2_profile.png Graphic file (type png)
+</Users/ward/cgenie_output/GLODAP_data/Atlantic_TCO2_profile.png, id=643, 291.0
+6908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/GLODAP_data/Atlantic_TCO2_profile.png Graphic f
+ile (type png)
 
-<use Figures/Atlantic_TCO2_profile.png>
-Package pdftex.def Info: Figures/Atlantic_TCO2_profile.png used on input line 1
-178.
+<use /Users/ward/cgenie_output/GLODAP_data/Atlantic_TCO2_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/GLODAP_data/Atlantic_TCO2_pr
+ofile.png used on input line 1170.
 (pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Atlantic_ocn_DIC_profile.png, id
-=644, 291.06908pt x 153.15936pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Atlantic_ocn_DIC_profile.pn
-g Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Atlant
+ic_ocn_DIC_profile.png, id=644, 291.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/A
+tlantic_ocn_DIC_profile.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Atlantic_ocn_DIC_profile.png
->
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Atlantic
-_ocn_DIC_profile.png used on input line 1184.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/At
+lantic_ocn_DIC_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/Atlantic_ocn_DIC_profile.png used on input line 1176.
 (pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Atlantic_ocn_DIC_profi
-le.png, id=645, 291.06908pt x 153.15936pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Atlantic_ocn_DIC_
-profile.png Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/Atlantic_ocn_DIC_profile.png, id=645, 291.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/Atlantic_ocn_DIC_profile.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Atlantic_ocn_DIC_p
-rofile.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/Atlantic_ocn_DIC_profile.png used on input line 1190.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/Atlantic_ocn_DIC_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/Atlantic_ocn_DIC_profile.png used on input line 118
+2.
 (pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
 
-<Figures/Indian_TCO2_profile.png, id=646, 291.06908pt x 153.15936pt>
-File: Figures/Indian_TCO2_profile.png Graphic file (type png)
+</Users/ward/cgenie_output/GLODAP_data/Indian_TCO2_profile.png, id=646, 291.069
+08pt x 153.15936pt>
+File: /Users/ward/cgenie_output/GLODAP_data/Indian_TCO2_profile.png Graphic fil
+e (type png)
 
-<use Figures/Indian_TCO2_profile.png>
-Package pdftex.def Info: Figures/Indian_TCO2_profile.png used on input line 119
-6.
+<use /Users/ward/cgenie_output/GLODAP_data/Indian_TCO2_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/GLODAP_data/Indian_TCO2_prof
+ile.png used on input line 1188.
 (pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Indian_ocn_DIC_profile.png, id=6
-47, 291.06908pt x 153.15936pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Indian_ocn_DIC_profile.png 
-Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Indian
+_ocn_DIC_profile.png, id=647, 291.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/I
+ndian_ocn_DIC_profile.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Indian_ocn_DIC_profile.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Indian_o
-cn_DIC_profile.png used on input line 1202.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/In
+dian_ocn_DIC_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/Indian_ocn_DIC_profile.png used on input line 1194.
 (pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Indian_ocn_DIC_profile
-.png, id=648, 291.06908pt x 153.15936pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Indian_ocn_DIC_pr
-ofile.png Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/Indian_ocn_DIC_profile.png, id=648, 291.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/Indian_ocn_DIC_profile.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Indian_ocn_DIC_pro
-file.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/Indian_ocn_DIC_profile.png used on input line 1208.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/Indian_ocn_DIC_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/Indian_ocn_DIC_profile.png used on input line 1200.
+
 (pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
 
-<Figures/Pacific_TCO2_profile.png, id=649, 291.06908pt x 153.15936pt>
-File: Figures/Pacific_TCO2_profile.png Graphic file (type png)
+</Users/ward/cgenie_output/GLODAP_data/Pacific_TCO2_profile.png, id=649, 291.06
+908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/GLODAP_data/Pacific_TCO2_profile.png Graphic fi
+le (type png)
 
-<use Figures/Pacific_TCO2_profile.png>
-Package pdftex.def Info: Figures/Pacific_TCO2_profile.png used on input line 12
-14.
+<use /Users/ward/cgenie_output/GLODAP_data/Pacific_TCO2_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/GLODAP_data/Pacific_TCO2_pro
+file.png used on input line 1206.
 (pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Pacific_ocn_DIC_profile.png, id=
-650, 291.06908pt x 153.15936pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Pacific_ocn_DIC_profile.png
- Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Pacifi
+c_ocn_DIC_profile.png, id=650, 291.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/P
+acific_ocn_DIC_profile.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Pacific_ocn_DIC_profile.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Pacific_
-ocn_DIC_profile.png used on input line 1220.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Pa
+cific_ocn_DIC_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/Pacific_ocn_DIC_profile.png used on input line 1212.
 (pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Pacific_ocn_DIC_profil
-e.png, id=651, 291.06908pt x 153.15936pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Pacific_ocn_DIC_p
-rofile.png Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/Pacific_ocn_DIC_profile.png, id=651, 291.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/Pacific_ocn_DIC_profile.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Pacific_ocn_DIC_pr
-ofile.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/Pacific_ocn_DIC_profile.png used on input line 1226.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/Pacific_ocn_DIC_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/Pacific_ocn_DIC_profile.png used on input line 1218
+.
 (pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_DIC_profile_clrbr.
-png, id=652, 279.13458pt x 27.18413pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_DIC_profile_c
-lrbr.png Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/ocn_DIC_profile_clrbr.png, id=652, 279.13458pt x 27.18413pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/ocn_DIC_profile_clrbr.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_DIC_profile_cl
-rbr.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/ocn_DIC_profile_clrbr.png used on input line 1232.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/ocn_DIC_profile_clrbr.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/ocn_DIC_profile_clrbr.png used on input line 1224.
 (pdftex.def)             Requested size: 189.2102pt x 18.42686pt.
 
-<Figures/Atlantic_PALK_profile.png, id=653, 291.06908pt x 153.15936pt>
-File: Figures/Atlantic_PALK_profile.png Graphic file (type png)
+</Users/ward/cgenie_output/GLODAP_data/Atlantic_PALK_profile.png, id=653, 291.0
+6908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/GLODAP_data/Atlantic_PALK_profile.png Graphic f
+ile (type png)
 
-<use Figures/Atlantic_PALK_profile.png>
-Package pdftex.def Info: Figures/Atlantic_PALK_profile.png used on input line 1
-243.
+<use /Users/ward/cgenie_output/GLODAP_data/Atlantic_PALK_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/GLODAP_data/Atlantic_PALK_pr
+ofile.png used on input line 1235.
 (pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Atlantic_ocn_ALK_profile.png, id
-=654, 291.06908pt x 153.15936pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Atlantic_ocn_ALK_profile.pn
-g Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Atlant
+ic_ocn_ALK_profile.png, id=654, 291.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/A
+tlantic_ocn_ALK_profile.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Atlantic_ocn_ALK_profile.png
->
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Atlantic
-_ocn_ALK_profile.png used on input line 1249.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/At
+lantic_ocn_ALK_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/Atlantic_ocn_ALK_profile.png used on input line 1241.
 (pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Atlantic_ocn_ALK_profi
-le.png, id=655, 291.06908pt x 153.15936pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Atlantic_ocn_ALK_
-profile.png Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/Atlantic_ocn_ALK_profile.png, id=655, 291.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/Atlantic_ocn_ALK_profile.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Atlantic_ocn_ALK_p
-rofile.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/Atlantic_ocn_ALK_profile.png used on input line 1255.
-(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
-
-<Figures/Indian_PALK_profile.png, id=656, 291.06908pt x 153.15936pt>
-File: Figures/Indian_PALK_profile.png Graphic file (type png)
-
-<use Figures/Indian_PALK_profile.png>
-Package pdftex.def Info: Figures/Indian_PALK_profile.png used on input line 126
-1.
-(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
-
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Indian_ocn_ALK_profile.png, id=6
-57, 291.06908pt x 153.15936pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Indian_ocn_ALK_profile.png 
-Graphic file (type png)
-
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Indian_ocn_ALK_profile.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Indian_o
-cn_ALK_profile.png used on input line 1267.
-(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
-
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Indian_ocn_ALK_profile
-.png, id=658, 291.06908pt x 153.15936pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Indian_ocn_ALK_pr
-ofile.png Graphic file (type png)
-
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Indian_ocn_ALK_pro
-file.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/Indian_ocn_ALK_profile.png used on input line 1273.
-(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
-
-<Figures/Pacific_PALK_profile.png, id=659, 291.06908pt x 153.15936pt>
-File: Figures/Pacific_PALK_profile.png Graphic file (type png)
-
-<use Figures/Pacific_PALK_profile.png>
-Package pdftex.def Info: Figures/Pacific_PALK_profile.png used on input line 12
-79.
-(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
-
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Pacific_ocn_ALK_profile.png, id=
-660, 291.06908pt x 153.15936pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Pacific_ocn_ALK_profile.png
- Graphic file (type png)
-
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Pacific_ocn_ALK_profile.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Pacific_
-ocn_ALK_profile.png used on input line 1285.
-(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
-
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Pacific_ocn_ALK_profil
-e.png, id=661, 291.06908pt x 153.15936pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Pacific_ocn_ALK_p
-rofile.png Graphic file (type png)
-
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Pacific_ocn_ALK_pr
-ofile.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/Pacific_ocn_ALK_profile.png used on input line 1291.
-(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
-
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_ALK_profile_clrbr.
-png, id=662, 279.7976pt x 27.18413pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_ALK_profile_c
-lrbr.png Graphic file (type png)
-
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_ALK_profile_cl
-rbr.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/ocn_ALK_profile_clrbr.png used on input line 1297.
-(pdftex.def)             Requested size: 189.2102pt x 18.3829pt.
-
-<Figures/Atlantic_o_an_profile.png, id=663, 291.06908pt x 153.15936pt>
-File: Figures/Atlantic_o_an_profile.png Graphic file (type png)
-
-<use Figures/Atlantic_o_an_profile.png>
-Package pdftex.def Info: Figures/Atlantic_o_an_profile.png used on input line 1
-309.
-(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
-
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Atlantic_ocn_O2_profile.png, id=
-664, 291.06908pt x 153.15936pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Atlantic_ocn_O2_profile.png
- Graphic file (type png)
-
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Atlantic_ocn_O2_profile.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Atlantic
-_ocn_O2_profile.png used on input line 1315.
-(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
-
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Atlantic_ocn_O2_profil
-e.png, id=665, 291.06908pt x 153.15936pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Atlantic_ocn_O2_p
-rofile.png Graphic file (type png)
-
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Atlantic_ocn_O2_pr
-ofile.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/Atlantic_ocn_O2_profile.png used on input line 1321.
-(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
-
-<Figures/Indian_o_an_profile.png, id=666, 291.06908pt x 153.15936pt>
-File: Figures/Indian_o_an_profile.png Graphic file (type png)
-
-<use Figures/Indian_o_an_profile.png>
-Package pdftex.def Info: Figures/Indian_o_an_profile.png used on input line 132
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/Atlantic_ocn_ALK_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/Atlantic_ocn_ALK_profile.png used on input line 124
 7.
 (pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Indian_ocn_O2_profile.png, id=66
-7, 291.06908pt x 153.15936pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Indian_ocn_O2_profile.png G
-raphic file (type png)
+</Users/ward/cgenie_output/GLODAP_data/Indian_PALK_profile.png, id=656, 291.069
+08pt x 153.15936pt>
+File: /Users/ward/cgenie_output/GLODAP_data/Indian_PALK_profile.png Graphic fil
+e (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Indian_ocn_O2_profile.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Indian_o
-cn_O2_profile.png used on input line 1333.
+<use /Users/ward/cgenie_output/GLODAP_data/Indian_PALK_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/GLODAP_data/Indian_PALK_prof
+ile.png used on input line 1253.
 (pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Indian_ocn_O2_profile.
-png, id=668, 291.06908pt x 153.15936pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Indian_ocn_O2_pro
-file.png Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Indian
+_ocn_ALK_profile.png, id=657, 291.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/I
+ndian_ocn_ALK_profile.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Indian_ocn_O2_prof
-ile.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/Indian_ocn_O2_profile.png used on input line 1339.
-(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
- <Figures/Pacific_o_an_profile.png, id=669, 291.06908pt x 153.15936pt>
-File: Figures/Pacific_o_an_profile.png Graphic file (type png)
-
-<use Figures/Pacific_o_an_profile.png>
-Package pdftex.def Info: Figures/Pacific_o_an_profile.png used on input line 13
-45.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/In
+dian_ocn_ALK_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/Indian_ocn_ALK_profile.png used on input line 1259.
 (pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Pacific_ocn_O2_profile.png, id=6
-70, 291.06908pt x 153.15936pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Pacific_ocn_O2_profile.png 
-Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/Indian_ocn_ALK_profile.png, id=658, 291.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/Indian_ocn_ALK_profile.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Pacific_ocn_O2_profile.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Pacific_
-ocn_O2_profile.png used on input line 1351.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/Indian_ocn_ALK_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/Indian_ocn_ALK_profile.png used on input line 1265.
+
 (pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Pacific_ocn_O2_profile
-.png, id=671, 291.06908pt x 153.15936pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Pacific_ocn_O2_pr
-ofile.png Graphic file (type png)
+</Users/ward/cgenie_output/GLODAP_data/Pacific_PALK_profile.png, id=659, 291.06
+908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/GLODAP_data/Pacific_PALK_profile.png Graphic fi
+le (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Pacific_ocn_O2_pro
-file.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/Pacific_ocn_O2_profile.png used on input line 1357.
+<use /Users/ward/cgenie_output/GLODAP_data/Pacific_PALK_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/GLODAP_data/Pacific_PALK_pro
+file.png used on input line 1271.
 (pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_O2_profile_clrbr.p
-ng, id=672, 269.8522pt x 27.18413pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_O2_profile_cl
-rbr.png Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Pacifi
+c_ocn_ALK_profile.png, id=660, 291.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/P
+acific_ocn_ALK_profile.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_O2_profile_clr
-br.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/ocn_O2_profile_clrbr.png used on input line 1363.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Pa
+cific_ocn_ALK_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/Pacific_ocn_ALK_profile.png used on input line 1277.
+(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
+
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/Pacific_ocn_ALK_profile.png, id=661, 291.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/Pacific_ocn_ALK_profile.png Graphic file (type png)
+
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/Pacific_ocn_ALK_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/Pacific_ocn_ALK_profile.png used on input line 1283
+.
+(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
+
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/ocn_ALK_profile_clrbr.png, id=662, 279.7976pt x 27.18413pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/ocn_ALK_profile_clrbr.png Graphic file (type png)
+
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/ocn_ALK_profile_clrbr.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/ocn_ALK_profile_clrbr.png used on input line 1289.
+(pdftex.def)             Requested size: 189.2102pt x 18.3829pt.
+
+</Users/ward/cgenie_output/WOA_2009_data/Atlantic_o_an_profile.png, id=663, 291
+.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/WOA_2009_data/Atlantic_o_an_profile.png Graphic
+ file (type png)
+
+<use /Users/ward/cgenie_output/WOA_2009_data/Atlantic_o_an_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/WOA_2009_data/Atlantic_o_an_
+profile.png used on input line 1301.
+(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
+
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Atlant
+ic_ocn_O2_profile.png, id=664, 291.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/A
+tlantic_ocn_O2_profile.png Graphic file (type png)
+
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/At
+lantic_ocn_O2_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/Atlantic_ocn_O2_profile.png used on input line 1307.
+(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
+
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/Atlantic_ocn_O2_profile.png, id=665, 291.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/Atlantic_ocn_O2_profile.png Graphic file (type png)
+
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/Atlantic_ocn_O2_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/Atlantic_ocn_O2_profile.png used on input line 1313
+.
+(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
+
+</Users/ward/cgenie_output/WOA_2009_data/Indian_o_an_profile.png, id=666, 291.0
+6908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/WOA_2009_data/Indian_o_an_profile.png Graphic f
+ile (type png)
+
+<use /Users/ward/cgenie_output/WOA_2009_data/Indian_o_an_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/WOA_2009_data/Indian_o_an_pr
+ofile.png used on input line 1319.
+(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
+
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Indian
+_ocn_O2_profile.png, id=667, 291.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/I
+ndian_ocn_O2_profile.png Graphic file (type png)
+
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/In
+dian_ocn_O2_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/Indian_ocn_O2_profile.png used on input line 1325.
+(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
+
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/Indian_ocn_O2_profile.png, id=668, 291.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/Indian_ocn_O2_profile.png Graphic file (type png)
+
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/Indian_ocn_O2_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/Indian_ocn_O2_profile.png used on input line 1331.
+(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
+
+</Users/ward/cgenie_output/WOA_2009_data/Pacific_o_an_profile.png, id=669, 291.
+06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/WOA_2009_data/Pacific_o_an_profile.png Graphic 
+file (type png)
+
+<use /Users/ward/cgenie_output/WOA_2009_data/Pacific_o_an_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/WOA_2009_data/Pacific_o_an_p
+rofile.png used on input line 1337.
+(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
+
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Pacifi
+c_ocn_O2_profile.png, id=670, 291.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/P
+acific_ocn_O2_profile.png Graphic file (type png)
+
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Pa
+cific_ocn_O2_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_new.SPIN/figures/Pacific_ocn_O2_profile.png used on input line 1343.
+(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
+
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/Pacific_ocn_O2_profile.png, id=671, 291.06908pt x 153.15936pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/Pacific_ocn_O2_profile.png Graphic file (type png)
+
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/Pacific_ocn_O2_profile.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/Pacific_ocn_O2_profile.png used on input line 1349.
+
+(pdftex.def)             Requested size: 124.87943pt x 65.71233pt.
+
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/ocn_O2_profile_clrbr.png, id=672, 269.8522pt x 27.18413pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/ocn_O2_profile_clrbr.png Graphic file (type png)
+
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/ocn_O2_profile_clrbr.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/ocn_O2_profile_clrbr.png used on input line 1355.
 (pdftex.def)             Requested size: 189.2102pt x 19.06067pt.
- [24
+ [25
 
- <./Figures/3basins.png>] [25 <./Figures/Atlantic_p_an_profile.png> <./Figures/
-BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Atlantic_ocn_PO4_profile.png> <./Figures/
-BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Atlantic_ocn_PO4_profile.png> <
-./Figures/Indian_p_an_profile.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.
-SPIN/Indian_ocn_PO4_profile.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_t
-gld_new.SPIN/Indian_ocn_PO4_profile.png> <./Figures/Pacific_p_an_profile.png> <
-./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Pacific_ocn_PO4_profile.png> <.
-/Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Pacific_ocn_PO4_profil
-e.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_PO4_profi
-le_clrbr.png>] [26 <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Atlantic_oc
-n_TDFe_profile.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
-Atlantic_ocn_TDFe_profile.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN
-/Indian_ocn_TDFe_profile.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld
-_new.SPIN/Indian_ocn_TDFe_profile.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_
-new.SPIN/Pacific_ocn_TDFe_profile.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_
-WF16_tgld_new.SPIN/Pacific_ocn_TDFe_profile.png> <./Figures/BENW.worjh2.PO4FeTD
-TL_HYBRID_WF16_tgld_new.SPIN/ocn_TDFe_profile_clrbr.png>] [27 <./Figures/Atlant
-ic_TCO2_profile.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Atlantic_
-ocn_DIC_profile.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
-/Atlantic_ocn_DIC_profile.png> <./Figures/Indian_TCO2_profile.png> <./Figures/B
-ENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Indian_ocn_DIC_profile.png> <./Figures/BEN
-W.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Indian_ocn_DIC_profile.png> <./Fig
-ures/Pacific_TCO2_profile.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN
-/Pacific_ocn_DIC_profile.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld
-_new.SPIN/Pacific_ocn_DIC_profile.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_
-WF16_tgld_new.SPIN/ocn_DIC_profile_clrbr.png>] [28 <./Figures/Atlantic_PALK_pro
-file.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Atlantic_ocn_ALK_pro
-file.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Atlantic_o
-cn_ALK_profile.png> <./Figures/Indian_PALK_profile.png> <./Figures/BENW.worjh2.
-PO4FeTDTL_HYBRID_new.SPIN/Indian_ocn_ALK_profile.png> <./Figures/BENW.worjh2.PO
-4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Indian_ocn_ALK_profile.png> <./Figures/Pacifi
-c_PALK_profile.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Pacific_oc
-n_ALK_profile.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/P
-acific_ocn_ALK_profile.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_n
-ew.SPIN/ocn_ALK_profile_clrbr.png>] [29 <./Figures/Atlantic_o_an_profile.png> <
-./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Atlantic_ocn_O2_profile.png> <.
-/Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Atlantic_ocn_O2_profil
-e.png> <./Figures/Indian_o_an_profile.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYB
-RID_new.SPIN/Indian_ocn_O2_profile.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID
-_WF16_tgld_new.SPIN/Indian_ocn_O2_profile.png> <./Figures/Pacific_o_an_profile.
-png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/Pacific_ocn_O2_profile.pn
-g> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Pacific_ocn_O2_pr
-ofile.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/ocn_O2_pr
-ofile_clrbr.png>]
+] [26 </Users/ward/cgenie_output/EXAMPLE.worjh2.PO4FeTDTL_HYBRID.SPIN/figures/3
+basins.png> </Users/ward/cgenie_output/WOA_2009_data/Atlantic_p_an_profile.png>
+ </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Atlan
+tic_ocn_PO4_profile.png> </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRI
+D_WF16_tgld_new.SPIN/figures/Atlantic_ocn_PO4_profile.png> </Users/ward/cgenie_
+output/WOA_2009_data/Indian_p_an_profile.png> </Users/ward/cgenie_output/BENW.w
+orjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Indian_ocn_PO4_profile.png> </Users/war
+d/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Indian_
+ocn_PO4_profile.png> </Users/ward/cgenie_output/WOA_2009_data/Pacific_p_an_prof
+ile.png> </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figur
+es/Pacific_ocn_PO4_profile.png> </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDT
+L_HYBRID_WF16_tgld_new.SPIN/figures/Pacific_ocn_PO4_profile.png> </Users/ward/c
+genie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_PO4_pr
+ofile_clrbr.png>] [27 </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_n
+ew.SPIN/figures/Atlantic_ocn_TDFe_profile.png> </Users/ward/cgenie_output/BENW.
+worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Atlantic_ocn_TDFe_profile.pn
+g> </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Ind
+ian_ocn_TDFe_profile.png> </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBR
+ID_WF16_tgld_new.SPIN/figures/Indian_ocn_TDFe_profile.png> </Users/ward/cgenie_
+output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Pacific_ocn_TDFe_profile.p
+ng> </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/Pacific_ocn_TDFe_profile.png> </Users/ward/cgenie_output/BENW.worjh2.PO
+4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_TDFe_profile_clrbr.png>] [28 </Us
+ers/ward/cgenie_output/GLODAP_data/Atlantic_TCO2_profile.png> </Users/ward/cgen
+ie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Atlantic_ocn_DIC_profil
+e.png> </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SP
+IN/figures/Atlantic_ocn_DIC_profile.png> </Users/ward/cgenie_output/GLODAP_data
+/Indian_TCO2_profile.png> </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBR
+ID_new.SPIN/figures/Indian_ocn_DIC_profile.png> </Users/ward/cgenie_output/BENW
+.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Indian_ocn_DIC_profile.png>
+ </Users/ward/cgenie_output/GLODAP_data/Pacific_TCO2_profile.png> </Users/ward/
+cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Pacific_ocn_DIC_pro
+file.png> </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new
+.SPIN/figures/Pacific_ocn_DIC_profile.png> </Users/ward/cgenie_output/BENW.worj
+h2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_DIC_profile_clrbr.png>] [29 
+</Users/ward/cgenie_output/GLODAP_data/Atlantic_PALK_profile.png> </Users/ward/
+cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Atlantic_ocn_ALK_pr
+ofile.png> </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_ne
+w.SPIN/figures/Atlantic_ocn_ALK_profile.png> </Users/ward/cgenie_output/GLODAP_
+data/Indian_PALK_profile.png> </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_
+HYBRID_new.SPIN/figures/Indian_ocn_ALK_profile.png> </Users/ward/cgenie_output/
+BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Indian_ocn_ALK_profile.
+png> </Users/ward/cgenie_output/GLODAP_data/Pacific_PALK_profile.png> </Users/w
+ard/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Pacific_ocn_ALK
+_profile.png> </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld
+_new.SPIN/figures/Pacific_ocn_ALK_profile.png> </Users/ward/cgenie_output/BENW.
+worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_ALK_profile_clrbr.png>] 
+[30 </Users/ward/cgenie_output/WOA_2009_data/Atlantic_o_an_profile.png> </Users
+/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Atlantic_ocn_
+O2_profile.png> </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tg
+ld_new.SPIN/figures/Atlantic_ocn_O2_profile.png> </Users/ward/cgenie_output/WOA
+_2009_data/Indian_o_an_profile.png> </Users/ward/cgenie_output/BENW.worjh2.PO4F
+eTDTL_HYBRID_new.SPIN/figures/Indian_ocn_O2_profile.png> </Users/ward/cgenie_ou
+tput/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Indian_ocn_O2_prof
+ile.png> </Users/ward/cgenie_output/WOA_2009_data/Pacific_o_an_profile.png> </U
+sers/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Pacific_o
+cn_O2_profile.png> </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16
+_tgld_new.SPIN/figures/Pacific_ocn_O2_profile.png> </Users/ward/cgenie_output/B
+ENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_O2_profile_clrbr.png
+>]
 </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_final.SPIN/fi
 gures/JGOFS_Phosphate.png, id=756, 576.17091pt x 289.74303pt>
 File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_final.SP
@@ -2756,10 +2881,10 @@ IN/figures/JGOFS_Phosphate.png Graphic file (type png)
 <use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_final.SPI
 N/figures/JGOFS_Phosphate.png>
 Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
-_WF16_tgld_final.SPIN/figures/JGOFS_Phosphate.png used on input line 1376.
+_WF16_tgld_final.SPIN/figures/JGOFS_Phosphate.png used on input line 1368.
 (pdftex.def)             Requested size: 455.24408pt x 228.93427pt.
 
-Overfull \hbox (56.9055pt too wide) in paragraph at lines 1376--1377
+Overfull \hbox (56.9055pt too wide) in paragraph at lines 1368--1369
  [] 
  []
 
@@ -2772,17 +2897,17 @@ IN/figures/JGOFS_Iron.png Graphic file (type png)
 <use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_final.SPI
 N/figures/JGOFS_Iron.png>
 Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
-_WF16_tgld_final.SPIN/figures/JGOFS_Iron.png used on input line 1385.
+_WF16_tgld_final.SPIN/figures/JGOFS_Iron.png used on input line 1377.
 (pdftex.def)             Requested size: 455.24408pt x 233.50569pt.
 
-Overfull \hbox (56.9055pt too wide) in paragraph at lines 1385--1387
+Overfull \hbox (56.9055pt too wide) in paragraph at lines 1377--1379
  [] 
  []
 
-[30
+[31
 
  </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_final.SPIN/f
-igures/JGOFS_Phosphate.png>] [31 </Users/ward/cgenie_output/BENW.worjh2.PO4FeTD
+igures/JGOFS_Phosphate.png>] [32 </Users/ward/cgenie_output/BENW.worjh2.PO4FeTD
 TL_HYBRID_WF16_tgld_final.SPIN/figures/JGOFS_Iron.png>]
 </Users/ward/cgenie_output/Satellite_data/SeaWiFS_on_GEnIE.png, id=781, 275.819
 44pt x 139.8988pt>
@@ -2791,29 +2916,30 @@ e (type png)
 
 <use /Users/ward/cgenie_output/Satellite_data/SeaWiFS_on_GEnIE.png>
 Package pdftex.def Info: /Users/ward/cgenie_output/Satellite_data/SeaWiFS_on_GE
-nIE.png used on input line 1407.
+nIE.png used on input line 1399.
 (pdftex.def)             Requested size: 189.2102pt x 95.97096pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Surface_Chl_Biomass.pn
-g, id=782, 246.64624pt x 125.3122pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Surface_Chl_Bioma
-ss.png Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/Surface_Chl_Biomass.png, id=782, 246.64624pt x 125.3122pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/Surface_Chl_Biomass.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Surface_Chl_Biomas
-s.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/Surface_Chl_Biomass.png used on input line 1412.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/Surface_Chl_Biomass.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/Surface_Chl_Biomass.png used on input line 1404.
 (pdftex.def)             Requested size: 189.2102pt x 96.1312pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Surface_Chl_Biomass_cl
-rbar.png, id=783, 268.52615pt x 27.84715pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Surface_Chl_Bioma
-ss_clrbar.png Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/Surface_Chl_Biomass_clrbar.png, id=783, 268.52615pt x 27.84715pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/Surface_Chl_Biomass_clrbar.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Surface_Chl_Biomas
-s_clrbar.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/Surface_Chl_Biomass_clrbar.png used on input line 1417.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/Surface_Chl_Biomass_clrbar.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/Surface_Chl_Biomass_clrbar.png used on input line 1
+409.
 (pdftex.def)             Requested size: 189.2102pt x 19.62245pt.
 
 </Users/ward/cgenie_output/Satellite_data/Composite_PP_on_GEnIE.png, id=788, 27
@@ -2823,90 +2949,96 @@ c file (type png)
 
 <use /Users/ward/cgenie_output/Satellite_data/Composite_PP_on_GEnIE.png>
 Package pdftex.def Info: /Users/ward/cgenie_output/Satellite_data/Composite_PP_
-on_GEnIE.png used on input line 1423.
+on_GEnIE.png used on input line 1415.
 (pdftex.def)             Requested size: 189.2102pt x 95.97096pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/PrimaryProdn.png, id=7
-89, 247.30927pt x 125.3122pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/PrimaryProdn.png 
-Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/PrimaryProdn.png, id=789, 247.30927pt x 125.3122pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/PrimaryProdn.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/PrimaryProdn.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/PrimaryProdn.png used on input line 1428.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/PrimaryProdn.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/PrimaryProdn.png used on input line 1420.
 (pdftex.def)             Requested size: 189.2102pt x 95.87689pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/PrimaryProdn_clrbar.pn
-g, id=790, 269.8522pt x 27.84715pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/PrimaryProdn_clrb
-ar.png Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/PrimaryProdn_clrbar.png, id=790, 269.8522pt x 27.84715pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/PrimaryProdn_clrbar.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/PrimaryProdn_clrba
-r.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/PrimaryProdn_clrbar.png used on input line 1433.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/PrimaryProdn_clrbar.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/PrimaryProdn_clrbar.png used on input line 1425.
 (pdftex.def)             Requested size: 189.2102pt x 19.52557pt.
- [32
 
-]
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/SizeClass_C_Biomass.pn
-g, id=811, 391.84927pt x 861.27275pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/SizeClass_C_Bioma
-ss.png Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/SizeClass_C_Biomass.png, id=800, 391.84927pt x 861.27275pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/SizeClass_C_Biomass.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/SizeClass_C_Biomas
-s.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/SizeClass_C_Biomass.png used on input line 1446.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/SizeClass_C_Biomass.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/SizeClass_C_Biomass.png used on input line 1438.
 (pdftex.def)             Requested size: 249.75885pt x 548.96542pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/SizeClass_C_Biomass_cl
-rbar.png, id=812, 392.5123pt x 33.8144pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/SizeClass_C_Bioma
-ss_clrbar.png Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/SizeClass_C_Biomass_clrbar.png, id=801, 392.5123pt x 33.8144pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/SizeClass_C_Biomass_clrbar.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/SizeClass_C_Biomas
-s_clrbar.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/SizeClass_C_Biomass_clrbar.png used on input line 1451.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/SizeClass_C_Biomass_clrbar.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/SizeClass_C_Biomass_clrbar.png used on input line 1
+443.
 (pdftex.def)             Requested size: 249.75885pt x 21.51678pt.
+ [33
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/SizeClass_Limitation.p
-ng, id=816, 188.96284pt x 861.27275pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/SizeClass_Limitat
-ion.png Graphic file (type png)
+]
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/SizeClass_Limitation.png, id=816, 188.96284pt x 861.27275pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/SizeClass_Limitation.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/SizeClass_Limitati
-on.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/SizeClass_Limitation.png used on input line 1462.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/SizeClass_Limitation.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/SizeClass_Limitation.png used on input line 1454.
 (pdftex.def)             Requested size: 124.87943pt x 569.19087pt.
 
-<Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/SizeClass_Limitation_c
-lrbar.png, id=817, 404.4468pt x 423.67459pt>
-File: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/SizeClass_Limitat
-ion_clrbar.png Graphic file (type png)
+</Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figu
+res/SizeClass_Limitation_clrbar.png, id=817, 404.4468pt x 423.67459pt>
+File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN
+/figures/SizeClass_Limitation_clrbar.png Graphic file (type png)
 
-<use Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/SizeClass_Limitati
-on_clrbar.png>
-Package pdftex.def Info: Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPI
-N/SizeClass_Limitation_clrbar.png used on input line 1466.
+<use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/
+figures/SizeClass_Limitation_clrbar.png>
+Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
+_WF16_tgld_new.SPIN/figures/SizeClass_Limitation_clrbar.png used on input line 
+1458.
 (pdftex.def)             Requested size: 94.6051pt x 99.09807pt.
 
 
-LaTeX Warning: Float too large for page by 9.41144pt on input line 1470.
+LaTeX Warning: Float too large for page by 9.41144pt on input line 1462.
 
-[33 </Users/ward/cgenie_output/Satellite_data/SeaWiFS_on_GEnIE.png> <./Figures/
-BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Surface_Chl_Biomass.png> <./Fig
-ures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/Surface_Chl_Biomass_clrbar
-.png> </Users/ward/cgenie_output/Satellite_data/Composite_PP_on_GEnIE.png> <./F
-igures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/PrimaryProdn.png> <./Fig
-ures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/PrimaryProdn_clrbar.png>]
-[34 <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/SizeClass_C_Biom
-ass.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/SizeClass_C
-_Biomass_clrbar.png>] [35 <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new
-.SPIN/SizeClass_Limitation.png> <./Figures/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tg
-ld_new.SPIN/SizeClass_Limitation_clrbar.png>]
+[34 </Users/ward/cgenie_output/Satellite_data/SeaWiFS_on_GEnIE.png> </Users/war
+d/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Surface
+_Chl_Biomass.png> </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_
+tgld_new.SPIN/figures/Surface_Chl_Biomass_clrbar.png> </Users/ward/cgenie_outpu
+t/Satellite_data/Composite_PP_on_GEnIE.png> </Users/ward/cgenie_output/BENW.wor
+jh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/PrimaryProdn.png> </Users/ward/
+cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/PrimaryPr
+odn_clrbar.png>] [35 </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF
+16_tgld_new.SPIN/figures/SizeClass_C_Biomass.png> </Users/ward/cgenie_output/BE
+NW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/SizeClass_C_Biomass_clrba
+r.png>] [36 </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_n
+ew.SPIN/figures/SizeClass_Limitation.png> </Users/ward/cgenie_output/BENW.worjh
+2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/SizeClass_Limitation_clrbar.png>]
+
 </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_final.SPIN/fi
 gures/JGOFS_Chlorophyll.png, id=846, 627.22403pt x 289.74303pt>
 File: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_final.SP
@@ -2915,10 +3047,10 @@ IN/figures/JGOFS_Chlorophyll.png Graphic file (type png)
 <use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_final.SPI
 N/figures/JGOFS_Chlorophyll.png>
 Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
-_WF16_tgld_final.SPIN/figures/JGOFS_Chlorophyll.png used on input line 1479.
+_WF16_tgld_final.SPIN/figures/JGOFS_Chlorophyll.png used on input line 1471.
 (pdftex.def)             Requested size: 455.24408pt x 210.29483pt.
 
-Overfull \hbox (56.9055pt too wide) in paragraph at lines 1479--1480
+Overfull \hbox (56.9055pt too wide) in paragraph at lines 1471--1472
  [] 
  []
 
@@ -2931,64 +3063,67 @@ IN/figures/JGOFS_PrProduction.png Graphic file (type png)
 <use /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_final.SPI
 N/figures/JGOFS_PrProduction.png>
 Package pdftex.def Info: /Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID
-_WF16_tgld_final.SPIN/figures/JGOFS_PrProduction.png used on input line 1487.
+_WF16_tgld_final.SPIN/figures/JGOFS_PrProduction.png used on input line 1479.
 (pdftex.def)             Requested size: 455.24408pt x 234.61098pt.
 
-Overfull \hbox (56.9055pt too wide) in paragraph at lines 1487--1488
+Overfull \hbox (56.9055pt too wide) in paragraph at lines 1479--1480
  [] 
  []
 
-[36
+[37
 
  </Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_final.SPIN/f
-igures/JGOFS_Chlorophyll.png>] [37 </Users/ward/cgenie_output/BENW.worjh2.PO4Fe
+igures/JGOFS_Chlorophyll.png>] [38 </Users/ward/cgenie_output/BENW.worjh2.PO4Fe
 TDTL_HYBRID_WF16_tgld_final.SPIN/figures/JGOFS_PrProduction.png>]
-<Figures/Taylor.png, id=867, 268.1217pt x 259.2084pt>
-File: Figures/Taylor.png Graphic file (type png)
- <use Figures/Taylor.png>
-Package pdftex.def Info: Figures/Taylor.png used on input line 1500.
+</Users/ward/GitHub/EcoGEnIE-desc/Figures/Taylor.png, id=867, 268.1217pt x 259.
+2084pt>
+File: /Users/ward/GitHub/EcoGEnIE-desc/Figures/Taylor.png Graphic file (type pn
+g)
+ <use /Users/ward/GitHub/EcoGEnIE-desc/Figures/Taylor.png>
+Package pdftex.def Info: /Users/ward/GitHub/EcoGEnIE-desc/Figures/Taylor.png us
+ed on input line 1492.
 (pdftex.def)             Requested size: 227.62204pt x 220.06316pt.
+ [39
 
-[38
+ </Users/ward/GitHub/EcoGEnIE-desc/Figures/Taylor.png>] [40
 
- <./Figures/Taylor.png>] [39
-
-] [40] (./EcoGEnIE.bbl [41
+] [41] (./EcoGEnIE.bbl
+[42
 
 ]
 
-LaTeX Warning: Command \o invalid in math mode on input line 155.
+LaTeX Warning: Command \o invalid in math mode on input line 145.
 
 Missing character: There is no ø in font cmr9!
 
-Underfull \hbox (badness 1122) in paragraph at lines 188--194
+Underfull \hbox (badness 1122) in paragraph at lines 183--189
 []\T1/ptm/m/n/9 John, E., Wil-son, J., Pear-son, P., and Ridg-well, A.: Tempera
 ture-dependent rem-iner-al-iza-tion and car-
  []
 
-[42] [43] [44]) [45]
+[43] [44] [45]) [46]
 
 Class copernicus Warning: No section Conclusions; proceeding without it.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1710.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1710.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1702.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1702.
 (./EcoGEnIE.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1710.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1710.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1702.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1702.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1710.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1702.
  ) 
 Here is how much of TeX's memory you used:
  20721 strings out of 493014
- 400059 string characters out of 6133351
- 441734 words of memory out of 5000000
- 23669 multiletter control sequences out of 15000+600000
- 61016 words of font info for 116 fonts, out of 8000000 for 9000
+ 411004 string characters out of 6133351
+ 443614 words of memory out of 5000000
+ 23668 multiletter control sequences out of 15000+600000
+ 59464 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,19n,43p,10382b,998s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,16n,43p,10382b,994s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/te
@@ -3010,18 +3145,19 @@ ist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2016/texmf-dist
 nts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2016/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publi
-c/amsfonts/symbols/msam10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/u
-rw/helvetic/uhvr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/time
-s/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.p
-fb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on EcoGEnIE.pdf (45 pages, 2373166 bytes).
+e1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/
+amsfonts/symbols/msam10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw
+/helvetic/uhvr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/
+utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
+></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on EcoGEnIE.pdf (46 pages, 2402428 bytes).
 PDF statistics:
- 1100 PDF objects out of 1200 (max. 8388607)
+ 1102 PDF objects out of 1200 (max. 8388607)
  782 compressed objects within 8 object streams
- 226 named destinations out of 1000 (max. 500000)
+ 223 named destinations out of 1000 (max. 500000)
  536 words of extra memory for PDF output out of 10000 (max. 10000000)
 
