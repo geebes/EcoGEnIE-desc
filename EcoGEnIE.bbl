@@ -1,4 +1,4 @@
-\begin{thebibliography}{67}
+\begin{thebibliography}{69}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{{\tt #1}}
 \providecommand{\urlprefix}{URL }
@@ -178,6 +178,12 @@ Hood, R.~R., Laws, E.~A., Armstrong, R.~A., Bates, N.~R., Brown, C.~W.,
   T.~L., Salihoglu, B., Schartau, M., Toole, D.~A., and Wiggert, J.~D.: Pelagic
   functional group modelling: {P}rogress, challenges and prospects, Deep-Sea
   Research II, 53, 459--512, 2006.
+
+\bibitem[{H{\"u}lse et~al.(2017)H{\"u}lse, Arndta, Wilson, Munhoven, and
+  Ridgwell}]{Hulse:2017}
+H{\"u}lse, D., Arndta, S., Wilson, J.~D., Munhoven, G., and Ridgwell, A.:
+  Understanding the causes and consequences of past marine carbon cycling
+  variability through models, Earth-Sience Reviews, 2017.
 
 \bibitem[{John et~al.(2014)John, Wilson, Pearson, and Ridgwell}]{John:2014}
 John, E., Wilson, J., Pearson, P., and Ridgwell, A.: Temperature-dependent
@@ -361,6 +367,11 @@ Schartau, M. and Oschlies, A.: Simultaneous data-based optimization of a
   1{D}-ecosystem model at three locations in the {N}orth {A}tlantic: {P}art
   {II} - {S}tanding stocks and nitrogen fluxes, Journal of Marine Research, 61,
   795--821, 2003.
+
+\bibitem[{Shigsesada and Okubo(1981)}]{Shigsesada:1981}
+Shigsesada, N. and Okubo, A.: Analysis of the self-shading effect on algal
+  vertical distribution in natural waters, Journal of Mathematical Biology, 12,
+  311--326, 1981.
 
 \bibitem[{Spitz et~al.(2001)Spitz, Moisan, and Abbot}]{Spitz:2001}
 Spitz, Y.~H., Moisan, J.~R., and Abbot, M.~R.: Configuring an ecosystem model
