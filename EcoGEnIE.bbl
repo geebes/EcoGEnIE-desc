@@ -1,4 +1,4 @@
-\begin{thebibliography}{69}
+\begin{thebibliography}{70}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{{\tt #1}}
 \providecommand{\urlprefix}{URL }
@@ -85,10 +85,15 @@ Droop, M.~R.: Vitamin {B}12 and {M}arine {E}cology, {IV}. {T}he kinetics of
   uptake, growth and inhibition in \textit{{M}onochrysis lutheri}, Journal of
   the Marine Biological Association of the United Kingdom, 48, 689--733, 1968.
 
-\bibitem[{Edwards and Marsh(2005)}]{EdwardsMarsh:2005}
+\bibitem[{Edwards and Marsh(2005{\natexlab{a}})}]{EdwardsMarsh:2005}
 Edwards, N. and Marsh, R.: Uncertainties due to transport-parameter sensitivity
   in an efficient 3-{D} ocean-climate model, Climate Dynamics, 24, 415--433,
-  2005.
+  2005{\natexlab{a}}.
+
+\bibitem[{Edwards and Marsh(2005{\natexlab{b}})}]{Edwards:2005}
+Edwards, N.~R. and Marsh, R.: Uncertainties due to transport-parameter
+  sensitivity in an efficient 3-D ocean-climate model, Climate Dynamics, 24,
+  415--433, 2005{\natexlab{b}}.
 
 \bibitem[{Flynn(2008)}]{Flynn:2008}
 Flynn, K.~J.: The importance of the form of the quota curve and control of
