@@ -1,4 +1,4 @@
-\begin{thebibliography}{70}
+\begin{thebibliography}{75}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{{\tt #1}}
 \providecommand{\urlprefix}{URL }
@@ -74,11 +74,26 @@ Carr, M.-E., Friedrichs, M. A.~M., Schmeltz, M., Aita, M.~N., Antoine, D.,
   comparison of global estimates of marine primary production from ocean color,
   Deep-Sea Research II, 53, 541--770, 2006.
 
+\bibitem[{Claussen et~al.(2002)Claussen, Mysak, Weaver, Crucifix, Fichefet,
+  Loutre, Weber, Alcamo, Alexeev, Berger, Calov, Ganopolski, Goosse, Lohmann,
+  Lunkeit, Mokhov, Petoukhov, Stone, and Wang}]{Claussen:2002}
+Claussen, M., Mysak, L., Weaver, A., Crucifix, M., Fichefet, T., Loutre, M.-F.,
+  Weber, S., Alcamo, J., Alexeev, V., Berger, A., Calov, R., Ganopolski, A.,
+  Goosse, H., Lohmann, G., Lunkeit, F., Mokhov, I., Petoukhov, ., Stone, P.,
+  and Wang, Z.: Earth system models of intermediate complexity: closing the gap
+  in the spectrum of climate system models., Climate Dynamics, 18, 579--586,
+  2002.
+
 \bibitem[{Dierssen(2010)}]{Dierssen:2010}
 Dierssen, H.~M.: Perspectives on empirical approaches for ocean color remote
   sensing of chlorophyll in a changing climate, Proceedings of the National
   Academy of Sciences of the United States of America, 107, 17\,073--17\,078,
   2010.
+
+\bibitem[{Doney et~al.(2006)Doney, Lindsay, Fung, and John}]{Doney:2006b}
+Doney, S., Lindsay, K., Fung, I., and John, J.: Natural variability in a
+  stable, 1000-yr global coupled climate--carbon cycle simulation, Journal of
+  Climate, 19, 3033--3054, 2006.
 
 \bibitem[{Droop(1968)}]{Droop:1968}
 Droop, M.~R.: Vitamin {B}12 and {M}arine {E}cology, {IV}. {T}he kinetics of
@@ -94,6 +109,12 @@ Edwards, N. and Marsh, R.: Uncertainties due to transport-parameter sensitivity
 Edwards, N.~R. and Marsh, R.: Uncertainties due to transport-parameter
   sensitivity in an efficient 3-D ocean-climate model, Climate Dynamics, 24,
   415--433, 2005{\natexlab{b}}.
+
+\bibitem[{Falkowski et~al.(2004)Falkowski, Katz, Knoll, Quigg, Raven,
+  Schofield, and Taylor}]{Falkowski:2004}
+Falkowski, P.~G., Katz, M.~E., Knoll, A.~H., Quigg, A., Raven, J.~A.,
+  Schofield, O., and Taylor, F. J.~R.: The Evolution of Modern Eukaryotic
+  Phytoplankton, Science, 305, 354--360, 2004.
 
 \bibitem[{Flynn(2008)}]{Flynn:2008}
 Flynn, K.~J.: The importance of the form of the quota curve and control of
@@ -224,6 +245,17 @@ Le~Qu{\'e}r{\'e}, C., Harrison, S.~P., Prentice, I.~C., Buitenhuis, E.~T.,
   Ecosystem dynamics based on plankton functional types for global ocean
   biogeochemistry models, Global Change Biology, 11, 2016--2040, 2005.
 
+\bibitem[{Lenton et~al.(2007)Lenton, Marsh, Price, Lunt, Aksenov, Annan,
+  Cooper-Chadwick, Cox, Edwards, Goswami, Hargreaves, Harris, Jiao, Livina,
+  Payne, Rutt, Shepherd, Valdes, Williams, Williamson, and Yool}]{Lenton:2007b}
+Lenton, T.~M., Marsh, R., Price, A.~R., Lunt, D.~J., Aksenov, Y., Annan, J.~D.,
+  Cooper-Chadwick, T., Cox, S.~J., Edwards, N.~R., Goswami, S., Hargreaves,
+  J.~C., Harris, P.~P., Jiao, Z., Livina, V.~N., Payne, A.~J., Rutt, I.~C.,
+  Shepherd, J.~G., Valdes, P.~J., Williams, G., Williamson, M.~S., and Yool,
+  A.: {Effects of atmospheric dynamics and ocean resolution on bi-stability of
+  the thermohaline circulation examined using the Grid ENabled Integrated Earth
+  system modelling (GENIE) framework}, Climate Dynamics, 29, 591--613, 2007.
+
 \bibitem[{Litchman et~al.(2007)Litchman, Klausmeier, Schofield, and
   Falkowski}]{Litchman:2007}
 Litchman, E., Klausmeier, C.~A., Schofield, O.~M., and Falkowski, P.~G.: The
@@ -251,6 +283,11 @@ Marsh, R., M\"uller, S.~A., Yool, A., and Edwards, N.~R.: Incorporation of the
 \bibitem[{Martin et~al.(1987)Martin, Knauer, Karl, and Broenkow}]{Martin:1987}
 Martin, J.~H., Knauer, G.~A., Karl, D.~M., and Broenkow, W.~W.: Vertex: carbon
   cycling in the northeast {P}acific, Deep-Sea Research, 34, 267--285, 1987.
+
+\bibitem[{Meyer et~al.(2008)Meyer, Kump, and Ridgwell}]{Meyer:2008}
+Meyer, K.~M., Kump, L.~R., and Ridgwell, A.: {Biogeochemical controls on
+  photic-zone euxinia during the end-Permian mass extinction}, Geology, 36,
+  747--750, 2008.
 
 \bibitem[{Meyer et~al.(2016)Meyer, Ridgwell, and Payne}]{Meyer:2016}
 Meyer, K.~M., Ridgwell, A., and Payne, J.~L.: The influence of the biological
