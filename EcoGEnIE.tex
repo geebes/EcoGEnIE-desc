@@ -45,12 +45,12 @@
 \title{EcoGEnIE 0.1: Plankton Ecology in the cGENIE Earth system model}
 
 
-\Author[1,2]{}{B.~A.~Ward}
-\Author[1]{}{J.~D.~Wilson}
-\Author[1]{}{R.~Death}
-\Author[1]{}{F.~M.~Monteiro}
-\Author[2]{}{A.~Yool}
-\Author[1,3]{}{A.~Ridgwell}
+\Author[1,2]{}{Ben~A.~Ward}
+\Author[1]{}{Jamie~D.~Wilson}
+\Author[1]{}{Ros~M.~Death}
+\Author[1]{}{Fanny~M.~Monteiro}
+\Author[2]{}{Andrew~Yool}
+\Author[1,3]{}{Andy~Ridgwell}
 
 \affil[1]{\small{School of Geographical Sciences, University of Bristol, Bristol BS8 1SS, UK}}
 \affil[2]{\small{National Oceanography Centre, European Way, Southampton SO14 3ZH, UK}}
@@ -83,8 +83,9 @@
 
 
 \begin{abstract}
-We present an extension to the cGENIE Earth System model that explicitly accounts for the growth and interaction of an arbitrary number of plankton species. The new package (`ECOGEM') replaces the implicit, flux-based, parameterisation of the plankton community currently employed, with explicitly resolved plankton populations and ecological dynamics. In ECOGEM, any number of plankton species, with ecophysiological traits (e.g. growth and grazing rates) assigned according to organism size and functional group (e.g. phytoplankton and zooplankton) can be incorporated at run-time. We illustrate the capability of the marine ecology enabled Earth system model (`EcoGENIE') by comparing results from one configuration of ECOGEM (with eight generic phytoplankton and zooplankton size classes) to climatological and seasonal observations. We find that the new ecological components of the model show reasonable agreement with both global-scale climatological and local-scale seasonal data. We also compare EcoGENIE results to a the existing biogeochemical incarnation of cGENIE. We find that the resulting global-scale distributions of phosphate, iron, dissolved inorganic carbon, alkalinity and oxygen are similar for both iterations of the model. A slight deterioration in some fields in EcoGENIE, relative to the data is observed, although we make no attempt to re-tune the overall marine cycling of carbon and nutrients here. The increased capabilities of EcoGENIE in this regard will enable future exploration of the ecological community on much longer timescales than have previously been examined in global ocean ecosystem models and particularly for past climates and global biogeochemical cycles.
+We present an extension to the cGENIE Earth System model that explicitly accounts for the growth and interaction of an arbitrary number of plankton species. The new package (`ECOGEM') replaces the implicit, flux-based, parameterisation of the plankton community currently employed, with explicitly resolved plankton populations and ecological dynamics. In ECOGEM, any number of plankton species, with ecophysiological traits (e.g. growth and grazing rates) assigned according to organism size and functional group (e.g. phytoplankton and zooplankton) can be incorporated at run-time. We illustrate the capability of the marine ecology enabled Earth system model (`EcoGENIE') by comparing results from one configuration of ECOGEM (with eight generic phytoplankton and zooplankton size classes) to climatological and seasonal observations. We find that the new ecological components of the model show reasonable agreement with both global-scale climatological and local-scale seasonal data. We also compare EcoGENIE results to a the existing biogeochemical incarnation of cGENIE. We find that the resulting global-scale distributions of phosphate, iron, dissolved inorganic carbon, alkalinity and oxygen are similar for both iterations of the model. A slight deterioration in some fields in EcoGENIE (relative to the data) is observed, although we make no attempt to re-tune the overall marine cycling of carbon and nutrients here. The increased capabilities of EcoGENIE in this regard will enable future exploration of the ecological community on much longer timescales than have previously been examined in global ocean ecosystem models and particularly for past climates and global biogeochemical cycles.
 \end{abstract}
+
 
 %\clearpage
 %\small{
@@ -95,25 +96,25 @@ We present an extension to the cGENIE Earth System model that explicitly account
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \introduction %% \introduction[modified heading if necessary]
 
-The marine ecosystem is an integral component of the Earth system and its dynamics. Photosynthetic plankton ultimately support almost all life in the ocean, including the the fisheries that provide essential nutrition to more than half the human population \citep{Hollowed:2013}. In addition, the oceans provide a key sink for carbon released into the atmosphere, playing a key role in moderating the climate. The strength of this sink, in turn, is modulated by the activity and composition of marine ecosystems and how this controls the `biological pump' in the ocean. \citep[The biological pump constitutes the photosynthetic uptake of carbon in the well-lit ocean surface, followed by the downward transport and deep remineralisation of organic matter, resulting in a net increase in the partial pressure of CO$_2$ at depth and decrease in the ocean surface and atmosphere -- see][]{Hulse:2017}. For instance, the existence of the biological carbon has been estimated to equate to a reduction in atmospheric carbon concentration at steady state of approximately 200 ppm \citep{Parekh:2006}, with variations in its magnitude being cited as playing a key role in, for example, the late Quaternary glacial-interglacial climate oscillations \citep{Watson:2000,Hain:2014}.
+The marine ecosystem is an integral component of the Earth system and its dynamics. Photosynthetic plankton ultimately support almost all life in the ocean, including the fisheries that provide essential nutrition to more than half the human population \citep{Hollowed:2013}. In addition, the marine biota determine an important downward flux of carbon, known as the `biological pump'. This flux arises as biomass generated by photosynthesis in the well-lit ocean surface sinks into the dark ocean interior, where it is remineralised \citep{Hulse:2017}. Modulated by the activity and composition of marine ecosystems, the biological pump increases the partial pressure of CO$_2$ at depth and decreases it in the ocean surface and atmosphere, and thus plays a key role in the regulation of Earth's climate. For instance, the existence of the biological carbon pump has been estimated to be responsible for an approximately 200 ppm decrease in atmospheric carbon concentration at steady state \citep{Parekh:2006}, with variations in its magnitude being cited as playing a key role in, for example, the late Quaternary glacial-interglacial climate oscillations \citep{Watson:2000,Hain:2014}.
 
-A variety of different marine biogeochemical modelling approaches have been developed in an attempt to understand how the marine carbon cycle functions and its dynamical interaction with climate, and to make both past and future projections. In the simplest of these approaches, the biological pump is incorporated into an ocean circulation (or box) model without explicitly including any state-variables for the biota. Such models have been described as models of `biogenically induced chemical fluxes' (rather than explicitly of the biology (and ecology) itself) \citep{Maier-Reimer:1993}. They vary considerably in complexity, but can be broadly divided into two categories. In the first of these -- `nutrient-restoring' -- models calculate the biological uptake of nutrients at any one point at the ocean surface as the flux required to maintain surface nutrient concentrations at observed values \cite[e.g.][]{Bacastow:1990,Najjar:1992}. The vertical flux is then remineralised at depth according to some attenuating profile, such as that of \citet{Martin:1987}. Within this framework, carbon export is typically calculated from the nutrient flux according to a fixed stoichiometric (`Redfield') ratio \citep{Redfield:1934}. In addition to the availability of a spatially explicit (in the case of ocean circulation models) observed surface ocean nutrient field, nutrient restoring models inherently only require a single parameter -- the restoring time-scale, and even this parameter is not critical (as long as the time-scale is sufficiently short that the model closely reproduces the observed nutrient concentrations). The simplicity of this approach lends itself to being able to focus on a very specific part of the ecosystem dynamics, namely the downward transport of organic matter, and was highly influential particularly during the early days of marine biogeochemical model development and assessment of carbon uptake and transport dynamics \citep[e.g.][]{Marchal:1998,Najjar:1992}. However, because this approach is based explicitly upon observed values (or modified observations), they are primarily only suitable for diagnostic and modern steady-state applications and are unable to model any deviations in nutrient cycling and hence climate from the current ocean state. 
+A variety of different marine biogeochemical modelling approaches have been developed in an attempt to understand how the marine carbon cycle functions and its dynamical interaction with climate, and to make both past and future projections. In the simplest of these approaches, the biological pump is incorporated into an ocean circulation (or box) model without explicitly including any state-variables for the biota. Such models have been described as models of `biogenically induced chemical fluxes' \citep[rather than explicitly of the biology - and ecology - itself;][]{Maier-Reimer:1993}. They vary considerably in complexity, but can be broadly divided into two categories. In the first of these -- `nutrient-restoring' -- models calculate the biological uptake of nutrients at any one point at the ocean surface as the flux required to maintain surface nutrient concentrations at observed values \cite[e.g.][]{Bacastow:1990,Najjar:1992}. The vertical flux is then remineralised at depth according to some attenuating profile, such as that of \citet{Martin:1987}. Within this framework, carbon export is typically calculated from the nutrient flux according to a fixed stoichiometric (`Redfield') ratio \citep{Redfield:1934}. In addition to the availability of a spatially explicit (in the case of ocean circulation models) observed surface ocean nutrient field, nutrient restoring models inherently only require a single parameter -- the restoring time-scale, and even this parameter is not critical (as long as the time-scale is sufficiently short that the model closely reproduces the observed nutrient concentrations). The simplicity of this approach lends itself to being able to focus on a very specific part of the ecosystem dynamics, namely the downward transport of organic matter, and was highly influential particularly during the early days of marine biogeochemical model development and assessment of carbon uptake and transport dynamics \citep[e.g.][]{Marchal:1998,Najjar:1992}. However, because this approach is based explicitly upon observed values (or modified observations), they are primarily only suitable for diagnostic and modern steady-state applications and are unable to model any deviations of nutrient cycling, and hence of climate, from the current ocean state. 
 
-More sophisticated models of biogenically induced chemical fluxes do away with a direct observational constraint and instead estimate the organic matter export term on the basis of limiting factors, such as temperature, light and the availability of nutrients such as nitrogen, phosphorous and iron -- an approach we will here refer to as `nutrient-limitation'. Models based on this approach \citep[e.g.][]{Bacastow:1990, Heinze:1991, Archer:2000} were natural successors to the early nutrient restoring models and could account for the influence of multiple limiting nutrients and even implicitly partition export between different functional types \citep{Watson:2000}. Without entraining an explicit dependence on observed surface ocean nutrient distributions, these models also now gain much more freedom and with it, a degree of predictive capability. Additionally, other than plausible values for nutrient half-saturation constants, nutrient-limitation models make few assumptions that are specifically tied to modern observations, and assume very little (if anything) about the particular organisms present. Hence, as long as one makes the assumption that the marine plankton that existed at some specific time in the past were physiologically similar, particularly in terms of fundamental nutrient requirements, there is no apparent reason why nutrient-limitation models will not be as applicable to much of the Phanerozoic in terms of geological past, as they are to the present (questions of how suitable they might be to the present in the first place, aside). Using nutrient-limitation flux schemes, marine biogeochmcial cycles have hence already been simulated for periods such as the mid Cretaceous \citep{Monteiro:2012} and end Permian \citep{Meyer:2008}, times when surface nutrient distributions are not known \textit{a priori}.
+More sophisticated models of biogenically induced chemical fluxes do away with a direct observational constraint and instead estimate the organic matter export term on the basis of limiting factors, such as temperature, light and the availability of nutrients such as nitrogen, phosphorous and iron -- an approach we will here refer to as `nutrient-limitation'. Models based on this approach \citep[e.g.][]{Bacastow:1990, Heinze:1991, Archer:2000} were natural successors to the early nutrient restoring models and could account for the influence of multiple limiting nutrients and even implicitly partition export between different functional types \citep{Watson:2000}. Without entraining an explicit dependence on observed surface ocean nutrient distributions, these models also now gain much more freedom and with it, a degree of predictive capability. Additionally, other than plausible values for nutrient half-saturation constants, nutrient-limitation models make few assumptions that are specifically tied to modern observations, and assume very little (if anything) about the particular organisms present. Hence, as long as one makes the assumption that the marine plankton that existed at some specific time in the past were physiologically similar, particularly in terms of fundamental nutrient requirements, there is no apparent reason why nutrient-limitation models will not be as applicable to much of the Phanerozoic in terms of geological past, as they are to the present (questions of how suitable they might be to the present in the first place, aside). Using nutrient-limitation flux schemes, marine biogeochemical cycles have hence already been simulated for periods such as the mid Cretaceous \citep{Monteiro:2012} and end Permian \citep{Meyer:2008}, times for which surface nutrient distributions are not known \textit{a priori}.
 
-The disadvantage of both  variants  of models of biogenically induced chemical fluxes, is that they are not able to represent interactions between parts of the ecosystem (e.g. resource competition and predator-prey interactions), simply because these processes are not resolved. Nor can they address questions involving the addition or loss, such as associated with past extinction events, of plankton species and changes in ecosystem complexity and/or structure. They also suffer from being overly responsive to changes in nutrient availability. In the case of restoring models this is simply because any change in the target field will be closely tracked. In the case of the nutrient-limitation models,  the lack of an explicit biomass term  results in export fluxes  changing instantaneously in response to changing limiting factors. In contrast, in the real world,  sufficient biomass must first exist, such as in a bloom condition, in order to achieve maximal export. This has consequences for the how the seasonality of organic matter  export  is represented. Other restrictions include the inability to know anything about ecosystem size structure (and, by association, about particle sinking speed), or the degree of recycling at the ocean surface and hence the partitioning of carbon into dissolved vs. particulate phases in exported organic matter. 
+The disadvantage of both  variants  of models of biogenically induced chemical fluxes, is that they are not able to represent interactions between parts of the ecosystem (e.g. resource competition and predator-prey interactions), simply because these components and processes are not resolved. Nor can they address questions involving the addition or loss, such as associated with past extinction events, of plankton species and changes in ecosystem complexity and/or structure. They also suffer from being overly responsive to changes in nutrient availability. In the case of restoring models this is simply because any change in the target field will be closely tracked. In the case of the nutrient-limitation models, the lack of an explicit biomass term results in export fluxes  changing instantaneously in response to changing limiting factors. In the real world, by contrast, sufficient biomass must first exist, such as in a bloom condition, in order to achieve maximal export. This has consequences for the how the seasonality of organic matter  export  is represented. Other restrictions include the inability to know anything about ecosystem size structure (and, by association, about particle sinking speed), or the degree of recycling at the ocean surface and hence the partitioning of carbon into dissolved vs. particulate phases in exported organic matter. 
 
 To allow models to respond to changes in ecosystem structure, and to incorporate some of the additional  feedbacks and complexities that may be important in determining the future marine response to continued greenhouse gas emissions \citep{LeQuere:2005}, it has been necessary to explicitly resolve the ecosystem itself. Such models have been developed across a wide range of complexities \citep{Kwiatkowski:2014}. Among the simplest are `NPZD' type models, resolving a single nutrient, homogenous  phytoplankton and zooplankton communities, and a single detrital pool \citep{Wroblewski:1988,Oschlies:2001}. At the other end of the spectrum, more complex models may include multiple nutrients and several `Plankton Functional Types' (PFTs) \citep[e.g.][]{Aumont:2003,Moore:2002,LeQuere:2005}. What links these models is that the living state variables are very broadly based on ecological guilds (i.e. groups of organisms that exploit similar resources). 
 
-While simple models have been shown to be capable of reproducing the bulk properties of ecosystems on both regional and global scales \citep{Palmer:2001,Spitz:2001,Schartau:2003pt2,Anderson:2005} many important biogeochemical processes and climate feedbacks can only be resolved by more complex models \citep{LeQuere:2005,Hood:2006}. Additionally, as the composition of the broad ecological guilds used to define NPZD models will be subject to change through both time and space, PFT models may be more generally applicable because they resolve relatively more fundamental ecological components \citep{Friedrichs:2007}. These are the key motivations behind the development of PFT models, in which the broad categories of the NPZD models are replaced with more specific groups based on biogeochemical function. By resolving these key actors in the system, it is possible for the models to capture important climate feedbacks that cannot be represented in simpler models \citep{LeQuere:2005}. 
+While simple NPZD models are capable of reproducing some of the observed variability in bulk properties such as chlorophyll biomass and primary production \citep{Schartau:2003pt2,Yool:2013a,Ward:2013a}, their very simplicity precludes the representation of many potentially important biogeochemical processes and climate feedbacks. Additionally, NPZD models are parameterised to represent the activity of diverse plankton communities, with different parameter values being required as the ecosystem changes in space and time \citep{Schartau:2003pt1,Losa:2006}. In this regard, PFT models may be more generally applicable because they resolve relatively more fundamental ecological processes that may be less sensitive to environmental variability \citep{Friedrichs:2007}. These are the key factors that have motivated the development of more complex models, in which the broad ecological guilds of NPZD models are replaced with more specific groups based on ecological and/or biogeochemical function \citep{Aumont:2015,Butenschon:2016}. It is argued that resolving more components of the ecosystem allows the representation of important climate feedbacks that cannot be accounted for in simpler models \citep{LeQuere:2006}. 
 
-However, alongside their advantages, the current generation of PFT models are faced with two important and conflicting challenges. Firstly, these complex models contain a large number of parameters that are often poorly constrained by observations \citep{Anderson:2005}. Secondly, although PFT models resolve more ecological structure than the preceding generation of ocean ecosystem models, they are rarely general enough to perform well across large environmental gradients \citep{Friedrichs:2006,Friedrichs:2007,Ward:2010}. To these, one might add difficulties in their application to past climates. PFT models are based on a conceptual reduction of the modern marine ecosystem to its apparent key biogeochemical components, such as nitrogen fixation, or opal frusicle production (as by diatoms). The role of diatoms and the attendant cycling of silica quickly becomes moot once one looks back in Earth history as the origin of diatoms is thought to be sometime early in the Mesozoic (252-66 Ma) and they did not proliferate and diversity until later in the Cenozoic (66-0 Ma) \citep{Falkowski:2004}. In addition, the physiological details of each species encoded in the model are  taken directly from laboratory culture experiments of isolated strains \citep{LeQuere:2005} creating a parameter-dependence on modern cultured species, in addition to a structural one. 
+However, alongside their advantages, the current generation of PFT models are faced with two important and conflicting challenges. Firstly, these complex models contain a large number of parameters that are often poorly constrained by observations \citep{Anderson:2005}. Secondly, although PFT models resolve more ecological structure than the preceding generation of ocean ecosystem models, they are rarely general enough to perform well across large environmental gradients \citep{Friedrichs:2006,Friedrichs:2007,Ward:2010}. To these, one might add difficulties in their application to past climates. PFT models are based on a conceptual reduction of the modern marine ecosystem to its apparent key biogeochemical components, such as nitrogen fixation, or opal frustule production (as by diatoms). The role of diatoms and the attendant cycling of silica quickly becomes moot once one looks back in Earth history as the origin of diatoms is thought to be sometime early in the Mesozoic (252-66 Ma) and they did not proliferate and diversify until later in the Cenozoic (66-0 Ma) \citep{Falkowski:2004}. In addition, the physiological details of each species encoded in the model are  taken directly from laboratory culture experiments of isolated strains \citep{LeQuere:2005} creating a parameter-dependence on modern cultured species, in addition to a structural one. 
 
 Recent studies have begun to address these issues by focussing on the more general rules that govern diversity (rather than by trying to quantify and parameterise the diversity itself). These `trait-based' models are beginning to be applied in the field of marine biogeochemical modelling \citep[e.g.][]{Follows:2007,Bruggeman:2007}, with a major advantage being that they are able to resolve greater diversity with fewer specified parameters. One of the main challenges of this approach then is to identify the general rules or trade-offs that govern competition between organisms \citep{Follows:2007,Litchman:2007}. These trade-offs are often strongly constrained by organism size. A potentially large number of different plankton size classes can therefore be parameterised according to well known allometric relationships linking plankton physiological traits to organism size \citep[e.g.][]{Tang:1995,Hansen:1997a}. This approach has the associated advantage that the size composition of the plankton community affects the biogeochemical function of the community \citep[e.g.][]{Guidi:2009}. If one assumes that the same allometric relationships and trade-offs are relatively invariant with time, then this approach provides a potential way forward to addressing geological questions. 
 
-In this paper we present an adaptable modelling framework with an ecological structure that can be easily adapted according to the scientific question at hand. The model is formulated so that all plankton are described by the same set of equations, and any differences are simply a matter of parameterisation. Within this framework, each plankton population is characterised in terms its size-dependent traits and its distinct functional type. The model also includes a realistic physiological component, based on a cell quota model \citep{Caperon:1968,Droop:1968} and a dynamic photoacclimation model \citep{Geider:1998}. This physiological component, decoupling nutrient uptake and growth, increases model realism, allowing phytoplankton to flexibly take up nutrients according to availability, rather than according to an unrealistically rigid cellular stoichiometry. Such flexible stoichiometry is rarely included in large-scale ocean models, and provides the opportunity to study the links between plankton physiology, ecological competition, and biogeochemistry. This model is then embedded within an Earth system model (cGENIE) widely used in addressing questions of past climate and carbon cycling, and the overall properties of the model system are evaluated. 
+In this paper we present an adaptable modelling framework with an ecological structure that can be easily adapted according to the scientific question at hand. The model is formulated so that all plankton are described by the same set of equations, and any differences are simply a matter of parameterisation. Within this framework, each plankton population is characterised in terms its size-dependent traits and its distinct functional type. The model also includes a realistic physiological component, based on a cell quota model \citep{Caperon:1968,Droop:1968} and a dynamic photoacclimation model \citep{Geider:1998}. This physiological component increases model realism by allowing phytoplankton to flexibly take up nutrients according to availability, rather than according to an unrealistically rigid cellular stoichiometry. Such flexible stoichiometry is rarely included in large-scale ocean models, and provides the opportunity to study the links between plankton physiology, ecological competition, and biogeochemistry. This model is then embedded within an Earth system model (cGENIE) widely used in addressing questions of past climate and carbon cycling, and the overall properties of the model system are evaluated. 
 
-The structure of this paper is as follows. In Section~\ref{GENIE} we will briefly outline the nature and properties of the cGENIE Earth system model, focussing on the ocean circulation and marine biogeochemical modules most directly relevant to the simulation of marine ecology. In Section~\ref{ECOGEM}, we  introduce the new ecological model -- ECOGEM -- that has been developed within the cGENIE framework. Section~\ref{SimData} describes the preliminary  experiments of ECOGEM, and Section~\ref{Results} presents results from the new  integrated global model (EcoGEnIE)  in comparison to observations (where available) as well as to   the pre-existing biogeochemical simulation of cGENIE.
+The structure of this paper is as follows. In Section~\ref{GENIE} we will briefly outline the nature and properties of the cGENIE Earth system model, focussing on the ocean circulation and marine biogeochemical modules most directly relevant to the simulation of marine ecology. In Section~\ref{ECOGEM}, we  introduce the new ecological model -- ECOGEM -- that has been developed within the cGENIE framework. Section~\ref{SimData} describes the preliminary  experiments of ECOGEM, and Section~\ref{Results} presents results from the new  integrated global model (EcoGEnIE)  in comparison to observations (where available) as well as to the pre-existing biogeochemical simulation of cGENIE.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -124,23 +125,21 @@ The structure of this paper is as follows. In Section~\ref{GENIE} we will briefl
 
 
 \section{The GENIE/cGENIE Earth system model}\label{GENIE}
-GENIE is an `Earth system model of intermediate complexity' (EMIC) \citep{Claussen:2002} and is based on a modularised framework that allows different components of the Earth system, including ocean circulation, ocean biogeochemistry, deep-sea sediments and geochemistry, to be incorporated \citep{Lenton:2007b}. The simplified atmosphere and carbon-centric version of GENIE we use --~cGENIE~-- has been previously applied to explore and understand the interactions between biological productivity, biogeochemistry and climate over a range of timescales and time periods \citep[e.g.,][]{Ridgwell:2010,Monteiro:2012,Norris:2013,John:2014,Gibbs:2015,Meyer:2016,Tagliabue:2016}.  As is common for EMICs, cGENIE features a reduced spatial and temporal resolution in order to facilitate the efficient simulation of the various interacting components. This imposes limits on the resolution of ecosystem dynamics to large-scale annual/seasonal patterns in contrast to higher resolutions often used to model modern ecosystems. However, our motivation for incorporating a new marine ecosystem module into cGENIE is to focus on the explicit interactions between ecosystems, biogeochemistry and climate that are computationally prohibitive in higher resolution models. In other words, our motivation is to include and explore a more complete range of interactions and dynamics within the marine system, at the expense of spatial fidelity and with a greater intention to explore long timescale and paleo questions, rather than short-term and future anthropogenic concerns. 
+GENIE is an `Earth system model of intermediate complexity' (EMIC) \citep{Claussen:2002} and is based on a modularised framework that allows different components of the Earth system, including ocean circulation, ocean biogeochemistry, deep-sea sediments and geochemistry, to be incorporated \citep{Lenton:2007b}. The simplified atmosphere and carbon-centric version of GENIE we use --~cGENIE~-- has been previously applied to explore and understand the interactions between biological productivity, biogeochemistry and climate over a range of timescales and time periods \citep[e.g.,][]{Ridgwell:2010,Monteiro:2012,Norris:2013,John:2014,Gibbs:2015,Meyer:2016,Tagliabue:2016}.  As is common for EMICs, cGENIE features a decreased spatial and temporal resolution in order to facilitate the efficient simulation of the various interacting components. This imposes limits on the resolution of ecosystem dynamics to large-scale annual/seasonal patterns in contrast to higher resolutions often used to model modern ecosystems. However, our motivation for incorporating a new marine ecosystem module into cGENIE is to focus on the explicit interactions between ecosystems, biogeochemistry and climate that are computationally prohibitive in higher resolution models. In other words, our motivation is to include and explore a more complete range of interactions and dynamics within the marine system, at the expense of spatial fidelity and with a greater intention to explore long timescale and paleoceanographic questions, rather than short-term and future anthropogenic concerns. 
 
-% GENIE is an `Earth system model of intermediate complexity' (EMIC). As is common for such models, it features a reduced spatial resolution in order to facilitate the efficient simulation of various interacting components of the Earth system. GENIE is based on a modularised framework that allows different components of the Earth system, including ocean circulation, ocean biogeochemistry, deep-sea sediments and geochemistry, to be incorporated. The carbon-centric version of GENIE (cGENIE) has been previously applied to explore and understand the interactions between biological productivity, biogeochemistry and climate over a range of timescales and time periods \citep[e.g.,][]{Ridgwell:2010,Monteiro:2012,Norris:2013,John:2014,Gibbs:2015,Meyer:2016,Tagliabue:2016}. In this section, we provide a brief overview of the ocean circulation and climate model (C-GOLDTSEIN) and the ocean biogeochemistry model (BIOGEM) that interact with the new ecological model (ECOGEM) presented in this paper. 
-
-\subsection{Ocean and climate model component -- C-GOLDSTEIN}
+\subsection{Ocean physics and climate model component -- C-GOLDSTEIN}
 The fast climate model, C-GOLDSTEIN features a reduced physics (frictional geostrophic) 3-D ocean circulation model coupled to a 2-D energy-moisture balance model of the atmosphere and a dynamic-thermodynamic sea-ice model.  Full descriptions of the model can be found in \citet{EdwardsMarsh:2005} and \citet{Marsh:2011}. 
 
-The circulation model calculates the horizontal and vertical transport of heat, salinity, and biogeochemical tracers via the combined parameterisation for isoneutral diffusion and eddy-induced advection \citep{EdwardsMarsh:2005,Marsh:2011}. The ocean model is configured on a 36 $\times$ 36 equal-area horizontal grid with 16 logarithmically spaced z-coordinate levels. The horizontal grid is generally constructed uniform in longitude (10$^\circ$ resolution) and uniform in the sine of latitude (varying in latitude from $\sim$3.2$^\circ$ at the equator to 19.2$^\circ$ near the poles). The thickness of the vertical grid increases with depth, from 80.8 m at the surface, to as much as 765 m at depth. The degree of spatial and temporal abstraction in C-GOLDSTEIN results in parameter values that are not well known and require calibration against observations. The parameters for C-GOLDSTEIN were calibrated against annual mean climatological observations of temperature, salinity, surface air temperature and humidity using the ensemble Kalman filer (EnKF) methdology \citep{Hargreaves:2004,Ridgwell:2007}. The parameter values for C-GOLDSTEIN used are those reported for the 16-level model in Table S1 of \citet{Cao:2009} under ``GENIE16''. C-GOLDSTEIN is run with 96 time-steps per year.  The resulting circulation is dynamically similar to that of classical GCMs based on the primitive equations but is significantly faster to run and in this configuration performs well against standard tests of circulation models such as anthropogenic CO$_2$ and CFC uptake, as well as reproducing the deep ocean radiocarbon ($\Delta^{14}$C) distribution \citep{Cao:2009}.
+The circulation model calculates the horizontal and vertical transport of heat, salinity, and biogeochemical tracers via the combined parameterisation for isoneutral diffusion and eddy-induced advection \citep{EdwardsMarsh:2005,Marsh:2011}. The ocean model is configured on a 36~$\times$~36 equal-area horizontal grid with 16 logarithmically spaced z-coordinate levels. The horizontal grid is generally constructed to be uniform in longitude (10$^\circ$ resolution) and uniform in the sine of latitude (varying in latitude from $\sim$3.2$^\circ$ at the equator to 19.2$^\circ$ near the poles). The thickness of the vertical grid increases with depth, from 80.8 m at the surface, to as much as 765 m at depth. The degree of spatial and temporal abstraction in C-GOLDSTEIN results in parameter values that are not well known and require calibration against observations. The parameters for C-GOLDSTEIN were calibrated against annual mean climatological observations of temperature, salinity, surface air temperature and humidity using the ensemble Kalman filer (EnKF) methdology \citep{Hargreaves:2004,Ridgwell:2007}. The parameter values for C-GOLDSTEIN used are those reported for the 16-level model in Table S1 of \citet{Cao:2009} under ``GENIE16''. C-GOLDSTEIN is run with 96 time-steps per year.  The resulting circulation is dynamically similar to that of classical GCMs based on the primitive equations but is significantly faster to run and in this configuration performs well against standard tests of circulation models such as anthropogenic CO$_2$ and CFC uptake, as well as reproducing the deep ocean radiocarbon ($\Delta^{14}$C) distribution \citep{Cao:2009}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %
 \subsection{Ocean biogeochemical model component -- BIOGEM}\label{BIOGEM}
 
-Transformations and spatial redistribution of biogeochemical compounds both at the ocean surface (by biological uptake) and in the ocean interior (remineralisation), plus  air-sea gas exchange, are handled by the module BIOGEM. In the current version of  BIOGEM the biological (soft-tissue) pump is driven by an implicit (i.e. unresolved) biological community (in place of an explicit representation of living microbial community). It is therefore a nutrient limitation variant of a model of biogenically induced chemical fluxes, as outlined above. A full description can be found in \citep{Ridgwell:2007, Ridgwell:prep}.  
+Transformations and spatial redistribution of biogeochemical compounds both at the ocean surface (by biological uptake) and in the ocean interior (remineralisation), plus  air-sea gas exchange, are handled by the module BIOGEM. In the pre-existing version of BIOGEM the biological (soft-tissue) pump is driven by an implicit (i.e. unresolved) biological community (in place of an explicit representation of living microbial community). It is therefore a nutrient limitation variant of a model of biogenically induced chemical fluxes, as outlined above. A full description can be found in \citep{Ridgwell:2007, Ridgwell:prep}.  
 
-In this study, we use a seasonally insolation forced, 16-level ocean model based configuration, similar to that of \citet{Cao:2009}. However, in the particular biogeochemical configuration we use, limitation of biological uptake of carbon is provided by the availability of two nutrients. In addition to phosphate, we now include an iron cycle following \citep{Tagliabue:2016}. To this, we make use a revised set of parameters controlling  the iron cycle. We also incorporate a series of minor modifications to the climate model component, particularly in terms of the  ocean grid and wind velocity and stress forcings \citep[consistent with][]{Marsh:2011} together with associated changes to several of the  physics parameters. A complete description and evaluation of the physical and biogeochemical  configuration of cGENIE is provided in \citep{Ridgwell:prep}.     
+In this study, we use a seasonally insolation forced, 16-level ocean model configuration, similar to that of \citet{Cao:2009}. However, in the particular biogeochemical configuration we use, limitation of biological uptake of carbon is provided by the availability of two nutrients. In addition to phosphate, we now include an iron cycle following \citep{Tagliabue:2016}. This aspect of the model is determined by a revised set of parameters controlling the iron cycle \citep{Ridgwell:prep}. We also incorporate a series of minor modifications to the climate model component, particularly in terms of the  ocean grid and wind velocity and stress forcings \citep[consistent with][]{Marsh:2011} together with associated changes to several of the  physics parameters. A complete description and evaluation of the physical and biogeochemical  configuration of cGENIE is provided in \citep{Ridgwell:prep}.     
 
  
 
@@ -154,7 +153,7 @@ The current BIOGEM module in cGENIE does not explicitly resolve the biological c
 \item[$\bullet$] inorganic nutrients $\xrightarrow[\rm and~export]{\rm production}$ DOM and remineralised nutrients
 \end{itemize}
 
-\noindent This simplification greatly facilitates the efficient modelling of the carbon cycle over long time scales, but with the associated  caveats of an implicit scheme (as discussed earlier). In ECOGEM, biological uptake is again limited by light, temperature and nutrient availability, but here it must pass through an explicit and dynamic intermediary plankton biomass pool, before being returned to DOM or dissolved inorganic nutrients:
+\noindent This simplification greatly facilitates the efficient modelling of the carbon cycle over long time scales, but with the associated  caveats of an implicit scheme (as discussed earlier). In ECOGEM, biological uptake is again limited by light, temperature and nutrient availability, but here it must pass through an explicit and dynamic intermediary plankton community, before being returned to DOM or dissolved inorganic nutrients:
 
 
 \begin{itemize}
@@ -165,11 +164,11 @@ The ecological community is also subject to respiration, mortality and internal 
 
 \begin{figure}[htp!]
 \includegraphics[width=6cm]{Figures/CouplingSchematic.pdf}
-\caption{Schematic representation of the coupling between BIOGEM and ECOGEM.}
+\caption{Schematic representation of the coupling between BIOGEM and ECOGEM. State variables: $\rm{R}$ = inorganic element (i.e. resource),  $\rm{B}$ = plankton biomass, $\rm{OM}$ = organic matter. Subsripts $_B$ and $_E$ denote state variables in BIOGEM and ECOGEM, respectively. BIOGEM passes resource biomass $\rm{R}$ to ECOGEM. ECOGEM passes rates of change ($\delta$) in  $\rm{R}$ and $\rm{OM}$ back to BIOGEM.}
 \label{BIOECOGEM}
 \end{figure}
 
-In the following section we outline the key state variables directly relating to ecosystem function (Section~\ref{StateVariables}), describe the mathematical form of the key rate processes relating to each state variable (Section~\ref{PhysiolProc}) and how they link together (Section~\ref{PDEs}). We will then describe the parameterisation of the model according to organism size and functional type (Section~\ref{Parameters}). The model equations are modified from \citet{Ward:2012}. Although we repeat all the equations used in ECOGEM here, we provide only brief descriptions of the parameterisations and parameter values justifications, already included in \citet{Ward:2012}.
+In the following section we outline the key state variables directly relating to ecosystem function (Section~\ref{StateVariables}), describe the mathematical form of the key rate processes relating to each state variable (Section~\ref{PhysiolProc}) and how they link together (Section~\ref{PDEs}). We will then describe the parameterisation of the model according to organism size and functional type (Section~\ref{Parameters}). The model equations are modified from \citet{Ward:2012}. We provide all the equations used in ECOGEM here, but we provide only brief descriptions of the parameterisations and parameter value justifications already included in \citet{Ward:2012}.
  
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -288,11 +287,11 @@ This equation is effectively equivalent to the Michaelis-Menten type response, b
 
 \subsubsection{Photosynthesis}
 
-The photosynthesis model is modified from \cite{Geider:1998} and \cite{Moore:2002}. Light-limitation is calculated as a Poisson function of local irradiance ($I$), modified by the iron-dependent initial slope of the P-I curve ($\alpha \gamma_{j,{\rm Fe}}$) and the chlorophyll-\textit{a}-to-carbon ratio ($Q_{j,{\rm Chl}}$). 
+The photosynthesis model is modified from \cite{Geider:1998} and \cite{Moore:2002}. Light-limitation is calculated as a Poisson function of local irradiance ($I$), modified by the iron-dependent initial slope of the P-I curve ($\alpha \cdot \gamma_{j,{\rm Fe}}$) and the chlorophyll-\textit{a}-to-carbon ratio ($Q_{j,{\rm Chl}}$). 
 %
 \begin{equation}
 \label{gammaI}
-\gamma_{j,I} = \Big[ 1- \exp \Big( \frac{-\alpha \cdot \gamma_{j,{\rm Fe}} Q_{j,{\rm Chl}} \cdot { I}}{ P_{j,{\rm C}}^{\rm sat}} \Big) \Big]
+\gamma_{j,I} = \Big[ 1- \exp \Big( \frac{-\alpha \cdot \gamma_{j,{\rm Fe}} \cdot Q_{j,{\rm Chl}} \cdot { I}}{ P_{j,{\rm C}}^{\rm sat}} \Big) \Big]
 \end{equation}
 %
 Here $P_{j,{\rm C}}^{\rm sat}$ is maximum light-saturated growth rate, modified from an absolute maximum rate of $P_{j,{\rm C}}^{max}$, according to the current nutrient and temperature limitation terms.
@@ -314,28 +313,28 @@ The gross photosynthetic rate ($P_{j,{\rm C}}$) is then modified from $P_{j,{\rm
 P_{j,{\rm C}} = \gamma_{j,I} P_{j,{\rm C}}^{\rm sat}
 \end{equation}
 %
-Net carbon uptake, after accounting for the metabolic cost of biosynthesis ($\xi$), is given by 
+Net carbon uptake is given by 
 %
 \begin{equation}
-V_{j,{\rm C}} = P_{j,{\rm C}} - \xi \cdot 16V_{j,{\rm P}}
+V_{j,{\rm C}} = P_{j,{\rm C}} - \xi \cdot V_{j,{\rm P}}
 \end{equation}
 %
-This was originally defined as a loss of carbon as a fraction of nitrogen uptake \citep{Geider:1998}. We define it here relative to phosphate uptake, using a fixed N:P ratio of 16.
+With the second term accounting for the metabolic cost of biosynthesis ($\xi$). This parameter was originally defined as a loss of carbon as a fraction of nitrogen uptake \citep{Geider:1998}. We define it here relative to phosphate uptake, using a fixed N:P ratio of 16.
 
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 \subsubsection{Photoacclimation}
 
-The chlorophyll-to-carbon ratio is regulated as the cell attempts to balance photon capture with the maximum rate at which energy can be used to fix carbon. Depending on this ratio, a certain fraction of newly assimilated nitrogen is diverted to the synthesis of new chlorophyll \textit{a}, 
+The chlorophyll-to-carbon ratio is regulated as the cell attempts to balance the rate of light capture by chlorophyll with the maximum potential (i.e. light-replete) rate of carbon fixation. Depending on this ratio, a certain fraction of newly assimilated phosphorus is diverted to the synthesis of new chlorophyll \textit{a}, 
 %
 \begin{equation}
-\rho_{j,{\rm Chl}} = \theta_{\rm N}^{\rm max} \frac{P_{j,{\rm C}}}{\alpha \cdot \gamma_{j,{\rm Fe}} \cdot Q_{j,{\rm Chl}} \cdot {I}}
+\rho_{j,{\rm Chl}} = \theta_{\rm P}^{\rm max} \frac{P_{j,{\rm C}}}{\alpha \cdot \gamma_{j,{\rm Fe}} \cdot Q_{j,{\rm Chl}} \cdot {I}}
 \end{equation}
 %
-where $\rho_{j,{\rm Chl}}$ is the amount of chlorophyll \textit{a} that is synthesised for every mmol of nitrogen assimilated (mg Chl (mmol N)$^{-1}$). If phosphorus is assimilated at carbon specific rate $V_{j,{\rm P}}$ (mmol N (mmol C)$^{-1}$ d$^{-1}$), then the carbon specific rate of chlorophyll \textit{a} synthesis (mg chl (mmol C)$^{-1}$ d$^{-1}$) is
+Here $\rho_{j,{\rm Chl}}$ is the amount of chlorophyll \textit{a} that is synthesised for every mmol of phosphorus assimilated (mg Chl (mmol P)$^{-1}$) with $\theta_{\rm P}^{\rm max}$ representing the maximum ratio  \citep[again converting from the nitrogen based units of ][with a fixed N:P ratio of 16]{Geider:1998}.  If phosphorus is assimilated at carbon specific rate $V_{j,{\rm P}}$ (mmol P (mmol C)$^{-1}$ d$^{-1}$), then the carbon specific rate of chlorophyll \textit{a} synthesis (mg chl (mmol C)$^{-1}$ d$^{-1}$) is
 %
 \begin{equation}
-V_{j,{\rm Chl}} = \rho_{j,{\rm Chl}} \cdot 16V_{j,{\rm P}}
+V_{j,{\rm Chl}} = \rho_{j,{\rm Chl}} \cdot V_{j,{\rm P}}
 \label{chl_synthesis}
 \end{equation}
 %
@@ -343,9 +342,9 @@ V_{j,{\rm Chl}} = \rho_{j,{\rm Chl}} \cdot 16V_{j,{\rm P}}
 
 \subsubsection{Light attenuation}
 
-ECOGEM uses a slightly more complex light attenuation scheme than BIOGEM, which simply calculates a mean solar (shortwave) irradiance averaged over the depth of the mixed layer (by default, equal to the surface layer thickness) and assuming a length scale of 20 m over which light decays \citep{Doney:2006b}. BIOGEM then takes this mean irradiance and applies a Michaelis-Menten like limitation term, assuming a half saturation value for light of 20 W m$^{-2}$ \citep{Doney:2006b}. At the ocean surface, the incoming shortwave solar radiation intensity is taken from the climate component in cGENIE and varies seasonally \citep{Edwards:2005, Marsh:2011}. In ECOGEM, productivity is also restricted to the surface layer with the light level again calculated as the mean level of photosynthetically available radiation within the mixed layer as if the biological population was evenly distributed across the mixed layer \citep[with depth calculated according to][]{Kraus:1967b}. But now we take into account inhibition of light penetration due to the presence of light absorbing particles and dissolved molecules \citep{Shigsesada:1981}.
+ECOGEM uses a slightly more complex light attenuation scheme than BIOGEM, which simply calculates a mean solar (shortwave) irradiance averaged over the depth of the surface layer, and assuming a length scale of 20 m over which light decays \citep{Doney:2006b}. BIOGEM then takes this mean irradiance and applies a Michaelis-Menten like limitation term, assuming a half saturation value for light of 20 W m$^{-2}$ \citep{Doney:2006b}. At the ocean surface, the incoming shortwave solar radiation intensity is taken from the climate component in cGENIE and varies seasonally \citep{Edwards:2005, Marsh:2011}. 
 
-If $Chl_{tot}$ is the total chlorophyll concentration in the surface layer, $Z_1$ is the thickness of the surface grid box and $Z_{ML}$ is the mixed-layer depth, the virtual chlorophyll concentration distributed across the mixed layer is given by
+In ECOGEM the light level is  calculated as the mean level of photosynthetically available radiation within a variable mixed layer \citep[with depth calculated according to][]{Kraus:1967b}. We also take into account inhibition of light penetration due to the presence of light absorbing particles and dissolved molecules \citep{Shigsesada:1981}. If $Chl_{tot}$ is the total chlorophyll concentration in the surface layer (of thickness $Z_1$), and $Z_{ML}$ is the mixed-layer depth, the virtual chlorophyll concentration distributed across the mixed layer is given by
 %
 \begin{equation}
 Chl_{ML} = Chl_{tot} \frac{Z_1}{Z_{ML}}
@@ -354,7 +353,7 @@ Chl_{ML} = Chl_{tot} \frac{Z_1}{Z_{ML}}
 The combined light-attenuation coefficient attributable to both water and the virtual chlorophyll concentration is given by
 %
 \begin{equation}
- k_{tot} = k_w + k_{chl}*Chl_{ML}
+ k_{tot} = k_w + k_{chl} \cdot Chl_{ML}
 \end{equation}
 %
 For a given level of photosynthetically available radiation at the ocean surface ($I_0$), plankton in the surface grid box experience the average irradiance within the mixed layer, which is given by
@@ -367,7 +366,7 @@ I = \frac{I_0}{k_{tot}} \frac{1}{Z_{ML}} (1-e^{(-k_{tot}\cdot Z_{ML})})
 
 \subsubsection{Predation (including both herbivorous and carnivorous interactions)}
 
-Here we define predation simply as the consumption of any living organism, regardless of the trophic level the organism (i.e. phytoplankton, mixotroph, zooplankton, etc.).
+Here we define predation simply as the consumption of any living organism, regardless of the trophic level the organism (i.e. phytoplankton or zooplankton prey).
 
 The predator-biomass-specific grazing rate of predator ($j_{\rm pred}$) on prey ($j_{\rm prey}$) is given by,
 %
@@ -392,14 +391,14 @@ Note that this equation is written out in matrix form, with the dimensions noted
 \phi_{j_{\rm pred},j_{\rm prey}} = \exp\Big[-\Big(\ln\big(\frac{\vartheta_{j_{\rm pred},j_{\rm prey}}}{\vartheta_{\rm opt}}\big)\Big)^2 /\big(2\sigma_{j_{\rm pred}}^2\big) \Big]
 \end{equation}
 %
-We also include an optional `prey-switching' term, such that predators may preferentially attack those prey that are relatively more available (i.e. active switching, $s=2$). Alternatively they may attack prey in direct proportion to their availability (i.e. passive switching, $s=1$).
+We also include an optional `prey-switching' term, such that predators may preferentially attack those prey that are relatively more available (i.e. active switching, $s=2$). Alternatively they may attack prey in direct proportion to their availability (i.e. passive switching, $s=1$). In the simulations below we assume active switching.
 %
 \begin{equation}
 \Phi_{j_{\rm pred},j_{\rm prey}} = \frac{(\phi_{j_{\rm pred},j_{\rm prey}} {\rm B}_{j_{\rm prey},{\rm C}})^{s}}{\sum_{j_{\rm prey}=1}^J (\phi_{j_{\rm pred},j_{\rm prey}} {\rm B}_{j_{\rm prey},{\rm C}})^{s}}
 \label{switching}
 \end{equation}
 %
-Finally, a prey refuge function is incorporated, such that the overall grazing rate is reduced when the availability of all prey ($\mathcal{F}_{j_{\rm pred},{\rm C}}$) is low. The size of the prey refuge is dictated by the coefficient $\Lambda$. The overall grazing response is calculated on the basis of prey carbon. Grazing losses of other prey elements are simply calculated from their stoichiometric ratio to prey carbon, with different elements assimilated according to the predator's nutritional requirements (see below).
+Finally, a prey refuge function is incorporated, such that the overall grazing rate is decreased when the availability of all prey ($\mathcal{F}_{j_{\rm pred},{\rm C}}$) is low. The size of the prey refuge is dictated by the coefficient $\Lambda$. The overall grazing response is calculated on the basis of prey carbon. Grazing losses of other prey elements are simply calculated from their stoichiometric ratio to prey carbon, with different elements assimilated according to the predator's nutritional requirements (see below).
 %
 \begin{equation}
 G_{j_{\rm pred},j_{\rm prey},{\rm i_b}} = G_{j_{\rm pred},j_{\rm prey},{\rm C}} \frac{{\rm B}_{j_{\rm prey},i_b}}{{\rm B}_{j_{\rm prey},{\rm C}}}
@@ -421,7 +420,7 @@ C assimilation is regulated according to the status of the most limiting nutrien
 Q_{j,i_b}^{\rm lim} = \bigg( \frac{Q_{j,i_b}-Q^{\rm min}_{j,i_b}}{Q_{j,i_b}^{\rm max}-Q_{j,i_b}^{\rm min}} \bigg)^h
 \end{equation}
 %
-If all three quotas are full, C is assimilated at the maximum rate. If any are empty, C assimilation is down-regulated until sufficient quantities of the limiting element(s) are acquired.
+If both nutrient quotas are full, C is assimilated at the maximum rate. If either are empty, C assimilation is down-regulated until sufficient quantities of the limiting element(s) are acquired.
 %
 \begin{equation}
 \lambda_{j_{\rm pred},{\rm C}} = \lambda^{\rm max} \min \big( Q_{j,{\rm P}}^{\rm lim}, Q_{j,{\rm Fe}}^{\rm lim} \big)
@@ -437,7 +436,7 @@ A linear respiration rate is applied to degrade plankton carbon biomass into dis
 
 \subsubsection{Death}
 
-All living biomass is subject to a linear mortality rate of $m_p$. This rate is reduced at very low biomasses (population carbon biomass $\lesssim$ 1$\times$10${-6}$ mmol C m$^{-3}$) in order to maintain a viable population within every surface grid cell \citep[``everything is everywhere, but the environment selects'',][]{BaasBecking:1934}. 
+All living biomass is subject to a linear mortality rate of $m_p$. This rate is decreased at very low biomasses (population carbon biomass $\lesssim$ 1$\times$10${-6}$ mmol C m$^{-3}$) in order to maintain a viable population within every surface grid cell \citep[``everything is everywhere, but the environment selects'',][]{BaasBecking:1934}. 
 %
 \begin{equation}
 m_j = m_p (1-e^{-10^{10}\cdot B_{j,C}})
@@ -458,7 +457,7 @@ The low biomass at which a population attains `immortality' is sufficiently smal
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsubsection{Calcium carbonate}
 
-The production and export of calcium carbonate (CaCO$_3$) by calcifying plankton in the surface ocean is scaled to the export of particulate organic carbon via a spatially-uniform scalar which is modified by a thermodynamically-based relationship with the calcite saturation state. The dissolution of CaCO$_3$ below the surface is treated in a similar way to that of particulate organic matter (equation~\ref{POM_remin}), as described by~\citet{Ridgwell:2007} with the parameter values controlling the export ratio between CaCO$_3$ and POC taken from \citet{Ridgwell:2007b}. 
+The production and export of calcium carbonate (CaCO$_3$) by calcifying plankton in the surface ocean is scaled to the export of particulate organic carbon via a spatially-uniform value which is modified by a thermodynamically-based relationship with the calcite saturation state. The dissolution of CaCO$_3$ below the surface is treated in a similar way to that of particulate organic matter (equation~\ref{POM_remin}), as described by~\citet{Ridgwell:2007} with the parameter values controlling the export ratio between CaCO$_3$ and POC taken from \citet{Ridgwell:2007b}. 
 
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsubsection{Oxygen}
@@ -479,7 +478,7 @@ Production of alkalinity is coupled to planktonic uptake of PO$_4$ via a fixed l
 V_{j,Alk} = -16 V_{j,{\rm PO_4}} \cdot B_{j,{\rm C}}
 \end{equation}
 %
-The negative sign indicates that alkalinity increases as PO$_4$ is consumed. This relationship accounts for alkalinity changes associated with N transformations \citep{Zeebe:2001} that are not explicitly represented in this particular biogeochemical configuration of cGENIE (because no N species in the ocean are defined).
+The negative sign indicates that alkalinity increases as PO$_4$ is consumed. This relationship accounts for alkalinity changes associated with N transformations \citep{Zeebe:2001} that are not explicitly represented in the biogeochemical configurations of cGENIE that are applied here.
 
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsubsection{Production of organic matter}
@@ -516,22 +515,20 @@ For each plankton class, $j$, and internal biomass quota, $i_b$,
 %
 \subsubsection{Dissolved organic matter}
 
- 
-
 For each detrital nutrient element, $i_d$, the rate of change of dissolved fraction of organic matter ($k=1$) is described by
 %
-\begin{align}
-\frac{\partial {\rm D}_{1,i_d}}{\partial t} =& \underbrace{ \sum_{j=1}^{J} [{\rm B}_{j,i_d}] \beta_{j} m_j }_{\rm mortality} 
+\begin{equation}
+\frac{\partial {\rm D}_{1,i_d}}{\partial t} = \underbrace{ \sum_{j=1}^{J} [{\rm B}_{j,i_d}] \beta_{j} m_j }_{\rm mortality} 
  + \underbrace{ \sum_{j_{\rm pred}=1}^{J} [{\rm B}_{j_{\rm pred},{\rm C}}] (1-\lambda_{j_{\rm pred},i_b}) \sum_{j_{\rm prey}=1}^{J} \beta_{j_{\rm prey}} G_{j_{\rm pred},j_{\rm prey},i_d}}_{\rm messy~feeding} \label{dDdt}
-\end{align}
+\end{equation}
 %
-Dissolved organic matter ($k=1$) is an explicit tracer that is transported by the ocean circulation model and is degraded back to its constituent nutrients with a fixed turnover time of $\lambda$ (= 0.5 years). The production of particulate organic matter (POM) in the surface layer is given by 
+Dissolved organic matter (${\matr D}_{1}$) is an explicit tracer that is transported by the ocean circulation model and is degraded back to its constituent nutrients with a fixed turnover time of $\lambda$ (= 0.5 years). Particulate organic matter (POM) is not represented as an explicit state variable in either ECOGEM or BIOGEM. Instead, its implicit production in the surface layer is given by 
 %
 \begin{equation} 
-F_{\text{surface},i_d} = \underbrace{ \sum_{j=1}^{J} [{\rm B}_{j,i_d}] (1-\beta_{j}) m_j}_{\rm mortality} + \underbrace{ \sum_{j_{\rm pred}=1}^{J} [{\rm B}_{j_{\rm pred},{\rm C}}] (1-\lambda_{j_{\rm pred},i_b}) \sum_{j_{\rm prey}=1}^{J} (1-\beta_{j_{\rm prey}}) G_{j_{\rm pred},j_{\rm prey},i_d}}_{\rm messy~feeding}
-\end{equation} 
+F_{\text{surface},i_d} = \underbrace{ \sum_{j=1}^{J} [{\rm B}_{j,i_d}] (1-\beta_{j}) m_j}_{\rm mortality} + \underbrace{ \sum_{j_{\rm pred}=1}^{J} [{\rm B}_{j_{\rm pred},{\rm C}}] (1-\lambda_{j_{\rm pred},i_b}) \sum_{j_{\rm prey}=1}^{J} (1-\beta_{j_{\rm prey}}) G_{j_{\rm pred},j_{\rm prey},i_d}}_{\rm messy~feeding} \nonumber\\ 
+\end{equation}
 % 
-However, POM is not represented as an explicit state variable in either ECOGEM or BIOGEM. Instead, surface production is redistributed throughout the water column as a depth dependent flux, $F_{z,i_d}$. To achieve this, $F_{\text{surface},i_d}$ is partitioned between a `refractory' component ($r^{\text{POM}}$) that is predominantly remineralised in the deep ocean at the seafloor and a `labile' component ($1-r^{\text{POM}}$) which predominantly remineralises in the upper water column. The net remineralisation at depth $z$, relative to the export depth $z_{0}$ is determined by characteristic length scales (${l^{\text{rPOM}}}$ and ${l^{\text{POM}}}$ for `refractory' and `labile' POM respectively):
+This surface production is redistributed throughout the water column as a depth dependent flux, $F_{z,i_d}$. To achieve this, $F_{\text{surface},i_d}$ is partitioned between a `refractory' component ($r^{\text{POM}}$) that is predominantly remineralised close to the seafloor, and a `labile' component ($1-r^{\text{POM}}$) which predominantly remineralises in the upper water column. The net remineralisation at depth $z$, relative to the export depth $z_{0}$ is determined by characteristic length scales (${l^{\text{rPOM}}}$ and ${l^{\text{POM}}}$ for `refractory' and `labile' POM respectively):
 %
 \begin{equation} \label{POM_remin}
 F_{z,i_d} = F_{\text{surface},i_d} \Big[ (1-r^{\text{POM}}) \cdot \text{exp}(\frac{z_{0} - z} {l^{\text{POM}}}) + r^{\text{POM}} \cdot \text{exp}(\frac{z_{0} - z} {l^{\text{rPOM}}}) \Big]
@@ -552,7 +549,7 @@ In the initial implementation of ECOGEM described and evaluated here, the explic
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Ecophysiological parameterisation}\label{Parameters}
 
-The model community is made up of a number of different plankton populations, with each one described according to the same set of equations, as outlined above. Differences between the populations are specified according to individual parameterisation of those equations. In the following sections, we describe how the members of the plankton community are specified for evaluation, and how their parameters are assigned according to the organism's size and taxonomic group.
+The model community is made up of a number of different plankton populations, with each one described according to the same set of equations, as outlined above. Differences between the populations are specified according to individual parameterisation of the equations. In the following sections, we describe how the members of the plankton community are specified, and how their parameters are assigned according to the organism's size and taxonomic group.
 
 \subsubsection{Model structure}\label{community_structure}
 
@@ -598,36 +595,48 @@ $j$ & Functional Type & \multicolumn{1}{r}{ESD ($\mu$m)} \\
 
 \subsubsection{Size-dependent traits}\label{size_dep_traits}
 
-The size-dependent ecophysiological parameters ($p$) given in Table~\ref{Size_dependent} are assigned as a function of organismal volume ($V=\pi [ESD]^3/6$) according to standard allometric relationships of the form,
+With the exception of the maximum photosynthetic rate ($P^{\rm max}_{\rm C}$, see below), the size-dependent ecophysiological parameters ($p$) given in Table~\ref{Size_dependent} are assigned as power-law functions of organismal volume ($V=\pi [ESD]^3/6$) according to standard equations of the form,
 %
 \begin{equation}
 p=a\Big(\frac{V}{V_0}\Big)^b
+\label{powerlaw}
 \end{equation}
 %
 Here $V_0$ is a reference value of $V_0$ = 1 $\mu$m$^3$. The value of $p$ at $V=V_0$ is given by the coefficient $a$, while the rate of change in $p$ as a function of $V$ is described by the exponent $b$.
 
+The maximum photosynthetic rate ($P^{\rm max}_{\rm C}$) of very small cells (i.e. $\lesssim$ 5 $\mu$m ESD) has been shown to deviate from the standard power law of equation~\ref{powerlaw} \citep{Raven:1994,Bec:2008,Finkel:2010}, so we use the slightly more complex unimodal function given by \citet{Ward:2016}.
+%
+\begin{equation}
+\label{PC_curve}
+%\log_{10}(P^{\rm max}_{\rm C}) = \big( log_{10}(p_a) + p_b x \big) \big(1 - \exp(p_c x + p_d) \big)
+P^{\rm max}_{\rm C} = \frac{p_a + \log_{10}(\frac{V}{V_0})}{p_b + p_c \log_{10}(\frac{V}{V_0})+ \log_{10}(\frac{V}{V_0})^2}
+\end{equation}
+%
+The parameters of this equation (listed in Table~\ref{Size_dependent}), were derived empirically from the data of \citet{Maranon:2013}.
+
 \begin{table*}[htp!]
 \footnotesize
-\caption{Size-dependent ecophysiological parameters ($p$) and power-law parameters ($a$ and $b$), such that ${p=a\Big(\frac{V}{V_0}\Big)^b}$.}
-\begin{tabular*}{1.0\textwidth}{@{\extracolsep{\fill}}llllll}
+\caption{Size-dependent ecophysiological parameters ($p$) and their units, with size-scaling coefficients ($a$, $b$ and~$c$) for use in equations~\ref{powerlaw} and~\ref{PC_curve}.}
+\begin{tabular*}{1.0\textwidth}{@{\extracolsep{\fill}}lllllll}
 \hline \\ [-2ex]
-\multicolumn{2}{l}{Parameter} & Symbol & \multicolumn{2}{l}{Power-law parameters} & Units \\ 
-& & $p$ & $a$ & $b$ & \\ 
-\multicolumn{5}{l}{{Inorganic nutrient uptake}}\\ 
+\multicolumn{2}{l}{Parameter} & Symbol & \multicolumn{3}{l}{Size-scaling coefficients} & Units \\ 
+& & $p$ & $a$ & $b$ & $c$ & \\ 
+\multicolumn{7}{l}{{Inorganic nutrient uptake}}\\ 
 %&Maximum uptake rate & $V^{\rm max}_{\rm NO_3}$ & 0.44 & -0.12 & mmol N (mmol C)$^{-1}$ d$^{-1}$ \\ 
 %& & $V^{\rm max}_{\rm NO_2}$ & 0.44 & -0.12 & mmol N (mmol C)$^{-1}$ d$^{-1}$ \\ 
 %& & $V^{\rm max}_{\rm NH_4}$ & 0.22 & -0.12 & mmol N (mmol C)$^{-1}$ d$^{-1}$ \\ 
-&Maximum uptake rates & $V^{\rm max}_{\rm PO_4}$ & 4.4$\times10^{-2}$ & 0.06 & mmol P (mmol C)$^{-1}$ d$^{-1}$ \\ 
-& & $V^{\rm max}_{\rm Fe}$ & 1.4$\times10^{-4}$ & -0.09 & mmol Fe (mmol C)$^{-1}$ d$^{-1}$ \\ 
+& Maximum photosynthetic rate & $P^{\rm max}_{\rm C}$ & 3.08 & 5.00 & -3.80 & mmol N (mmol C)$^{-1}$ d$^{-1}$ \\ 
+& Maximum nutrient uptake rates  & $V^{\rm max}_{\rm PO_4}$ & 4.4$\times10^{-2}$ & 0.06 & & mmol P (mmol C)$^{-1}$ d$^{-1}$ \\ 
+& & $V^{\rm max}_{\rm Fe}$ & 1.4$\times10^{-4}$ & -0.09 & & mmol Fe (mmol C)$^{-1}$ d$^{-1}$ \\ 
 %&Half-saturation concentration & $k_{\rm NO_3}$ & 0.14 & 0.33 & mmol N m$^{-3}$ \\ 
 %& & $k_{\rm NO_2}$ & 0.14 & 0.33 & mmol N m$^{-3}$ \\ 
 %& & $k_{\rm NH_4}$ & 0.07 & 0.33 & mmol N m$^{-3}$ \\ 
-&Nutrient affinities			 & $\alpha_{\rm PO_4}$ & 1.10 & -0.35 & m$^{3}$ (mmol C)$^{-1}$ d$^{-1}$ \\ 
-& & $\alpha_{\rm Fe}$ & 0.175 & -0.36 & m$^{3}$ (mmol C)$^{-1}$ d$^{-1}$ \\ 
-\multicolumn{6}{l}{{Carbon quotas}} \\ 
-&Cell carbon content & $Q_{\rm C}$ & 1.45$\times10^{-11}$ & 0.88 & mmol C cell$^{-1}$ \\ 
-\multicolumn{6}{l}{{Grazing}}\\
-&Maximum prey ingestion rate & $G^{max}_{\rm C}$ & 21.9 & -0.16 & d$^{-1}$ \\ 
+&Nutrient affinities			 & $\alpha_{\rm PO_4}$ & 1.10 & -0.35 & & m$^{3}$ (mmol C)$^{-1}$ d$^{-1}$ \\ 
+& & $\alpha_{\rm Fe}$ & 0.175 & -0.36 & & m$^{3}$ (mmol C)$^{-1}$ d$^{-1}$ \\ 
+\multicolumn{7}{l}{{Carbon quotas}} \\ 
+&Cell carbon content & $Q_{\rm C}$ & 1.45$\times10^{-11}$ & 0.88 & & mmol C cell$^{-1}$ \\ 
+\multicolumn{7}{l}{{Grazing}}\\
+&Maximum prey ingestion rate & $G^{max}_{\rm C}$ & 21.9 & -0.16 & & d$^{-1}$ \\ 
 \hline\\ [-1ex]
 \end{tabular*}
 \label{Size_dependent}
@@ -685,15 +694,16 @@ A list of size-independent model parameters are listed in Table~\ref{Size_indepe
 & Reference temperature & $T_{\rm ref}$ & 20 & $^\circ$C \\ 
 & Temperature dependence & $A$ & 0.05 & - \\ 
 \multicolumn{5}{l}{{Photosynthesis}} \\ 
-& Maximum Chl-\textit{a}-to-nitrogen ratio & $\theta^{\rm max}_{\rm N}$ & 3.0 & mg Chl \textit{a} (mmol N)$^{-1}$ \\ 
+& Maximum Chl-\textit{a}-to-phosphorus ratio & $\theta^{\rm max}_{\rm N}$ & 48 & mg Chl \textit{a} (mmol P)$^{-1}$ \\ 
 & Initial slope of P-I curve & $\alpha$ & 3.83$\times10^{-7}$ & mmol C (mg Chl \textit{a})$^{-1}$($\mu$Ein m$^{-2}$)$^{-1}$ \\ 
-& Cost of biosynthesis & $\xi$ & 2.33 & mmol C (mmol N)$^{-1}$ \\ 
+& Cost of biosynthesis & $\xi$ & 37.28 & mmol C (mmol P)$^{-1}$ \\ 
 \multicolumn{5}{l}{{Grazing}}\\ 
 & Optimum predator:prey length ratio & $\vartheta_{\rm opt}$ & 10 & - \\ 
 & Geometric s.d. of $\vartheta$ & $\sigma_{\rm graz}$ & 2.0 & - \\ 
 & Total prey half-saturation & $k^{\rm prey}_{\rm C}$ & 5.0 & mmol C m$^{-3}$ \\ 
 & Maximum assimilation efficiency & $\lambda^{\rm max}$ & 0.7 & - \\ 
 & Grazing refuge parameter & $\Lambda$ & -1 & (mmol C m$^{-3}$)$^{-1}$ \\ 
+& Active switching parameter & $s$ & 2 & - \\ 
 & Assimilation shape parameter & $h$ & 0.1 & - \\ 
 \multicolumn{5}{l}{{Other loss terms}}\\ 
 & Plankton mortality & $m$ & 0.05 & d$^{-1}$ \\ 
@@ -712,7 +722,7 @@ A list of size-independent model parameters are listed in Table~\ref{Size_indepe
 
 \subsection{Parameter modifications}
 
-As far as possible, the parameter values applied in ECOGEM were kept as close as possible to previously published versions of the model \citep{Ward:2016}. There were however a few modifications that were required to bring EcoGENIE into first order agreement with observations and the current version of cGENIE \citep{Ridgwell:prep}. In particular, in comparison to the biogeochemical model used in \citet{Ward:2016}, the amount of soluble iron supplied to cGENIE by atmospheric deposition is considerably less. With a smaller source of iron, it was necessary to reduce the iron demand of the plankton community, and this was achieved by reducing $Q^{\rm max}_{\rm Fe}$ and $Q^{\rm min}_{\rm Fe}$ by five-fold ($Q^{\rm max}_{\rm Fe}$ from 20 to 4 nmol Fe (mmol C)$^{-1}$, and $Q^{\rm min}_{\rm Fe}$ from 5 to 1 nmol Fe (mmol C)$^{-1}$).
+As far as possible, the parameter values applied in ECOGEM were kept as close as possible to previously published versions of the model \citep{Ward:2016}. There were however a few modifications that were required to bring EcoGENIE into first order agreement with observations and the current version of cGENIE \citep{Ridgwell:prep}. In particular, in comparison to the biogeochemical model used in \citet{Ward:2016}, the amount of soluble iron supplied to cGENIE by atmospheric deposition is considerably less. With a smaller source of iron, it was necessary to decrease the iron demand of the plankton community, and this was achieved by decreasing $Q^{\rm max}_{\rm Fe}$ and $Q^{\rm min}_{\rm Fe}$ by five-fold ($Q^{\rm max}_{\rm Fe}$ from 20 to 4 nmol Fe (mmol C)$^{-1}$, and $Q^{\rm min}_{\rm Fe}$ from 5 to 1 nmol Fe (mmol C)$^{-1}$).
 
 We also found that the flexible stoichiometry of ECOGEM led to excessive export of carbon from the surface ocean, attributable to higher C:P ratios in organic matter (BIOGEM assumes a Redfieldian C:P of 106). This effect was moderated by adding the respiration term, which returns a fraction of carbon biomass directly to DIC (it is assumed that other elements are not lost in this way). The additional production of POC also led to increased production of calcium carbonate. This was counteracted by increasing the PIC:POC production ratio ($r^{\rm CaCO_3:POC}$) from 0.022 to 0.0285, and decreasing the thermodynamic calcification rate power ($\eta$) from 1.28 to 0.744 \citep{Ridgwell:2007}.
 
@@ -721,15 +731,15 @@ We also found that the flexible stoichiometry of ECOGEM led to excessive export 
 
 \subsection{10,000 year spin-up}
 
-We ran cGENIE (as configured and described in \citep{Ridgwell:prep}) and EcoGENIE (as described here) each for period of 10,000 years. These runs were initialised from a homogenous and static ocean, with an imposed constant atmospheric CO$_2$ concentration of 278 ppm. We present model output from the 10,000th year of integration. 
+We ran cGENIE \citep[as configured and described in][]{Ridgwell:prep} and EcoGENIE (as described here) each for period of 10,000 years. These runs were initialised from a homogenous and static ocean, with an imposed constant atmospheric CO$_2$ concentration of 278 ppm. We present model output from the 10,000th year of integration. 
 
 \subsection{Observations}
 
- Although they are not necessarily strictly comparable (discussed later), we compare results from the pre-industrial configurations of cGENIE and EcoGENIE to contemporary climatologies from a range of sources. Global climatologies of dissolved phosphate and oxygen are drawn from the World Ocean Atlas (WOA 2009), while DIC and alkalinity are taken from Global Ocean Data Analysis Project (GLODAP). Surface chlorophyll concentrations represent a climatological average from 1997 to 2002, estimated by the SeaWiFS satellite. Depth-integrated primary production is from \citet{Behrenfeld:1997}. All of these interpolated global fields have been re-gridded onto the cGENIE 36\(\times\)36\(\times\)16 grid.
+ Although they are not necessarily strictly comparable, we compare results from the pre-industrial configurations of cGENIE and EcoGENIE to contemporary climatologies from a range of sources. Global climatologies of dissolved phosphate and oxygen are drawn from the World Ocean Atlas (WOA 2009), while DIC and alkalinity are taken from Global Ocean Data Analysis Project (GLODAP). Surface chlorophyll concentrations represent a climatological average from 1997 to 2002, estimated by the SeaWiFS satellite. Depth-integrated primary production is from \citet{Behrenfeld:1997}. All of these interpolated global fields have been re-gridded onto the cGENIE 36\(\times\)36\(\times\)16 grid.
 
 Observed dissolved iron concentrations are those published by Tagliabue et al. (2012). These data are too sparse and variable to allow reliable mapping on the cGENIE grid, and are therefore shown as individual data.
 
-Fidelity to the observed seasonal cycle of nutrients and biomass was evaluated against observations from nine Joint Global Ocean Flux Study (JGOFS) sites: the Hawai`i Ocean Time-series (HOT: 23$^\circ$N, 158$^\circ$W), the Bermuda Atlantic Time-series Study (BATS: 32$^\circ$N, 64$^\circ$W), the equatorial Pacific (EQPAC: 0$^\circ$N, 140$^\circ$W), the Arabian Sea (ARABIAN: 16$^\circ$N, 62$^\circ$E), the North Atlantic Bloom Experiment (NABE: 47$^\circ$N, 19$^\circ$W), station P (STNP: 50$^\circ$NS, 145$^\circ$W), Kerfix (KERFIX: 51$^\circ$S, 68$^\circ$E), Antarctic Polar Frontal Zone (APFZ: 62$^\circ$S, 170$^\circ$W) and the Ross Sea (ROSS: 75$^\circ$S, 180$^\circ$W). Model output for KERFIX and the Ross Sea site was not taken at the true locations of the observations (51$^\circ$S, 68$^\circ$E and 75$^\circ$S, 180$^\circ$W, respectively). Kerfix was moved to compensate for a poor representation of the Polar Front within the coarse resolution ocean model, while the Ross Sea site does not lie within the GEnIE ocean grid. At each site, the observational data represent the mean daily value within the mixed layer. Data from all years are plotted together as one climatological year.
+Fidelity to the observed seasonal cycle of nutrients and biomass was evaluated against observations from nine Joint Global Ocean Flux Study (JGOFS) sites: the Hawai$\!$`i Ocean Time-series (HOT: 23$^\circ$N, 158$^\circ$W), the Bermuda Atlantic Time-series Study (BATS: 32$^\circ$N, 64$^\circ$W), the equatorial Pacific (EQPAC: 0$^\circ$N, 140$^\circ$W), the Arabian Sea (ARABIAN: 16$^\circ$N, 62$^\circ$E), the North Atlantic Bloom Experiment (NABE: 47$^\circ$N, 19$^\circ$W), Station P (STNP: 50$^\circ$NS, 145$^\circ$W), Kerfix (KERFIX: 51$^\circ$S, 68$^\circ$E), Antarctic Polar Frontal Zone (APFZ: 62$^\circ$S, 170$^\circ$W) and the Ross Sea (ROSS: 75$^\circ$S, 180$^\circ$W). Model output for KERFIX and the Ross Sea site was not taken at the true locations of the observations (51$^\circ$S, 68$^\circ$E and 75$^\circ$S, 180$^\circ$W, respectively). Kerfix was moved to compensate for a poor representation of the Polar Front within the coarse resolution ocean model, while the Ross Sea site does not lie within the GEnIE ocean grid. At each site, the observational data represent the mean daily value within the mixed layer. Observational data from all years are plotted together as one climatological year.
 
 % global surface BGC
 \section{Results}\label{Results}
@@ -740,62 +750,62 @@ We start by describing the global distributions of key biogeochemical tracers th
 
 \subsubsection{Global surface values}
 
-Annual mean global distributions are presented for the upper 80.8~m of the water column, corresponding to the model surface layer. In Figure~\ref{fig:nutrients} we compare output from the two models to observations of dissolved phosphate and iron. Surface phosphate concentrations are broadly similar between the two versions of the model, except that EcoGENIE slightly underestimates concentrations in the Southern Ocean. Both versions strongly underestimate surface phosphate in the equatorial and north Pacific, and to a lesser extent in the north and east Atlantic, the Arctic and the Arabian Sea. This is likely attributable in part to the model underestimating the strength of upwelling in these regions. It should also be noted that the observations may in some cases be unrepresentative of the true surface layer, when this is significantly less than 80.8 m. In such cases the observed value will be affected by measurements from below the surface layer. Iron distributions are also broadly similar between the two models, with EcoGENIE showing slightly lower iron concentrations over most of the ocean. 
+Annual mean global distributions are presented for the upper 80.8~m of the water column, corresponding to the model surface layer. In Figure~\ref{fig:nutrients} we compare output from the two models to observations of dissolved phosphate and iron. Surface phosphate concentrations are broadly similar between the two versions of the model, except that EcoGENIE provides slightly lower estimates in the Southern Ocean and equatorial upwellings. Both versions strongly underestimate surface phosphate in the equatorial and north Pacific, and to a lesser extent in the north and east Atlantic, the Arctic and the Arabian Sea. This is likely attributable in part to the model underestimating the strength of upwelling in these regions. It should also be noted that the observations may in some cases be unrepresentative of the true surface layer, when this is significantly shallower than 80.8 m. In such cases the observed value will be affected by measurements from below the surface layer. Iron distributions are also broadly similar between the two models, with EcoGENIE showing slightly lower iron concentrations over most of the ocean. 
 
-Figure~\ref{fig:carbon} shows observed and modelled values of inorganic carbon, alkalinity and oxygen. The two models yield very similar surface distributions of the three tracers. DIC and alkalinity are both broadly underestimated relative to observations, while oxygen shows higher fidelity, albeit with artificially high estimates in the equatorial Pacific. This is likely attributable to artificially weak upwelling in this region. 
+Figure~\ref{fig:carbon} shows observed and modelled values of inorganic carbon, oxygen and alkalinity. The two models yield very similar surface distributions of the three tracers. DIC and alkalinity are both broadly underestimated relative to observations, while oxygen shows higher fidelity, albeit with artificially high estimates in the equatorial Atlantic and Pacific. This is likely attributable to unrealistically weak upwelling in these regions. 
 
 Surface $\Delta$pCO$_2$ from the two models is shown in Figure~\ref{fig:dpCO2}. EcoGENIE shows weaker CO$_2$ outgassing in tropical band, with a much stronger ocean-to-atmosphere flux in the Western Arctic. 
 
 In Figure~\ref{fig:particulates} we show the annual mean rate of particulate organic matter production in the surface layer, and the relative differences between ECOGEM and BIOGEM. In comparison to cGENIE, EcoGENIE shows elevated POC production in all regions. Production of CaCO$_3$ is globally less variable in EcoGENIE than cGENIE, with notable higher fluxes in the oligotrophic gyres and polar regions. 
 
-The relative proportions in which these elements and compounds are exported from the surface ocean are regulated by the stoichiometry of biological production. In BIOGEM, carbon and phosphorus production are rigidly coupled through a fixed ratio of 106:1, while POFe:POC and CaCO$_3$:POC production ratios are regulated as a function of environmental conditions. In ECOGEM, phosphorus, iron and carbon production are all decoupled through the flexible quota physiology, which depends on both environmental conditions, and the status of the food-web. Only CaCO$_3$:POC production ratios are regulated via the same mechanism in the two models (although we reduced the average CaCO$_3$:POC ratio in ECOGEM to compensate for the elevated POC production relative to POP). 
+The relative proportions in which these elements and compounds are exported from the surface ocean are regulated by the stoichiometry of biological production. In cGENIE (BIOGEM), carbon and phosphorus production are rigidly coupled through a fixed ratio of 106:1, while POFe:POC and CaCO$_3$:POC production ratios are regulated as a function of environmental conditions. In ecoGENIE (ECOGEM), phosphorus, iron and carbon production are all decoupled through the flexible quota physiology, which depends on both environmental conditions, and the status of the food-web. Only CaCO$_3$:POC production ratios are regulated via the same mechanism in the two models (although we decreased the average CaCO$_3$:POC ratio in ECOGEM to compensate for the elevated POC production relative to POP). 
 
 \begin{figure}[htp]
 \begin{subfigure}{.33\textwidth}
  \centering
  \caption{PO$_4$ - WOA (2009)}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/WOA_2009_data/surface_p_an.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/WOA_2009_data/surface_p_an.png}
  \label{fig:nutrients1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{PO$_4$ - BIOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/ocn_PO4.png}
+ \caption{PO$_4$ - cGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/ocn_PO4.png}
  \label{fig:nutrients1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{PO$_4$ - ECOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_PO4.png}
+ \caption{PO$_4$ - EcoGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_PO4.png}
  \label{fig:nutrients2}
 \end{subfigure}
 \\[+0.2cm]
 \begin{subfigure}{.5\textwidth}
  \centering
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_PO4_clrbr.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_PO4_clrbr.png}
 \end{subfigure}
 \begin{subfigure}{.33\textwidth}
  \centering
  \caption{dFe - \citet{Tagliabue:2012}}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/Tagliabue_data/surface_fe.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/Tagliabue_data/surface_fe.png}
  \label{fig:nutrients1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{dFe - BIOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/ocn_TDFe.png}
+ \caption{dFe - cGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/ocn_TDFe.png}
  \label{fig:nutrients3}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{dFe - ECOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_TDFe.png}
+ \caption{dFe - EcoGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_TDFe.png}
  \label{fig:nutrients4}
 \end{subfigure}
 \\[+0.2cm]
 \begin{subfigure}{.5\textwidth}
  \centering
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_TDFe_clrbr.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_TDFe_clrbr.png}
 \end{subfigure}
 \caption{Surface concentrations of dissolved inorganic nutrients.}
 \label{fig:nutrients}
@@ -805,71 +815,71 @@ The relative proportions in which these elements and compounds are exported from
 \begin{subfigure}{.33\textwidth}
  \centering
  \caption{DIC - GLODAP}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/GLODAP_data/surface_TCO2.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/GLODAP_data/surface_TCO2.png}
  \label{fig:nutrients1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{DIC - BIOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/ocn_DIC.png}
+ \caption{DIC -  - cGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/ocn_DIC.png}
  \label{fig:carbon1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{DIC - ECOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_DIC.png}
+ \caption{DIC - EcoGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_DIC.png}
  \label{fig:carbon2}
 \end{subfigure}
 \\[+0.2cm]
 \begin{subfigure}{.5\textwidth}
  \centering
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_DIC_clrbr.png}
-\end{subfigure}
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Alkalinity - GLODAP}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/GLODAP_data/surface_PALK.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Alkalinity - BIOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/ocn_ALK.png}
- \label{fig:carbon3}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Alkalinity - ECOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_ALK.png}
- \label{fig:carbon4}
-\end{subfigure}
-\\[+0.2cm]
-\begin{subfigure}{.5\textwidth}
- \centering
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_ALK_clrbr.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_DIC_clrbr.png}
 \end{subfigure}
 \begin{subfigure}{.33\textwidth}
  \centering
  \caption{Oxygen - WOA (2009)}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/WOA_2009_data/surface_o_an.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/WOA_2009_data/surface_o_an.png}
  \label{fig:nutrients1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{Oxygen - BIOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/ocn_O2.png}
+ \caption{Oxygen - cGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/ocn_O2.png}
  \label{fig:carbon3}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{Oxygen - ECOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_O2.png}
+ \caption{Oxygen - EcoGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_O2.png}
  \label{fig:carbon4}
 \end{subfigure}
 \\[+0.2cm]
 \begin{subfigure}{.5\textwidth}
  \centering
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_O2_clrbr.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_O2_clrbr.png}
+\end{subfigure}
+\begin{subfigure}{.33\textwidth}
+ \centering
+ \caption{Alkalinity - GLODAP}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/GLODAP_data/surface_PALK.png}
+ \label{fig:nutrients1}
+\end{subfigure}%
+\begin{subfigure}{.33\textwidth}
+ \centering
+ \caption{Alkalinity - cGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/ocn_ALK.png}
+ \label{fig:carbon3}
+\end{subfigure}%
+\begin{subfigure}{.33\textwidth}
+ \centering
+ \caption{Alkalinity - EcoGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_ALK.png}
+ \label{fig:carbon4}
+\end{subfigure}
+\\[+0.2cm]
+\begin{subfigure}{.5\textwidth}
+ \centering
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_ALK_clrbr.png}
 \end{subfigure}
 \caption{Surface concentrations of dissolved inorganic carbon, alkalinity and dissolved oxygen.}
 \label{fig:carbon}
@@ -879,20 +889,20 @@ The relative proportions in which these elements and compounds are exported from
 \begin{figure}[htp]
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{$\Delta$pCO$_2$ (ppm) - BIOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/atm_dpCO2.png}
+ \caption{$\Delta$pCO$_2$ (ppm) - cGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/atm_dpCO2.png}
  \label{fig:dpCO2_1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{$\Delta$pCO$_2$ (ppm) - ECOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/atm_dpCO2.png}
+ \caption{$\Delta$pCO$_2$ (ppm) - EcoGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/atm_dpCO2.png}
  \label{fig:dpCO2_2}
 \end{subfigure}
 \\[+0.2cm]
 \begin{subfigure}{.5\textwidth}
  \centering
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/atm_dpCO2_clrbr.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/atm_dpCO2_clrbr.png}
 \end{subfigure}
 \caption{(Preindustrial) surface $\Delta$pCO$_2$.}
 \label{fig:dpCO2}
@@ -905,20 +915,20 @@ The relative proportions in which these elements and compounds are exported from
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{POC production - BIOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart_POC.png}
+ \caption{POC production - cGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart_POC.png}
  \label{fig:dpCO2_1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{POC production - ECOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/bio_fpart_POC.png}
+ \caption{POC production - EcoGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/bio_fpart_POC.png}
  \label{fig:dpCO2_2}
 \end{subfigure}
 \begin{subfigure}{.33\textwidth}
  \centering
  \caption{ECOGEM$\div$BIOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart_POC_diff.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart_POC_diff.png}
  \label{fig:dpCO2_2}
 \end{subfigure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -926,31 +936,31 @@ The relative proportions in which these elements and compounds are exported from
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{subfigure}{.49\textwidth}
  \centering
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/bio_fpart_POC_clrbr.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/bio_fpart_POC_clrbr.png}
 \end{subfigure}
 \begin{subfigure}{.49\textwidth}
  \centering
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart_POC_clrbr_diff.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart_POC_clrbr_diff.png}
 \end{subfigure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \\[+0.2cm]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{POP production - BIOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart_POP.png}
+ \caption{POP production - cGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart_POP.png}
  \label{fig:dpCO2_1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{POP production - ECOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/bio_fpart_POP.png}
+ \caption{POP production - EcoGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/bio_fpart_POP.png}
  \label{fig:dpCO2_2}
 \end{subfigure}
 \begin{subfigure}{.33\textwidth}
  \centering
  \caption{ECOGEM$\div$BIOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart_POP_diff.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart_POP_diff.png}
  \label{fig:dpCO2_2}
 \end{subfigure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -958,31 +968,31 @@ The relative proportions in which these elements and compounds are exported from
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{subfigure}{.49\textwidth}
  \centering
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/bio_fpart_POP_clrbr.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/bio_fpart_POP_clrbr.png}
 \end{subfigure}
 \begin{subfigure}{.49\textwidth}
  \centering
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart_POP_clrbr_diff.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart_POP_clrbr_diff.png}
 \end{subfigure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \\[+0.2cm]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{POFe production - BIOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart_POFe.png}
+ \caption{POFe production - cGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart_POFe.png}
  \label{fig:dpCO2_1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{POFe production - ECOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/bio_fpart_POFe.png}
+ \caption{POFe production - EcoGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/bio_fpart_POFe.png}
  \label{fig:dpCO2_2}
 \end{subfigure}
 \begin{subfigure}{.33\textwidth}
  \centering
  \caption{ECOGEM$\div$BIOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart_POFe_diff.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart_POFe_diff.png}
  \label{fig:dpCO2_2}
 \end{subfigure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -990,31 +1000,31 @@ The relative proportions in which these elements and compounds are exported from
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{subfigure}{.49\textwidth}
  \centering
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/bio_fpart_POFe_clrbr.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/bio_fpart_POFe_clrbr.png}
 \end{subfigure}
 \begin{subfigure}{.49\textwidth}
  \centering
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart_POFe_clrbr_diff.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart_POFe_clrbr_diff.png}
 \end{subfigure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \\[+0.2cm]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{CaCO$_3$ production - BIOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart_CaCO3.png}
+ \caption{CaCO$_3$ production - cGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart_CaCO3.png}
  \label{fig:dpCO2_1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{CaCO$_3$ production - ECOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/bio_fpart_CaCO3.png}
+ \caption{CaCO$_3$ production - EcoGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/bio_fpart_CaCO3.png}
  \label{fig:dpCO2_2}
 \end{subfigure}
 \begin{subfigure}{.33\textwidth}
  \centering
  \caption{ECOGEM$\div$BIOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart_CaCO3_diff.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart_CaCO3_diff.png}
  \label{fig:dpCO2_2}
 \end{subfigure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1022,11 +1032,11 @@ The relative proportions in which these elements and compounds are exported from
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{subfigure}{.49\textwidth}
  \centering
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/bio_fpart_CaCO3_clrbr.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/bio_fpart_CaCO3_clrbr.png}
 \end{subfigure}
 \begin{subfigure}{.49\textwidth}
  \centering
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart_CaCO3_clrbr_diff.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/bio_fpart_CaCO3_clrbr_diff.png}
 \end{subfigure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \caption{Particulate matter production (and export from the surface layer). The right-hand column indicates the relative increase or decrease in ECOGEM, relative to BIOGEM.}
@@ -1036,20 +1046,20 @@ The relative proportions in which these elements and compounds are exported from
 \clearpage
 \subsubsection{Basin-averaged depth profiles}
 
-In this section we present meridional depth distribution of key biogeochemical tracers, averaged across each of the three main ocean basins, as shown in Figure~\ref{fig:basins}. Figure~\ref{fig:basin_PO4} shows that the vertical distribution of dissolved phosphate is very similar between the two models, with EcoGENIE showing a slightly stronger sub-surface accumulation in the northern Indian Ocean. 
+In this section we present the meridional depth distributions of key biogeochemical tracers, averaged across each of the three main ocean basins, as shown in Figure~\ref{fig:basins}. Figure~\ref{fig:basin_PO4} shows that the distribution of dissolved phosphate is very similar between the two models, with EcoGENIE showing a slightly stronger sub-surface accumulation in the northern Indian Ocean. 
 
 The vertical distributions shown in Figure~\ref{fig:basin_Fe} reveal that dissolved iron is lower throughout the ocean in EcoGENIE, relative to cGENIE, particularly below 1500 m. Differences are less obvious at intermediate depths. (Observations are currently too sparse to estimate reliable basin-scale distributions of dissolved iron; see Tagliabue 2016.)
 
 Figure~\ref{fig:basin_DIC} shows that while cGENIE reproduces observed DIC distributions very well, EcoGENIE overestimates concentrations within the Indian and Pacific Oceans. The total oceanic DIC inventory increased by just under 2\% from 0.299 mol C in cGENIE to 0.304 in EcoGENIE (with a fixed atmospheric CO\(_{2}\) concentration of 278 ppm). Otherwise the two models show broadly similar distributions, with the most pronounced differences (as for PO$_4$) in the northern Indian Ocean.
 
-Alkalinity (Figure 10), shows some pronounced differences between the two models, particularly in the Indian Ocean. In this region EcoGENIE shows excessive accumulation of alkalinity at $\sim$1000~m depth (this also occurs to a lesser degree in the north Pacific). The reason for this accumulation is that in the absence of a nitrogen cycle (and NO\(^{-}_{3}\) reduction) being included in the representation of global biogeochemical cycles adopted here, reduction of sulphate (to H\(_{2}\)S) occurs as oxygen becomes depleted (Figure 11). The process of sulphate reduction increases alkalinity of seawater. Further adjustment of the respiration of carbon in ECOGEM and hence the effective exported P:C Redfield ratio, and/or returning of the organic matter remineralization profiles in BIOGEM \citep{Ridgwell:2007} would likely resolve this.
+Figure~\ref{fig:basin_O2} shows that cGENIE reasonably captures the invasion of O$_2$ into the ocean interior through the Southern Ocean and North Atlantic. These patterns are also seen in EcoGENIE, although unrealistic water column anoxia is seen in the northern intermediate Indian and Pacific Oceans. Again, this is likely a consequence of greater export and remineralisation of organic carbon in EcoGENIE, leading to more oxygen consumption at intermediate depths (also evidenced by elevated PO$_4$, DIC and alkalinity in the same regions; Figures~\ref{fig:basin_PO4}, \ref{fig:basin_DIC} and~\ref{fig:basin_ALK}).
 
-cGENIE reasonably captures the invasion of O$_2$ into the ocean interior through the Southern Ocean and North Atlantic (Figure 11),. These patterns are also seen in EcoGENIE, although concentrations in the far Northern deep ocean tend to be too low in the Indian and Pacific Oceans. Again, this is likely a consequence of greater export and remineralisation of organic carbon in ECOGEM leading to more oxygen consumption as the intermediate depth regions of elevated PO$_4$ (Figure 7), DIC (Figure 9), and alkalinity (Figure 10), in the Indian and Pacific Oceans are also associated with water column anoxia (Figure 11),.
+Alkalinity (Figure~\ref{fig:basin_ALK}) also shows some clear differences between the two models, again most noticeably in the northern intermediate Indian and Pacific Oceans. In these regions EcoGENIE shows excessive accumulation of alkalinity at $\sim$1000~m depth. This is again attributable to the increased C export in EcoGENIE. In the absence of a nitrogen cycle (and NO\(^{-}_{3}\) reduction), increased anoxic remineralisation of organic carbon (Figures~\ref{fig:basin_DIC} and~\ref{fig:basin_O2}) leads to increased reduction of sulphate to H\(_{2}\)S, which in turn increases the alkalinity of seawater. Further adjustment of the respiration of carbon in ECOGEM and hence the effective exported P:C Redfield ratio, and/or retuning of the organic matter remineralisation profiles in BIOGEM \citep{Ridgwell:2007} would likely resolve these issues.
 
 
 \begin{figure}[htp]
  \centering
- \includegraphics[width=0.5\linewidth]{/Users/ward/cgenie_output/EXAMPLE.worjh2.PO4FeTDTL_HYBRID.SPIN/figures/3basins.png}
+ \includegraphics[width=0.5\linewidth]{/Volumes/cGENIE/cgenie_output/EXAMPLE.worjh2.PO4FeTDTL_HYBRID.SPIN/figures/3basins.png}
 \caption{Spatial definition of the three ocean basins used in Figures \ref{fig:basin_PO4} to \ref{fig:basin_O2}. Locations of the JGOFS time-series sites are indicated with blue dots.}
 \label{fig:basins}
 \end{figure}
@@ -1058,61 +1068,61 @@ cGENIE reasonably captures the invasion of O$_2$ into the ocean interior through
 \begin{subfigure}{.33\textwidth}
  \centering
  \caption{Atlantic PO$_4$ - WOA (2009)}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/WOA_2009_data/Atlantic_p_an_profile.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/WOA_2009_data/Atlantic_p_an_profile.png}
  \label{fig:nutrients1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{Atlantic PO$_4$ - BIOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Atlantic_ocn_PO4_profile.png}
+ \caption{Atlantic PO$_4$ - cGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Atlantic_ocn_PO4_profile.png}
  \label{fig:nutrients1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{Atlantic PO$_4$ - ECOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Atlantic_ocn_PO4_profile.png}
+ \caption{Atlantic PO$_4$ - EcoGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Atlantic_ocn_PO4_profile.png}
  \label{fig:nutrients2}
 \end{subfigure}
 \begin{subfigure}{.33\textwidth}
  \centering
  \caption{Indian PO$_4$ - WOA (2009)}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/WOA_2009_data/Indian_p_an_profile.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/WOA_2009_data/Indian_p_an_profile.png}
  \label{fig:nutrients1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{Indian PO$_4$ - BIOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Indian_ocn_PO4_profile.png}
+ \caption{Indian PO$_4$ - cGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Indian_ocn_PO4_profile.png}
  \label{fig:nutrients1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{Indian PO$_4$ - ECOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Indian_ocn_PO4_profile.png}
+ \caption{Indian PO$_4$ - EcoGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Indian_ocn_PO4_profile.png}
  \label{fig:nutrients2}
 \end{subfigure}
 \begin{subfigure}{.33\textwidth}
  \centering
  \caption{Pacific PO$_4$ - WOA (2009)}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/WOA_2009_data/Pacific_p_an_profile.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/WOA_2009_data/Pacific_p_an_profile.png}
  \label{fig:nutrients1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{Pacific PO$_4$ - BIOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Pacific_ocn_PO4_profile.png}
+ \caption{Pacific PO$_4$ - cGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Pacific_ocn_PO4_profile.png}
  \label{fig:nutrients1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{Pacific PO$_4$ - ECOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Pacific_ocn_PO4_profile.png}
+ \caption{Pacific PO$_4$ - EcoGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Pacific_ocn_PO4_profile.png}
  \label{fig:nutrients2}
 \end{subfigure}
 \\[+0.2cm]
 \begin{subfigure}{.5\textwidth}
  \centering
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_PO4_profile_clrbr.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_PO4_profile_clrbr.png}
 \end{subfigure}
 \caption{Basin-averaged meridional-depth distribution of phosphate.}
 \label{fig:basin_PO4}
@@ -1123,44 +1133,44 @@ cGENIE reasonably captures the invasion of O$_2$ into the ocean interior through
 \begin{figure}[htp]
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{Atlantic dFe - BIOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Atlantic_ocn_TDFe_profile.png}
+ \caption{Atlantic dFe - cGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Atlantic_ocn_TDFe_profile.png}
  \label{fig:nutrients1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{Atlantic dFe - ECOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Atlantic_ocn_TDFe_profile.png}
+ \caption{Atlantic dFe - EcoGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Atlantic_ocn_TDFe_profile.png}
  \label{fig:nutrients2}
 \end{subfigure}
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{Indian dFe - BIOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Indian_ocn_TDFe_profile.png}
+ \caption{Indian dFe - cGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Indian_ocn_TDFe_profile.png}
  \label{fig:nutrients1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{Indian dFe - ECOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Indian_ocn_TDFe_profile.png}
+ \caption{Indian dFe - EcoGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Indian_ocn_TDFe_profile.png}
  \label{fig:nutrients2}
 \end{subfigure}
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{Pacific dFe - BIOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Pacific_ocn_TDFe_profile.png}
+ \caption{Pacific dFe - cGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Pacific_ocn_TDFe_profile.png}
  \label{fig:nutrients1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{Pacific dFe - ECOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Pacific_ocn_TDFe_profile.png}
+ \caption{Pacific dFe - EcoGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Pacific_ocn_TDFe_profile.png}
  \label{fig:nutrients2}
 \end{subfigure}
 \\[+0.2cm]
 \begin{subfigure}{.5\textwidth}
  \centering
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_TDFe_profile_clrbr.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_TDFe_profile_clrbr.png}
 \end{subfigure}
 \caption{Basin-averaged meridional-depth distribution of total dissolved iron (dFe).}
 \label{fig:basin_Fe}
@@ -1172,129 +1182,64 @@ cGENIE reasonably captures the invasion of O$_2$ into the ocean interior through
 \begin{subfigure}{.33\textwidth}
  \centering
  \caption{Atlantic DIC - GLODAP}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/GLODAP_data/Atlantic_TCO2_profile.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/GLODAP_data/Atlantic_TCO2_profile.png}
  \label{fig:nutrients1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{Atlantic DIC - BIOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Atlantic_ocn_DIC_profile.png}
+ \caption{Atlantic DIC - cGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Atlantic_ocn_DIC_profile.png}
  \label{fig:nutrients1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{Atlantic DIC - ECOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Atlantic_ocn_DIC_profile.png}
+ \caption{Atlantic DIC - EcoGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Atlantic_ocn_DIC_profile.png}
  \label{fig:nutrients2}
 \end{subfigure}
 \begin{subfigure}{.33\textwidth}
  \centering
  \caption{Indian DIC - GLODAP}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/GLODAP_data/Indian_TCO2_profile.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/GLODAP_data/Indian_TCO2_profile.png}
  \label{fig:nutrients1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{Indian DIC - BIOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Indian_ocn_DIC_profile.png}
+ \caption{Indian DIC - cGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Indian_ocn_DIC_profile.png}
  \label{fig:nutrients1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{Indian DIC - ECOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Indian_ocn_DIC_profile.png}
+ \caption{Indian DIC - EcoGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Indian_ocn_DIC_profile.png}
  \label{fig:nutrients2}
 \end{subfigure}
 \begin{subfigure}{.33\textwidth}
  \centering
  \caption{Pacific DIC - GLODAP}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/GLODAP_data/Pacific_TCO2_profile.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/GLODAP_data/Pacific_TCO2_profile.png}
  \label{fig:nutrients1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{Pacific DIC - BIOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Pacific_ocn_DIC_profile.png}
+ \caption{Pacific DIC - cGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Pacific_ocn_DIC_profile.png}
  \label{fig:nutrients1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{Pacific DIC - ECOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Pacific_ocn_DIC_profile.png}
+ \caption{Pacific DIC - EcoGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Pacific_ocn_DIC_profile.png}
  \label{fig:nutrients2}
 \end{subfigure}
 \\[+0.2cm]
 \begin{subfigure}{.5\textwidth}
  \centering
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_DIC_profile_clrbr.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_DIC_profile_clrbr.png}
 \end{subfigure}
 \caption{Basin-averaged meridional-depth distribution of DIC.}
 \label{fig:basin_DIC}
-\end{figure}
-
-
-\begin{figure}[htp]
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Atlantic ALK - GLODAP}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/GLODAP_data/Atlantic_PALK_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Atlantic Alkalinity - BIOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Atlantic_ocn_ALK_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Atlantic Alkalinity - ECOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Atlantic_ocn_ALK_profile.png}
- \label{fig:nutrients2}
-\end{subfigure}
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Indian ALK - GLODAP}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/GLODAP_data/Indian_PALK_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Indian Alkalinity - BIOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Indian_ocn_ALK_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Indian Alkalinity - ECOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Indian_ocn_ALK_profile.png}
- \label{fig:nutrients2}
-\end{subfigure}
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Pacific ALK - GLODAP}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/GLODAP_data/Pacific_PALK_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Pacific Alkalinity - BIOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Pacific_ocn_ALK_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Pacific Alkalinity - ECOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Pacific_ocn_ALK_profile.png}
- \label{fig:nutrients2}
-\end{subfigure}
-\\[+0.2cm]
-\begin{subfigure}{.5\textwidth}
- \centering
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_ALK_profile_clrbr.png}
-\end{subfigure}
-\caption{Basin-averaged meridional-depth distribution of alkalinity.}
-\label{fig:basin_ALK}
 \end{figure}
 
 
@@ -1303,75 +1248,139 @@ cGENIE reasonably captures the invasion of O$_2$ into the ocean interior through
 \begin{subfigure}{.33\textwidth}
  \centering
  \caption{Atlantic O$_2$ - WOA (2009)}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/WOA_2009_data/Atlantic_o_an_profile.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/WOA_2009_data/Atlantic_o_an_profile.png}
  \label{fig:nutrients1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{Atlantic O$_2$ - BIOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Atlantic_ocn_O2_profile.png}
+ \caption{Atlantic O$_2$ - cGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Atlantic_ocn_O2_profile.png}
  \label{fig:nutrients1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{Atlantic O$_2$ - ECOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Atlantic_ocn_O2_profile.png}
+ \caption{Atlantic O$_2$ - EcoGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Atlantic_ocn_O2_profile.png}
  \label{fig:nutrients2}
 \end{subfigure}
 \begin{subfigure}{.33\textwidth}
  \centering
  \caption{Indian O$_2$ - WOA (2009)}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/WOA_2009_data/Indian_o_an_profile.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/WOA_2009_data/Indian_o_an_profile.png}
  \label{fig:nutrients1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{Indian O$_2$ - BIOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Indian_ocn_O2_profile.png}
+ \caption{Indian O$_2$ - cGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Indian_ocn_O2_profile.png}
  \label{fig:nutrients1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{Indian O$_2$ - ECOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Indian_ocn_O2_profile.png}
+ \caption{Indian O$_2$ - EcoGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Indian_ocn_O2_profile.png}
  \label{fig:nutrients2}
 \end{subfigure}
 \begin{subfigure}{.33\textwidth}
  \centering
  \caption{Pacific O$_2$ - WOA (2009)}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/WOA_2009_data/Pacific_o_an_profile.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/WOA_2009_data/Pacific_o_an_profile.png}
  \label{fig:nutrients1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{Pacific O$_2$ - BIOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Pacific_ocn_O2_profile.png}
+ \caption{Pacific O$_2$ - cGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Pacific_ocn_O2_profile.png}
  \label{fig:nutrients1}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
  \centering
- \caption{Pacific O$_2$ - ECOGEM}
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Pacific_ocn_O2_profile.png}
+ \caption{Pacific O$_2$ - EcoGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Pacific_ocn_O2_profile.png}
  \label{fig:nutrients2}
 \end{subfigure}
 \\[+0.2cm]
 \begin{subfigure}{.5\textwidth}
  \centering
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_O2_profile_clrbr.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_O2_profile_clrbr.png}
 \end{subfigure}
 \caption{Basin-averaged meridional-depth distribution of dissolved oxygen.}
 \label{fig:basin_O2}
+\end{figure}
+
+
+\begin{figure}[htp]
+\begin{subfigure}{.33\textwidth}
+ \centering
+ \caption{Atlantic ALK - GLODAP}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/GLODAP_data/Atlantic_PALK_profile.png}
+ \label{fig:nutrients1}
+\end{subfigure}%
+\begin{subfigure}{.33\textwidth}
+ \centering
+ \caption{Atlantic Alkalinity - cGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Atlantic_ocn_ALK_profile.png}
+ \label{fig:nutrients1}
+\end{subfigure}%
+\begin{subfigure}{.33\textwidth}
+ \centering
+ \caption{Atlantic Alkalinity - EcoGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Atlantic_ocn_ALK_profile.png}
+ \label{fig:nutrients2}
+\end{subfigure}
+\begin{subfigure}{.33\textwidth}
+ \centering
+ \caption{Indian ALK - GLODAP}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/GLODAP_data/Indian_PALK_profile.png}
+ \label{fig:nutrients1}
+\end{subfigure}%
+\begin{subfigure}{.33\textwidth}
+ \centering
+ \caption{Indian Alkalinity - cGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Indian_ocn_ALK_profile.png}
+ \label{fig:nutrients1}
+\end{subfigure}%
+\begin{subfigure}{.33\textwidth}
+ \centering
+ \caption{Indian Alkalinity - EcoGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Indian_ocn_ALK_profile.png}
+ \label{fig:nutrients2}
+\end{subfigure}
+\begin{subfigure}{.33\textwidth}
+ \centering
+ \caption{Pacific ALK - GLODAP}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/GLODAP_data/Pacific_PALK_profile.png}
+ \label{fig:nutrients1}
+\end{subfigure}%
+\begin{subfigure}{.33\textwidth}
+ \centering
+ \caption{Pacific Alkalinity - cGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_new.SPIN/figures/Pacific_ocn_ALK_profile.png}
+ \label{fig:nutrients1}
+\end{subfigure}%
+\begin{subfigure}{.33\textwidth}
+ \centering
+ \caption{Pacific Alkalinity - EcoGENIE}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Pacific_ocn_ALK_profile.png}
+ \label{fig:nutrients2}
+\end{subfigure}
+\\[+0.2cm]
+\begin{subfigure}{.5\textwidth}
+ \centering
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/ocn_ALK_profile_clrbr.png}
+\end{subfigure}
+\caption{Basin-averaged meridional-depth distribution of alkalinity.}
+\label{fig:basin_ALK}
 \end{figure}
 
 \clearpage
 \subsubsection{Time-series}
 
 Figures~\ref{fig:jgofs_po4} and~\ref{fig:jgofs_fe} we compare the seasonal cycles of surface nutrients (phosphate and iron) at nine Joint Global Ocean Flux Study (JGOFS) sites.
-
-\begin{figure}[htbp]
+ \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=16cm]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_final.SPIN/figures/JGOFS_Phosphate.png}
-\caption{Annual cycle of surface PO$_4$ at 9 time-series sites in cGENIE and EcoGENIE. Red dots indicate climatological observations, while the lines represent modelled surface PO$_4$concentrations. Locations of the time-series are indicated in Figure~\ref{fig:basins}.}
+\includegraphics[width=16cm]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_final.SPIN/figures/JGOFS_Phosphate.png}
+\caption{Annual cycle of surface PO$_4$ at 9 time-series sites in cGENIE and EcoGENIE. Red dots indicate climatological observations, while the lines represent modelled surface PO$_4$ concentrations. Locations of the time-series are indicated in Figure~\ref{fig:basins}.}
 \label{fig:jgofs_po4}
 \end{center}
 \end{figure}
@@ -1379,7 +1388,7 @@ Figures~\ref{fig:jgofs_po4} and~\ref{fig:jgofs_fe} we compare the seasonal cycle
 
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=16cm]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_final.SPIN/figures/JGOFS_Iron.png}
+\includegraphics[width=16cm]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_final.SPIN/figures/JGOFS_Iron.png}
 \caption{Annual cycle of surface dissolved iron at 9 time-series sites in cGENIE and EcoGENIE. Red dots indicate climatological observations, while the 
 lines represent modelled surface iron concentrations. Locations of the time-series are indicated in Figure~\ref{fig:basins}.}
 \label{fig:jgofs_fe}
@@ -1389,11 +1398,11 @@ lines represent modelled surface iron concentrations. Locations of the time-seri
 \clearpage
 \subsection{Ecological variables}
 
-Moving on from the core components that are common to both models, we present a range of ecological variables that are exclusive to ECOGEM (and coupled as part of EcoGENIE). As before, we begin by presenting the annual mean global distributions in the ocean surface layer, comparing total chlorophyll and primary production to satellite-derived estimates (Figure~\ref{fig:chl_prpr}). We then look in more detail at the community composition, with Figure~\ref{fig:surf_sizefrac} showing the carbon biomass within each plankton population. Figure~\ref{fig:surf_sizefrac_limitation} then shows the degree of nutrient limitation within each phytoplankton population. Finally, in Figure~\ref{fig:jgofs_chl}, we show the seasonal cycle of community and population level chlorophyll at each of the nine JGOFS time-series sites.
+Moving on from the core components that are common to both models, we present a range of ecological variables that are exclusive to EcoGENIE. As before, we begin by presenting the annual mean global distributions in the ocean surface layer, comparing total chlorophyll and primary production to satellite-derived estimates (Figure~\ref{fig:chl_prpr}). We then look in more detail at the community composition, with Figure~\ref{fig:surf_sizefrac} showing the carbon biomass within each plankton population. Figure~\ref{fig:surf_sizefrac_limitation} then shows the degree of nutrient limitation within each phytoplankton population. Finally, in Figure~\ref{fig:jgofs_chl}, we show the seasonal cycle of community and population level chlorophyll at each of the nine JGOFS time-series sites.
 
 \subsubsection{Global surface values}
 
-Figure~\ref{fig:chl_prpr} reveals that ECOGEM shows some limited agreement with the satellite-derived estimate of global chlorophyll. As expected, chlorophyll biomass is elevated in the high-latitude oceans relative to lower latitudes. The sub-tropical gyres show low biomass, but the distinction with higher latitudes is not as clear as in the satellite estimate. The model also shows a clear lack of chlorophyll in equatorial and coastal upwelling regions, relative to the satellite estimate. The model predicts higher chlorophyll concentrations in the Southern Ocean, although this may, in part, be related to the satellite algorithm overestimating concentrations in these regions \citep{Dierssen:2010}.
+Figure~\ref{fig:chl_prpr} reveals that EcoGENIE shows some limited agreement with the satellite-derived estimate of global chlorophyll. As expected, chlorophyll biomass is elevated in the high-latitude oceans relative to lower latitudes. The sub-tropical gyres show low biomass, but the distinction with higher latitudes is not as clear as in the satellite estimate. The model also shows a clear lack of chlorophyll in equatorial and coastal upwelling regions, relative to the satellite estimate. The model predicts higher chlorophyll concentrations in the Southern Ocean than the satellite estimate, although it should be noted that the satellite algorithms may be underestimating concentrations in these regions \citep{Dierssen:2010}.
 
 Modelled primary production correctly increases from the oligotrophic gyres towards high latitudes and upwelling regions, but variability is much lower than in the satellite estimate. Specifically, the model and satellite estimates yield broadly similar estimates in the oligotrophic gyres, but the model does not attain the high values seen at higher latitudes and in coastal areas.
 
@@ -1401,66 +1410,66 @@ Modelled primary production correctly increases from the oligotrophic gyres towa
 \begin{subfigure}{.5\textwidth}
 \centering
  \caption{SeaWiFS Chlorophyll}
-\includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/Satellite_data/SeaWiFS_on_GEnIE.png}
+\includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/Satellite_data/SeaWiFS_on_GEnIE.png}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
 \centering
  \caption{ECOGEM Chlorophyll}
-\includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Surface_Chl_Biomass.png}
+\includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Surface_Chl_Biomass.png}
 \end{subfigure}%
 \\[+0.2cm]
 \begin{subfigure}{.5\textwidth}
  \centering
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Surface_Chl_Biomass_clrbar.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/Surface_Chl_Biomass_clrbar.png}
 \end{subfigure}
 %%%%%
 \begin{subfigure}{.5\textwidth}
 \centering
  \caption{\citet{Yool:2013a} Pr. Production}
-\includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/Satellite_data/Composite_PP_on_GEnIE.png}
+\includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/Satellite_data/Composite_PP_on_GEnIE.png}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
 \centering
  \caption{ECOGEM Pr. Production}
-\includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/PrimaryProdn.png}
+\includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/PrimaryProdn.png}
 \end{subfigure}%
 \\[+0.2cm]
 \begin{subfigure}{.5\textwidth}
  \centering
- \includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/PrimaryProdn_clrbar.png}
+ \includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/PrimaryProdn_clrbar.png}
 \end{subfigure}
-\caption{Satellite-derived (left) and modelled (right) surface chlorophyll~\textit{a} concentration and depth-integrated primary production. The satellite-derived estimate of primary production is a composite of three products \citep{Behrenfeld:1997,Carr:2006,Westberry:2008}, as in \citet[][Figure~12]{Yool:2013a}.}
+\caption{Satellite-derived (left) and modelled (right) surface chlorophyll~\textit{a} concentration and depth-integrated primary production. The satellite-derived estimate of primary production is a composite of three products \citep{Behrenfeld:1997,Carr:2006,Westberry:2008}, as in \citet[][their Figure~12]{Yool:2013a}.}
 \label{fig:chl_prpr}
 \end{figure}
 
 Figure~\ref{fig:surf_sizefrac} shows the modelled carbon biomass concentrations in the surface layer, for each modelled plankton population. The smallest (0.6 $\mu$m) phytoplankton size class is evenly distributed in the low-latitude oceans between 40$^\circ$ N and S, but is largely absent nearer to the poles. The 1.9 $\mu$m phytoplankton size class is similarly ubiquitous at low latitudes, albeit with somewhat higher biomass, and its range extends much further towards the poles. With increasing size, the larger phytoplankton are increasingly restricted to highly productive areas, such as the sub-polar gyres and upwelling zones. 
 
-Perhaps as expected, zooplankton size classes tend to mirror the biogeography of their phytoplankton prey. The smallest (1.9 $\mu$m) size class is found primarily at low latitudes, although a highly variable population is found at higher latitudes. This population is presumably supported by grazing on the larger 6 $\mu$m size class (with very low efficiency dictated by the unfavourable predator-prey length ratio). Larger zooplankton size classes follow a similar pattern to the phytoplankton, moving from a cosmopolitan but homogenous distribution in the smaller size classes, towards spatially more variable distributions among the larger organisms.
+Perhaps as expected, zooplankton size classes tend to mirror the biogeography of their phytoplankton prey. The smallest (1.9 $\mu$m) surviving size class is found primarily at low latitudes, although a highly variable population is found at higher latitudes. This population is presumably supported by grazing on the larger 6 $\mu$m size class (with very low efficiency dictated by the unfavourable predator-prey length ratio). Larger zooplankton size classes follow a similar pattern to the phytoplankton, moving from a cosmopolitan but homogenous distribution in the smaller size classes, towards spatially more variable distributions among the larger organisms.
 
 \begin{figure}[htbp]
 \begin{subfigure}{.66\textwidth}
  \centering
-\includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/SizeClass_C_Biomass.png}
+\includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/SizeClass_C_Biomass.png}
 \end{subfigure} 
 \\[+0.2cm]
 \begin{subfigure}{.66\textwidth}
  \centering
-\includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/SizeClass_C_Biomass_clrbar.png}
+\includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/SizeClass_C_Biomass_clrbar.png}
 \end{subfigure}
 \caption{Surface concentrations of carbon biomass in each population.}
 \label{fig:surf_sizefrac}
 \end{figure}
 
-The degree of nutrient limitation within each phytoplankton size class is shown in Figure~\ref{fig:surf_sizefrac_limitation}. The two-dimensional colour-scale indicates decreasing iron limitation from left to right, and decreasing phosphorus limitation from bottom to top. White is therefore nutrient replete, blue is phosphorus limited, red is iron limited, and magenta is phosphorus-iron co-limited. The figure demonstrates that the smallest size class is not nutrient limited in any region. The increasing saturation of the colour scale in larger size classes indicates an increasing degree of nutrient limitation. As expected, nutrient limitation is strongest in the highly stratified low latitudes. A stronger vertical supply of nutrients at higher latitudes is associated with weaker nutrient limitation, although nutrient limitation is still significant among the larger size classes. Consistent with observations \citep{Moore:2013}, phosphorus limitation is restricted is restricted to low latitudes. Iron limitation dominates in high latitude regions. Among the larger size classes the upwelling zones appear to be characterised by iron-phosphorus co-limitation.
+The degree of nutrient limitation within each phytoplankton size class is shown in Figure~\ref{fig:surf_sizefrac_limitation}. The two-dimensional colour-scale indicates decreasing iron limitation from left to right, and decreasing phosphorus limitation from bottom to top. White is therefore nutrient replete, blue is phosphorus limited, red is iron limited, and magenta is phosphorus-iron co-limited. The figure demonstrates that the smallest size class is not nutrient limited in any region. The increasing saturation of the colour scale in larger size classes indicates an increasing degree of nutrient limitation. As expected, nutrient limitation is strongest in the highly stratified low latitudes. A stronger vertical supply of nutrients at higher latitudes is associated with weaker nutrient limitation, although nutrient limitation is still significant among the larger size classes. Consistent with observations \citep{Moore:2013}, phosphorus limitation is restricted to low latitudes. Iron limitation dominates in high latitude regions. Among the larger size classes the upwelling zones appear to be characterised by iron-phosphorus co-limitation.
 
 \begin{figure}[htbp]
 \begin{subfigure}{.33\textwidth}
  \centering
-\includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/SizeClass_Limitation.png}
+\includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/SizeClass_Limitation.png}
 \end{subfigure}
 \begin{subfigure}{.25\textwidth}
  \centering
-\includegraphics[width=0.95\linewidth]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/SizeClass_Limitation_clrbar.png}
+\includegraphics[width=0.95\linewidth]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_new.SPIN/figures/SizeClass_Limitation_clrbar.png}
 \end{subfigure}
 \caption{Nutrient limitation in each phytoplankton population. The two-dimensional colour-scale indicates decreasing phosphorus limitation from left to right, and decreasing iron limitation from bottom to top. White is therefore nutrient replete, blue is phosphorus limited, red is iron limited, and magenta is phosphorus-iron co-limited.}
 \label{fig:surf_sizefrac_limitation}
@@ -1473,7 +1482,7 @@ The seasonal cycles of phytoplankton chlorophyll~\textit{a} are compared to time
 
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=16cm]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_final.SPIN/figures/JGOFS_Chlorophyll.png}
+\includegraphics[width=16cm]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_final.SPIN/figures/JGOFS_Chlorophyll.png}
 \caption{Annual cycle of surface chlorophyll~\textit{a} at nine JGOFS time-series sites. Red dots indicate climatological observations, while the black lines represents modelled total surface chlorophyll~\textit{a}. Coloured lines represent chlorophyll~\textit{a} in individual size classes (blue = small, red = large). Locations of the time-series are indicated in Figure~\ref{fig:basins}.}
 \label{fig:jgofs_chl}
 \end{center}
@@ -1481,7 +1490,7 @@ The seasonal cycles of phytoplankton chlorophyll~\textit{a} are compared to time
 
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=16cm]{/Users/ward/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_final.SPIN/figures/JGOFS_PrProduction.png}
+\includegraphics[width=16cm]{/Volumes/cGENIE/cgenie_output/BENW.worjh2.PO4FeTDTL_HYBRID_WF16_tgld_final.SPIN/figures/JGOFS_PrProduction.png}
 \caption{Annual cycle of surface primary production at nine JGOFS time-series sites. Red dots indicate climatological observations, while the black lines represents modelled total primary production. Locations of the time-series are indicated in Figure~\ref{fig:basins}.}
 \label{fig:jgofs_chl}
 \end{center}
@@ -1490,7 +1499,7 @@ The seasonal cycles of phytoplankton chlorophyll~\textit{a} are compared to time
 \clearpage
 \subsubsection{cGENIE vs. EcoGENIE}
 
-Figure~\ref{fig:taylor} is a Taylor diagram comparing the two models in terms of their correlation to observations and their standard deviations, relative to observations. A perfect model would be located at the middle of the bottom axis, with a correlation coefficient of 1.0 and a normalised standard deviation of 1.0. The closer a model is to this ideal point, the better a representation of the data it provides. Figure~\ref{fig:taylor} shows that EcoGENIE is located further from the ideal point than cGENIE, in terms of oxygen, alkalinity, phosphate, and DIC. The new model seems to provide a universally worse representation of global ocean biogeochemistry. This is perhaps not surprising, given that the BIOGEM component of cGENIE has at various times formally (e.g. \citep{Ridgwell:2007}.) or informally (e.g. \textcolor{red}{REF}) systematically tuned to match the observation data. EcoGENIE has not yet been optimised in this way.
+Figure~\ref{fig:taylor} is a Taylor diagram comparing the two models in terms of their correlation to observations and their standard deviations, relative to observations. A perfect model would be located at the middle of the bottom axis, with a correlation coefficient of 1.0 and a normalised standard deviation of 1.0. The closer a model is to this ideal point, the better a representation of the data it provides. Figure~\ref{fig:taylor} shows that EcoGENIE is located further from the ideal point than cGENIE, in terms of oxygen, alkalinity, phosphate, and DIC. The new model seems to provide a universally worse representation of global ocean biogeochemistry. This is perhaps not surprising, given that the BIOGEM component of cGENIE has at various times been systematically tuned to match the observation data \citep[e.g.][]{Ridgwell:2007,Ridgwell:prep}. EcoGENIE has not yet been optimised in this way.
 
 \begin{figure}[htbp]
 \begin{center}
@@ -1508,15 +1517,13 @@ The marine ecosystem is a central component of the Earth system, harnessing sola
 
 cGENIE is a model of intermediate complexity on this spectrum. It has been designed to allow rapid model evaluation while at the same time retaining somewhat realistic global dynamics that facilitate comparison with observations. With this goal in mind, the biological pump was parameterised as a simple vertical flux defined as a function of environmental conditions \citep{Ridgwell:2007}. This simplicity is well suited to questions concerning the interactions of marine biogeochemistry and climate, but at the same time precludes any investigation of the role of ecological interactions with the broader Earth system.
 
-Here we have presented an ecological extension to cGENIE that opens up this area of investigation. The ecological model is rooted in size-dependent physiological and ecological constraints \citep{Ward:2012}. The ecophysiological parameters are relatively well constrained by observations, even in comparison to simpler ecosystem models that are based on much more aggregated functional groups \citep{Anderson:2005,Litchman:2007}. The size-based formulation has the additional benefit of linking directly to functional aspects of the ecosystem, such as food-web structure and particle sinking \citep{Ward:2016}. 
+Here we have presented an ecological extension to cGENIE that opens up this area of investigation. EcoGENIE is rooted in size-dependent physiological and ecological constraints \citep{Ward:2012}. The ecophysiological parameters are relatively well constrained by observations, even in comparison to simpler ecosystem models that are based on much more aggregated functional groups \citep{Anderson:2005,Litchman:2007}. The size-based formulation has the additional benefit of linking directly to functional aspects of the ecosystem, such as food-web structure and particle sinking \citep{Ward:2016}. 
 
-The aim of this paper is to provide a detailed description of the new ecological component. It is clear from Figure~\ref{fig:taylor} that the switch from the parameterised biological pump to the explicit ecological model has led to a deterioration in the overall ability of cGENIE to reproduce the global distributions of important biogeochemical tracers. This is an acceptable outcome, as our goal here is simply to provide a full description of the new model. Given that the original model was calibrated to the observations in question \citep{Ridgwell:2007}, that process will need to be repeated for the new model before any sort of objective comparison can be made.
+The aim of this paper is to provide a detailed description of the new ecological component. It is clear from Figure~\ref{fig:taylor} that the switch from the parameterised biological pump to the explicit ecological model has led to a deterioration in the overall ability of cGENIE to reproduce the global distributions of important biogeochemical tracers. This is an acceptable outcome, as our goal here is simply to provide a full description of the new model. Given that the original model was calibrated to the observations in question \citep{Ridgwell:2007}, that process will need to be repeated for the new model before any sort of objective comparison can be made. We also note that EcoGENIE is still capable of reproducing approximately 90\% of the global variability in DIC, more than 70\% for phosphate, oxygen and alkalinity, and more than 50\% for surface chlorophyll.
 
 Despite a slight overall deterioration in terms of model-observation misfit, the biogeochemical components of the model retain the key features that should be expected. At the same time, the ecological community conforms to expectations in terms of standing stocks and fluxes, both in terms of large-scale spatial distributions, and the seasonal cycles at specific locations. Overall patterns of community structure and physiological limitation also follow expectations based on observations and theory. 
 
-As presented, the model is limited to three limiting resources (light, phosphorus, and iron) and two plankton functional types (phytoplankton and zooplankton). We have written the model equations to facilitate the extension of the model to include additional components. In particular, the model capabilities can be extended by enabling silicon and nitrogen limitation, leveraging the silicon and nitrogen cycles already present in BIOGEM \citep{Monteiro:2012}. Adding these nutrients will enable the addition of diatoms and diazotrophs, which are both likely to be important factors affecting the strength of the long-term biological pump \citep{Tyrrell:1999,Armstrong:2002}.
-
-%In its presented configuration, GEnIE has a very coarse spatial resolution. Horizontal resolution is no less than 10 degrees, and the surface layer has a fixed thickness of $\sim$80~m. In addition, all phytoplankton growth is restricted to this surface layer. On the one hand this configuration enables rapid integration of the model, but on the other, it precludes the accurate representation of planktonic environment. The importance of this crude structure is not yet known in terms of the ecological dynamics, so it will be helpful in future to examine the model in more realistic configurations. Key adaptations would be the adoption of a fine-scale model grid \citep{}, and the extension of the model to allow plankton growth deeper in the water column.
+As presented, the model is limited to three limiting resources (light, phosphorus, and iron) and two plankton functional types (phytoplankton and zooplankton). We have written the model equations and code to facilitate the extension of the model to include additional components. In particular, the model capabilities can be extended by enabling silicon and nitrogen limitation, leveraging the silicon and nitrogen cycles already present in BIOGEM \citep{Monteiro:2012}. Adding these nutrients will enable the addition of diatoms and diazotrophs, which are both likely to be important factors affecting the strength of the long-term biological pump \citep{Tyrrell:1999,Armstrong:2002}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
