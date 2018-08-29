@@ -87,7 +87,6 @@
 We present an extension to the cGEnIE Earth System model that explicitly accounts for the growth and interaction of an arbitrary number of plankton species. The new package (`ECOGEM') replaces the implicit, flux-based, parameterisation of the plankton community currently employed, with explicitly resolved plankton populations and ecological dynamics. In ECOGEM, any number of plankton species, with ecophysiological traits (e.g. growth and grazing rates) assigned according to organism size and functional group (e.g. phytoplankton and zooplankton) can be incorporated at run-time. We illustrate the capability of the marine ecology enabled Earth system model (`EcoGEnIE') by comparing results from one configuration of ECOGEM (with eight generic phytoplankton and zooplankton size classes) to climatological and seasonal observations. We find that the new ecological components of the model show reasonable agreement with both global-scale climatological and local-scale seasonal data. We also compare EcoGEnIE results to a the existing biogeochemical incarnation of cGEnIE. We find that the resulting global-scale distributions of phosphate, iron, dissolved inorganic carbon, alkalinity and oxygen are similar for both iterations of the model. A slight deterioration in some fields in EcoGEnIE (relative to the data) is observed, although we make no attempt to re-tune the overall marine cycling of carbon and nutrients here. The increased capabilities of EcoGEnIE in this regard will enable future exploration of the ecological community on much longer timescales than have previously been examined in global ocean ecosystem models and particularly for past climates and global biogeochemical cycles.
 \end{abstract}
 
-\end{document}
 
 %\clearpage
 %\small{
@@ -485,8 +484,13 @@ The negative sign indicates that alkalinity increases as PO$_4$ is consumed. Thi
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsubsection{Production of organic matter}
 
-Plankton mortality and grazing are the only two sources of organic matter, with partitioning between non-sinking dissolved and sinking particulate phases determined by the parameter $\beta_j$. In this initial implementation of ECOGEM, for traceability, the assumptions are the same as made in the current version of BIOGEM \citep{Ridgwell:prep} which themselves follow the OCMIP2 ocean carbon cycle modelling intercomparison protocol described in \citet{Najjar:2007}. Specifically, $\beta_j$ is set to a fixed fraction $\beta$ for all size classes. 
+Plankton mortality and grazing are the only two sources of organic matter, with partitioning between non-sinking dissolved and sinking particulate phases determined by the parameter $\beta$. In this initial implementation of ECOGEM, we use a size-based sigmoidal partitioning function with three parameters.
 
+\begin{equation} 
+\beta = \beta_{a} - \frac{\beta_{a}-\beta_{b}}{1-\beta_{c}/[ESD]}
+\end{equation}
+
+Here $\beta_{a}$ is the (maximum) fraction to DOM as ESD approaches zero, $\beta_{b}$ is the m(minimum) fraction to DOM as ESD approaches infinity, and $\beta_c$ is the size at which the partitioning is 50:50 between DOM and POM. 
 
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Differential equations}\label{PDEs}
@@ -637,6 +641,8 @@ The parameters of this equation (listed in Table~\ref{Size_dependent}), were der
 &Cell carbon content & $Q_{\rm C}$ & 1.45$\times10^{-11}$ & 0.88 & & mmol C cell$^{-1}$ \\ 
 \multicolumn{7}{l}{{Grazing}}\\
 &Maximum prey ingestion rate & $G^{max}_{\rm C}$ & 21.9 & -0.16 & & d$^{-1}$ \\ 
+\multicolumn{5}{l}{{Partitioning of organic matter}}\\ 
+& Fraction to DOM & $\beta$ & 0.8 & 0.4 & 100 & - \\ 
 \hline\\ [-1ex]
 \end{tabular*}
 \label{Size_dependent}
@@ -709,8 +715,6 @@ A list of size-independent model parameters are listed in Table~\ref{Size_indepe
 & Plankton mortality & $m$ & 0.05 & d$^{-1}$ \\ 
 %& Plankton respiration 	& $r_{i_b={\rm DIC}}$ & 0.05 & d$^{-1}$ \\ 
 & 					& $r_{i_b\neq{\rm DIC}}$ & 0 & d$^{-1}$ \\ 
-\multicolumn{5}{l}{{Partitioning of organic matter}}\\ 
-& Fraction to DOM & $\beta$ & 0.66 & - \\ 
 \multicolumn{4}{l}{{Light attenuation}} \\ 
 &Light attenuation by water & $k_{\rm w}$ & 0.04 & m$^{-1}$ \\ 
 &Light attenuation by chlorophyll & $k_{\rm Chl}$ & 0.03 & m$^{-1}$(mg Chl)$^{-1}$ \\ [+1ex]
