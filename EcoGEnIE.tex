@@ -484,14 +484,14 @@ The negative sign indicates that alkalinity increases as PO$_4$ is consumed. Thi
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsubsection{Production of organic matter}
 
-Plankton mortality and grazing are the only two sources of organic matter, with partitioning between non-sinking dissolved and sinking particulate phases determined by the parameter $\beta$. In this initial implementation of ECOGEM, we use a size-based sigmoidal partitioning function with three parameters.
+Plankton mortality and grazing are the only two sources of organic matter, with partitioning between non-sinking dissolved and sinking particulate phases determined by the parameter $\beta$. In this initial implementation of ECOGEM, we use a similar size-based sigmoidal partitioning function to  \citet{Ward:2016}{.
 
 \begin{equation} 
-\beta = \beta_{a} - \frac{\beta_{a}-\beta_{b}}{1-\beta_{c}/[ESD]}
+\beta = \beta_{a} - \frac{\beta_{a}-\beta_{b}}{1+\beta_{c}/[ESD]}
 \label{eqn_beta}
 \end{equation}
 
-Here $\beta_{a}$ is the (maximum) fraction to DOM as ESD approaches zero, $\beta_{b}$ is the m(minimum) fraction to DOM as ESD approaches infinity, and $\beta_c$ is the size at which the partitioning is 50:50 between DOM and POM. 
+Here $\beta_{a}$ is the (maximum) fraction to DOM as ESD approaches zero, $\beta_{b}$ is the m(minimum) fraction to DOM as ESD approaches infinity, and $\beta_c$ is the size at which the partitioning is 50:50 between DOM and POM. The parameter values have been adjusted from \citet{Ward:2016}, such that the global average of $\beta$ is equal to the constant value of 0.66 used in cGEnIE. 
 
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Differential equations}\label{PDEs}
