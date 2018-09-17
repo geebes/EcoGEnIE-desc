@@ -1,0 +1,57 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: EcoGEnIE.aux
+The style file: copernicus.bst
+Database file #1: biblio1.bib
+Warning--I didn't find a database entry for "Olsen:2016"
+Name 2 in "Meyer, K. M. and L. R. Kump, and A. Ridgwell" has a comma at the end for entry Meyer:2008
+while executing---line 1595 of file copernicus.bst
+Warning--can't use both author and editor fields in Garcia:2010
+Name 2 in "Meyer, K. M. and L. R. Kump, and A. Ridgwell" has a comma at the end for entry Meyer:2008
+while executing---line 1671 of file copernicus.bst
+Name 2 in "Meyer, K. M. and L. R. Kump, and A. Ridgwell" has a comma at the end for entry Meyer:2008
+while executing---line 1671 of file copernicus.bst
+Warning--missing publisher in Redfield:1934
+Warning--empty journal in Ridgwell:prep
+You've used 82 entries,
+            2811 wiz_defined-function locations,
+            1543 strings with 28430 characters,
+and the built_in function-call counts, 95840 in all, are:
+= -- 10487
+> -- 4504
+< -- 31
++ -- 1992
+- -- 1428
+* -- 6134
+:= -- 9760
+add.period$ -- 82
+call.type$ -- 82
+change.case$ -- 644
+chr.to.int$ -- 79
+cite$ -- 249
+duplicate$ -- 9185
+empty$ -- 4529
+format.name$ -- 1676
+if$ -- 18989
+int.to.chr$ -- 4
+int.to.str$ -- 1
+missing$ -- 1045
+newline$ -- 255
+num.names$ -- 328
+pop$ -- 4274
+preamble$ -- 1
+purify$ -- 640
+quote$ -- 0
+skip$ -- 5441
+stack$ -- 0
+substring$ -- 3854
+swap$ -- 8086
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 726
+warning$ -- 3
+while$ -- 400
+width$ -- 0
+write$ -- 927
+(There were 3 error messages)
