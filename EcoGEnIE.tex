@@ -15,26 +15,18 @@
 %% Journal Abbreviations (Please use the same for Discussion Papers and Final Revised Papers)
 % Geoscientific Model Development (gmd)
 
-%% \usepackage commands included in the copernicus.cls:
 %\usepackage[german, english]{babel}
-%\usepackage{tabularx}
-%\usepackage{cancel}
-%\usepackage{multirow}
-%\usepackage{supertabular}
-%\usepackage{algorithmic}
-%\usepackage{algorithm}
-%\usepackage{amsthm}
-\usepackage{amsmath}
-\usepackage{bm}
-\usepackage{siunitx}
-%\usepackage{float}
-%\usepackage{subfig}
-%\usepackage{rotating}
-\usepackage{subcaption}
+\usepackage{tabularx}
+\usepackage{cancel}
+\usepackage{multirow}
+\usepackage{supertabular}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{amsthm}
+\usepackage{float}
+\usepackage{subfig}
+\usepackage{rotating}
 
-\newcommand{\matr}[1]{\mathbf{#1}}
-\newcommand{\sss}[1]{\scriptscriptstyle{#1}}
-\usepackage{color}
 
 \hyphenation{ECOGEM}
 
@@ -164,7 +156,7 @@ The current BIOGEM module in cGEnIE does not explicitly resolve the biological c
 The ecological community is also subject to mortality and internal trophic interactions, and will produce both inorganic compounds and organic matter. The structural relationship between BIOGEM and ECOGEM is illustrated in Figure~\ref{BIOECOGEM}. 
 
 \begin{figure}[htp!]
-\includegraphics[width=6cm]{Figures/CouplingSchematic.pdf}
+\includegraphics[width=6cm]{Final_figures/Fig_1.png}
 \caption{Schematic representation of the coupling between BIOGEM and ECOGEM. State variables: $\rm{R}$ = inorganic element (i.e. resource),  $\rm{B}$ = plankton biomass, $\rm{OM}$ = organic matter. Subsripts $_B$ and $_E$ denote state variables in BIOGEM and ECOGEM, respectively. BIOGEM passes resource biomass $\rm{R}$ to ECOGEM. ECOGEM passes rates of change ($\delta$) in  $\rm{R}$ and $\rm{OM}$ back to BIOGEM.}
 \label{BIOECOGEM}
 \end{figure}
@@ -175,7 +167,7 @@ In the following section we outline the key state variables directly relating to
 
 \subsection{State variables}\label{StateVariables}
 
-ECOGEM state variables are organised into three matrices (Table~\ref{matrix_table}), representing ecologically-relevant biogeochemical tracers (hereafter referred to as `nutrient resources'), plankton biomass and organic matter. All these matrices have units of mmol element m$^{-3}$, with the exception of the dynamic chlorophyll quota, which is expressed in units of mg~chlorophyll~m$^{-3}$. The nutrient resource matrix ($\matr{R}$) includes $I_r$ distinct inorganic resources. The plankton community ($\matr{B}$) is made up of $J$ individual populations, each associated with $I_b$ cellular nutrient quotas. Finally organic matter ($\matr{D}$) is made up of $K$ size classes of organic matter, each containing $i_d$ organic nutrient element pools. (Note that strictly speaking, detrital organic matter is not explicitly resolved as a state variable in ECOGEM as we currently only resolve the production of organic matter, which is passed to BIOGEM and held there as a state variable.  As a consequence, there is no grazing on detrital organic matter in the current configuration of EcoGEnIE. We include  a description of $\matr{D}$ and its relationships here for completeness and for convenience of notation.)
+ECOGEM state variables are organised into three matrices (Table~\ref{matrix_table}), representing ecologically-relevant biogeochemical tracers (hereafter referred to as `nutrient resources'), plankton biomass and organic matter. All these matrices have units of mmol element m$^{-3}$, with the exception of the dynamic chlorophyll quota, which is expressed in units of mg~chlorophyll~m$^{-3}$. The nutrient resource matrix ($\mathbf{R}$) includes $I_r$ distinct inorganic resources. The plankton community ($\mathbf{B}$) is made up of $J$ individual populations, each associated with $I_b$ cellular nutrient quotas. Finally organic matter ($\mathbf{D}$) is made up of $K$ size classes of organic matter, each containing $i_d$ organic nutrient element pools. (Note that strictly speaking, detrital organic matter is not explicitly resolved as a state variable in ECOGEM as we currently only resolve the production of organic matter, which is passed to BIOGEM and held there as a state variable.  As a consequence, there is no grazing on detrital organic matter in the current configuration of EcoGEnIE. We include  a description of $\mathbf{D}$ and its relationships here for completeness and for convenience of notation.)
 
 % This matrix formulation allows all plankton populations to be described using the same generic equation. The model structure is therefore highly flexible, and can, in principle, take any number of populations ($J$). The number of nutrient elements and detrital size classes ($I_r$, $I_b$, $I_d$ and $K$) are also flexible, but in practice will be limited to what is also carried available within BIOGEM. 
 
@@ -186,12 +178,12 @@ ECOGEM state variables are organised into three matrices (Table~\ref{matrix_tabl
 \hline 
 State variable				& Dimensions				& Index 	& Size	&Available elements \\
 \hline 
-$\matr{R}$				& Resource element			& $i_r$	& $I_r$	&$\begin{array}{cccccc}	DIC,	& PO_4, & Fe		\end{array}$ \\
+$\mathbf{R}$				& Resource element			& $i_r$	& $I_r$	&$\begin{array}{cccccc}	DIC,	& PO_4, & Fe		\end{array}$ \\
 \hline
-\multirow{2}{*}{$\matr{B}$}		& Plankton class			& $j$	& $J$	&$\begin{array}{cccc}	1, & 2, & \dots, & $J$	\end{array}$ \\ 
+\multirow{2}{*}{$\mathbf{B}$}	& Plankton class			& $j$	& $J$	&$\begin{array}{cccc}	1, & 2, & \dots, & $J$	\end{array}$ \\ 
 						& Cellular quota			& $i_b$	& $I_b$	&$\begin{array}{ccccc}	C, & P, & Fe, & Chl		\end{array}$ \\
 \hline
-\multirow{2}{*}{$\matr{D}$}	& Organic matter size class	& $k$	& $K$	&$\begin{array}{cc}		DOM, & POM			\end{array}$ \\
+\multirow{2}{*}{$\mathbf{D}$}	& Organic matter size class	& $k$	& $K$	&$\begin{array}{cc}		DOM, & POM			\end{array}$ \\
 						& Detrital nutrient element		& $i_d$	& $I_d$	&$\begin{array}{cccc}	C, & P, & Fe			\end{array}$ \\ 
 \hline
 \end{tabular} 
@@ -202,35 +194,35 @@ $\matr{R}$				& Resource element			& $i_r$	& $I_r$	&$\begin{array}{cccccc}	DIC,	
 
 \subsubsection{Inorganic resources}
 
-$\matr{R}$ is a row vector of length $I_r$, the number of dissolved inorganic nutrient resources.
+$\mathbf{R}$ is a row vector of length $I_r$, the number of dissolved inorganic nutrient resources.
 %
 \begin{equation}
-\matr{R}=\left[\begin{array}{ccc}DIC & PO_4 & Fe \end{array}\right]
+\mathbf{R}=\left[\begin{array}{ccc}DIC & PO_4 & Fe \end{array}\right]
 \end{equation}
 %
 An individual inorganic resource is denoted by the appropriate subscript. For example, $PO_4$ is denoted $R_{PO_4}.$
 
 \subsubsection{Plankton biomass}
 
-$\matr{B}$ is a $J\times I_b$ matrix, where $J$ is the number of plankton populations and $I_b$ is the number of cellular quotas, including chlorophyll.
+$\mathbf{B}$ is a $J\times I_b$ matrix, where $J$ is the number of plankton populations and $I_b$ is the number of cellular quotas, including chlorophyll.
 %
 \begin{equation}
-\matr{B}=\left[\begin{array}{cccccc} B_{1,C}		& B_{1,P}		& B_{1,Fe}	& B_{1,Chl} 	\\
+\mathbf{B}=\left[\begin{array}{cccccc} B_{1,C}		& B_{1,P}		& B_{1,Fe}	& B_{1,Chl} 	\\
  	B_{2,C}		& B_{2,P}		& B_{2,Fe}	& B_{2,Chl} 	\\
  	\vdots		& \vdots		& \vdots 		& \vdots 		\\
  	B_{J,C}		& B_{J,P}		& B_{J,Fe}	& B_{J,Chl} 	\end{array}\right]
 \end{equation}
 %
-Each population and element is denoted by an appropriate subscript. For example, the total carbon biomass of plankton population $j$ is denoted $B_{j,C}$, while the chlorophyll biomass of that population is denoted $B_{j,Chl}$. The column vector describing the carbon content of all plankton populations is denoted $\matr{B}_{C}$.
+Each population and element is denoted by an appropriate subscript. For example, the total carbon biomass of plankton population $j$ is denoted $B_{j,C}$, while the chlorophyll biomass of that population is denoted $B_{j,Chl}$. The column vector describing the carbon content of all plankton populations is denoted $\mathbf{B}_{C}$.
 
 This framework can account for competition between (in theory) any number of different plankton populations. The model equations (below) are written in terms of an `ideal' planktonic form, with the potential to exhibit the full range of ecophysiological traits (among those that are included in the model). Individual populations may take on a realistic subset of these traits, according to their assigned `plankton functional type' (PFT) (see Section~\ref{community_structure}). Each population is also assigned a characteristic size, in terms of equivalent spherical diameter (ESD) or cell volume. Organism size plays a key role in determining each population's ecophysiological traits (see Section~\ref{size_dep_traits}).
 
 \subsubsection{Organic detritus}
 
-$\matr{D}$ is a $K\times I_d$ matrix, where $K$ is the number of detrital size classes and $I_d$ is the number of detrital nutrient elements.
+$\mathbf{D}$ is a $K\times I_d$ matrix, where $K$ is the number of detrital size classes and $I_d$ is the number of detrital nutrient elements.
 %
 \begin{equation}
-\matr{D}=\left[\begin{array}{ccc}	D_{1,C}	& D_{1,P}	& D_{1,Fe} \\
+\mathbf{D}=\left[\begin{array}{ccc}	D_{1,C}	& D_{1,P}	& D_{1,Fe} \\
  	D_{2,C} 	& D_{2,P} 	& D_{2,Fe} \end{array}\right]
 \end{equation}
 %
@@ -259,7 +251,7 @@ The parameter $A$ describes the temperature sensitivity, T is the ambient water 
 
 \subsubsection{The plankton `quota'}
 
-The physiological status of a plankton population is defined in terms of its cellular nutrient quota, $\matr{Q}$, which is the ratio of assimilated nutrient (phosphorus or iron) to carbon biomass. For each plankton population, $j$, and each planktonic quota, $i_b$ ($\ne C$), 
+The physiological status of a plankton population is defined in terms of its cellular nutrient quota, $\mathbf{Q}$, which is the ratio of assimilated nutrient (phosphorus or iron) to carbon biomass. For each plankton population, $j$, and each planktonic quota, $i_b$ ($\ne C$), 
 %
 \begin{equation}
 Q_{j,i_b} = \frac{B_{j,i_b}}{B_{j,C}}
@@ -380,10 +372,10 @@ G_{j_{\rm pred},j_{\rm prey},{\rm C}} =
 \label{grazing_func}
 \end{equation}
 \\
-where $\gamma_{\rm T}$ is the temperature-dependence, $G_{j_{\rm pred},{\rm C}}^{\rm max}$ is the maximum grazing rate, and $k_{j_{prey},\rm C}$ is the half-saturation concentration for all (available) prey. The overall grazing rate is a function of total food available to the predator, $\mathcal{F}_{j_{\rm pred},{\rm C}}$. This is given by the product of the prey biomass vector, $\matr{B}_{\rm C}$, and the grazing kernel ($\boldsymbol{\phi}$),
+where $\gamma_{\rm T}$ is the temperature-dependence, $G_{j_{\rm pred},{\rm C}}^{\rm max}$ is the maximum grazing rate, and $k_{j_{prey},\rm C}$ is the half-saturation concentration for all (available) prey. The overall grazing rate is a function of total food available to the predator, $\mathcal{F}_{j_{\rm pred},{\rm C}}$. This is given by the product of the prey biomass vector, $\mathbf{B}_{\rm C}$, and the grazing kernel ($\boldsymbol{\phi}$),
 %
 \begin{equation}
-\underset{\sss [J_{\rm pred}\times 1]}{\boldsymbol{\mathcal{F}}_{\rm C}} = \underset{\sss [J_{\rm pred}\times J_{\rm prey}]}{\boldsymbol{\phi}} \underset{\sss [J_{\rm prey}\times 1]}{\boldsymbol{B}_{\rm C}}
+\underset{\scriptsize [J_{\rm pred}\times 1]}{\boldsymbol{\mathcal{F}}_{\rm C}} = \underset{\scriptsize [J_{\rm pred}\times J_{\rm prey}]}{\boldsymbol{\phi}} \underset{\scriptsize [J_{\rm prey}\times 1]}{\boldsymbol{B}_{\rm C}}
 \end{equation}
 %
 Note that this equation is written out in matrix form, with the dimensions noted underneath each matrix. Each element of the grazing matrix $\boldsymbol{\phi}$ is an approximately log-normal function of the predator-to-prey length ratio, $\vartheta_{j_{\rm pred},j_{\rm prey}}$, with an optimum ratio of $\vartheta_{\rm opt}$ and a geometric standard deviation $\sigma_{j_{\rm pred}}$. 
@@ -431,7 +423,7 @@ If both nutrient quotas are full, C is assimilated at the maximum rate. If eithe
 
 %\subsubsection{Respiration}
 
-%A linear respiration rate is applied to degrade plankton carbon biomass into dissolved inorganic carbon. This is achieved through a $J$ by $I_r$ respiration matrix, $\matr{r}$, which is non-zero only for $i_r={\rm DIC}$.
+%A linear respiration rate is applied to degrade plankton carbon biomass into dissolved inorganic carbon. This is achieved through a $J$ by $I_r$ respiration matrix, $\mathbf{r}$, which is non-zero only for $i_r={\rm DIC}$.
 
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -496,7 +488,7 @@ Here $\beta_{a}$ is the (maximum) fraction to DOM as ESD approaches zero, $\beta
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Differential equations}\label{PDEs}
 
-Differential equations for ${\matr R}$, ${\matr B}$ and ${\matr D}$ are written below. The dimensions of each matrix and vector used in equations~\ref{dRdt} to~\ref{dDdt} are given in Table~\ref{matrix_table}. Note that while $\matr{R}$ and $\matr{OM}$ are transported by the physical component of GEnIE, living biomass $\matr{B}$ is not currently subject to any physical transport. The only communication between biological communities in adjacent grid cells is through the advection and diffusion of inorganic resources and non-living organic matter in BIOGEM. Note that some additional sources and sinks of $\matr{R}$, and all sinks of $\matr{D}$, are computed in BIOGEM.
+Differential equations for ${\mathbf R}$, ${\mathbf B}$ and ${\mathbf D}$ are written below. The dimensions of each matrix and vector used in equations~\ref{dRdt} to~\ref{dDdt} are given in Table~\ref{matrix_table}. Note that while $\mathbf{R}$ and $\mathbf{OM}$ are transported by the physical component of GEnIE, living biomass $\mathbf{B}$ is not currently subject to any physical transport. The only communication between biological communities in adjacent grid cells is through the advection and diffusion of inorganic resources and non-living organic matter in BIOGEM. Note that some additional sources and sinks of $\mathbf{R}$, and all sinks of $\mathbf{D}$, are computed in BIOGEM.
 
 \subsubsection{Inorganic resources}
 
@@ -527,7 +519,7 @@ For each detrital nutrient element, $i_d$, the rate of change of dissolved fract
  + \underbrace{ \sum_{j_{\rm pred}=1}^{J} [{\rm B}_{j_{\rm pred},{\rm C}}] (1-\lambda_{j_{\rm pred},i_b}) \sum_{j_{\rm prey}=1}^{J} \beta_{j_{\rm prey}} G_{j_{\rm pred},j_{\rm prey},i_d}}_{\rm messy~feeding} \label{dDdt}
 \end{equation}
 %
-The dissolved organic matter vector (${\matr D}_{1}$) includes three explicit tracers that are transported by the ocean circulation model and are degraded back to their constituent nutrients with a fixed turnover time of $\lambda$ (= 0.5 years). Particulate organic matter (POM) is not represented with explicit state variables in either ECOGEM or BIOGEM. Instead, its implicit production in the surface layer (and the corresponding export below the surface layer) is given by 
+The dissolved organic matter vector (${\mathbf D}_{1}$) includes three explicit tracers that are transported by the ocean circulation model and are degraded back to their constituent nutrients with a fixed turnover time of $\lambda$ (= 0.5 years). Particulate organic matter (POM) is not represented with explicit state variables in either ECOGEM or BIOGEM. Instead, its implicit production in the surface layer (and the corresponding export below the surface layer) is given by 
 %
 \begin{equation} 
 F_{\text{surface},i_d} = \underbrace{ \sum_{j=1}^{J} [{\rm B}_{j,i_d}] (1-\beta_{j}) m_j}_{\rm mortality} + \underbrace{ \sum_{j_{\rm pred}=1}^{J} [{\rm B}_{j_{\rm pred},{\rm C}}] (1-\lambda_{j_{\rm pred},i_b}) \sum_{j_{\rm prey}=1}^{J} (1-\beta_{j_{\rm prey}}) G_{j_{\rm pred},j_{\rm prey},i_d}}_{\rm messy~feeding} \nonumber\\ 
@@ -543,7 +535,7 @@ The remineralisation length scales reflect a constant sinking speed and constant
 
 \subsubsection{Coupling to BIOGEM}
 
-The calculations in BIOGEM are performed 48 times for each model year (i.e. once for every 2 time-steps taken by the ocean circulation mode). ECOGEM takes 20 time steps for each BIOGEM time-step i.e. 960 time-steps per year). At the beginning of each ECOGEM time-step loop, concentrations of inorganic tracers and key properties of the physical environment are passed from BIOGEM. The ecological community responds by transforming inorganic compounds into living biomass through photosynthesis. At the end of each ECOGEM time step loop, the rates of change in $\bf{R}$ and $\bf{OM}$ are passed back to BIOGEM. ${\partial {\matr R}}/{\partial t}$ is used to update DIC, phosphate, iron, oxygen and alkalinity tracers, while ${\partial {\matr D}_1}/{\partial t}$ is added to the dissolved organic matter pools. The rate of particulate organic matter production, ${\partial {\matr D}_2}/{\partial t}$ is instantly remineralised at depth using to the standard BIOGEM export functions described above (equation~\ref{POM_remin}). $\frac{\partial {\matr B}}{\partial t}$ is used only to update the living biomass concentrations within ECOGEM. The structure of the coupling is illustrated in Figure~\ref{BIOECOGEM}.
+The calculations in BIOGEM are performed 48 times for each model year (i.e. once for every 2 time-steps taken by the ocean circulation mode). ECOGEM takes 20 time steps for each BIOGEM time-step i.e. 960 time-steps per year). At the beginning of each ECOGEM time-step loop, concentrations of inorganic tracers and key properties of the physical environment are passed from BIOGEM. The ecological community responds by transforming inorganic compounds into living biomass through photosynthesis. At the end of each ECOGEM time step loop, the rates of change in $\bf{R}$ and $\bf{OM}$ are passed back to BIOGEM. ${\partial {\mathbf R}}/{\partial t}$ is used to update DIC, phosphate, iron, oxygen and alkalinity tracers, while ${\partial {\mathbf D}_1}/{\partial t}$ is added to the dissolved organic matter pools. The rate of particulate organic matter production, ${\partial {\mathbf D}_2}/{\partial t}$ is instantly remineralised at depth using to the standard BIOGEM export functions described above (equation~\ref{POM_remin}). $\frac{\partial {\mathbf B}}{\partial t}$ is used only to update the living biomass concentrations within ECOGEM. The structure of the coupling is illustrated in Figure~\ref{BIOECOGEM}.
 
 
 
@@ -566,10 +558,9 @@ In this configuration we include 16 plankton populations across eight different 
 \begin{table}[htp!]
 \begin{center}
 \caption{Plankton functional groups and sizes in the standard run.}
-\begin{tabular}{rlS[table-format=3.2]}
-\hline
-$j$ & PFT & \multicolumn{1}{r}{ESD ($\mu$m)} \\
-\hline
+\begin{tabular}{lll}
+\hline 
+$j$ & Functional Type & ESD ($\mu$m) \\ [+1ex]
 1 & Phytoplankton & 0.6 \\
 2 & Phytoplankton & 1.9 \\
 3 & Phytoplankton & 6.0 \\
@@ -580,10 +571,9 @@ $j$ & PFT & \multicolumn{1}{r}{ESD ($\mu$m)} \\
 8 & Phytoplankton & 1900. \\
 \hline 
 \end{tabular} 
-\begin{tabular}{rlS[table-format=3.2]}
-\hline
-$j$ & Functional Type & \multicolumn{1}{r}{ESD ($\mu$m)} \\
-\hline
+\begin{tabular}{lll}
+\hline 
+$j$ & Functional Type & ESD ($\mu$m) \\ [+1ex]
 11 & Zooplankton & 0.6 \\
 12 & Zooplankton & 1.9 \\
 13 & Zooplankton & 6.0 \\
@@ -660,12 +650,12 @@ The parameters of this equation (listed in Table~\ref{Size_dependent}), were der
 %\footnotesize
 %\caption{Parameters describing the size-dependent partitioning of detrital material between the dissolved and (implicit) particulate pools.}
 %\begin{tabular*}{1.0\textwidth}{@{\extracolsep{\fill}}lllll}
-%\hline \\ [-2ex]
+%% \hline \\ [-2ex]
 %Parameter & Meaning & $\beta_{mort}$ & $\beta_{graz}$ & Units \\
 %$\beta_a$ & Maximum fraction to DOM as $ESD\rightarrow0$ & 1.0 & 1.0 & dimensionless \\
 %$\beta_b$ & Minimum fraction to DOM as $ESD\rightarrow\infty$ & 0.7 & 0.7 & dimensionless \\
 %$\beta_c$ & Reference diameter at which $\beta=0.5$ & 10 & 100 & $\mu$m \\
-%\hline\\ [-1ex]
+%% \hline\\ [-1ex]
 %\end{tabular*}
 %\label{tab:beta}
 %\end{table*}
@@ -766,149 +756,20 @@ In Figure~\ref{fig:particulates} we show the annual mean rate of particulate org
 The relative proportions in which these elements and compounds are exported from the surface ocean are regulated by the stoichiometry of biological production. In cGEnIE (BIOGEM), carbon and phosphorus production are rigidly coupled through a fixed ratio of 106:1, while POFe:POC and CaCO$_3$:POC export flux ratios are regulated as a function of environmental conditions. In ecoGEnIE (ECOGEM), phosphorus, iron and carbon fluxes are all decoupled through the flexible quota physiology, which depends on both environmental conditions, and the status of the food-web. Only CaCO$_3$:POC flux ratios are regulated via the same mechanism in the two models (although we decreased the average CaCO$_3$:POC ratio in ECOGEM to compensate for the elevated POC production relative to POP). 
 
 \begin{figure}[htp]
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{PO$_4$ - WOA (2009)}
- \includegraphics[width=0.95\linewidth]{Final_figures/OBSERVATIONS/surface_p_an.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{PO$_4$ - cGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/BIOGEM/ocn_PO4.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{PO$_4$ - EcoGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/ocn_PO4.png}
- \label{fig:nutrients2}
-\end{subfigure}
-\\[+0.2cm]
-\begin{subfigure}{.5\textwidth}
- \centering
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/ocn_PO4_clrbr.png}
-\end{subfigure}
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{dFe - \citet{Tagliabue:2012}}
- \includegraphics[width=0.95\linewidth]{Final_figures/OBSERVATIONS/surface_fe.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{dFe - cGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/BIOGEM/ocn_TDFe.png}
- \label{fig:nutrients3}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{dFe - EcoGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/ocn_TDFe.png}
- \label{fig:nutrients4}
-\end{subfigure}
-\\[+0.2cm]
-\begin{subfigure}{.5\textwidth}
- \centering
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/ocn_TDFe_clrbr.png}
-\end{subfigure}
+\includegraphics[width=0.95\linewidth]{Final_figures/Fig_2.png}
 \caption{Surface concentrations of dissolved phosphate (mmol PO$_4$ m$^{-3}$) and iron (mmol dFe m$^{-3}$ ).}
 \label{fig:nutrients}
 \end{figure}
 
 \begin{figure}[htp]
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{DIC - GLODAPv2}
- \includegraphics[width=0.95\linewidth]{Final_figures/OBSERVATIONS/surface_TCO2.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{DIC -  - cGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/BIOGEM/ocn_DIC.png}
- \label{fig:carbon1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{DIC - EcoGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/ocn_DIC.png}
- \label{fig:carbon2}
-\end{subfigure}
-\\[+0.2cm]
-\begin{subfigure}{.5\textwidth}
- \centering
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/ocn_DIC_clrbr.png}
-\end{subfigure}
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Oxygen - WOA (2009)}
- \includegraphics[width=0.95\linewidth]{Final_figures/OBSERVATIONS/surface_o_an.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Oxygen - cGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/BIOGEM/ocn_O2.png}
- \label{fig:carbon3}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Oxygen - EcoGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/ocn_O2.png}
- \label{fig:carbon4}
-\end{subfigure}
-\\[+0.2cm]
-\begin{subfigure}{.5\textwidth}
- \centering
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/ocn_O2_clrbr.png}
-\end{subfigure}
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Alkalinity - GLODAPv2}
- \includegraphics[width=0.95\linewidth]{Final_figures/OBSERVATIONS/surface_TALK.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Alkalinity - cGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/BIOGEM/ocn_ALK.png}
- \label{fig:carbon3}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Alkalinity - EcoGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/ocn_ALK.png}
- \label{fig:carbon4}
-\end{subfigure}
-\\[+0.2cm]
-\begin{subfigure}{.5\textwidth}
- \centering
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/ocn_ALK_clrbr.png}
-\end{subfigure}
+\includegraphics[width=0.95\linewidth]{Final_figures/Fig_3.png}
 \caption{Surface concentrations of dissolved inorganic carbon (mmol C m$^{-3}$), alkalinity (meq m$^{-3}$) and dissolved oxygen (mmol O$_2$ m$^{-3}$).}
 \label{fig:carbon}
 \end{figure}
 
 
 \begin{figure}[htp]
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{$\Delta$pCO$_2$ - cGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/BIOGEM/atm_dpCO2.png}
- \label{fig:dpCO2_1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{$\Delta$pCO$_2$ - EcoGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/atm_dpCO2.png}
- \label{fig:dpCO2_2}
-\end{subfigure}
-\\[+0.2cm]
-\begin{subfigure}{.5\textwidth}
- \centering
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/atm_dpCO2_clrbr.png}
-\end{subfigure}
+\includegraphics[width=0.75\linewidth]{Final_figures/Fig_4.png}
 \caption{(Preindustrial) surface $\Delta$pCO$_2$ (ppm).}
 \label{fig:dpCO2}
 \end{figure}
@@ -917,133 +778,7 @@ The relative proportions in which these elements and compounds are exported from
 
 
 \begin{figure}[htp]
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{POC production - cGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/BIOGEM/bio_fpart_POC.png}
- \label{fig:dpCO2_1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{POC production - EcoGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/bio_fpart_POC.png}
- \label{fig:dpCO2_2}
-\end{subfigure}
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{ECOGEM$\div$BIOGEM}
-\includegraphics[width=0.95\linewidth]{Final_figures/bio_fpart_POC_diff.png}
- \label{fig:dpCO2_2}
-\end{subfigure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\\[+0.2cm]
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{subfigure}{.49\textwidth}
- \centering
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/bio_fpart_POC_clrbr.png}
-\end{subfigure}
-\begin{subfigure}{.49\textwidth}
- \centering
-\includegraphics[width=0.95\linewidth]{Final_figures/bio_fpart_POC_clrbr_diff.png}
-\end{subfigure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\\[+0.2cm]
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{POP production - cGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/BIOGEM/bio_fpart_POP.png}
- \label{fig:dpCO2_1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{POP production - EcoGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/bio_fpart_POP.png}
- \label{fig:dpCO2_2}
-\end{subfigure}
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{ECOGEM$\div$BIOGEM}
-\includegraphics[width=0.95\linewidth]{Final_figures/bio_fpart_POP_diff.png}
- \label{fig:dpCO2_2}
-\end{subfigure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\\[+0.2cm]
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{subfigure}{.49\textwidth}
- \centering
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/bio_fpart_POP_clrbr.png}
-\end{subfigure}
-\begin{subfigure}{.49\textwidth}
- \centering
-\includegraphics[width=0.95\linewidth]{Final_figures/bio_fpart_POP_clrbr_diff.png}
-\end{subfigure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\\[+0.2cm]
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{POFe production - cGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/BIOGEM/bio_fpart_POFe.png}
- \label{fig:dpCO2_1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{POFe production - EcoGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/bio_fpart_POFe.png}
- \label{fig:dpCO2_2}
-\end{subfigure}
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{ECOGEM$\div$BIOGEM}
-\includegraphics[width=0.95\linewidth]{Final_figures/bio_fpart_POFe_diff.png}
- \label{fig:dpCO2_2}
-\end{subfigure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\\[+0.2cm]
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{subfigure}{.49\textwidth}
- \centering
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/bio_fpart_POFe_clrbr.png}
-\end{subfigure}
-\begin{subfigure}{.49\textwidth}
- \centering
-\includegraphics[width=0.95\linewidth]{Final_figures/bio_fpart_POFe_clrbr_diff.png}
-\end{subfigure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\\[+0.2cm]
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{CaCO$_3$ production - cGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/BIOGEM/bio_fpart_CaCO3.png}
- \label{fig:dpCO2_1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{CaCO$_3$ production - EcoGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/bio_fpart_CaCO3.png}
- \label{fig:dpCO2_2}
-\end{subfigure}
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{ECOGEM$\div$BIOGEM}
-\includegraphics[width=0.95\linewidth]{Final_figures/bio_fpart_CaCO3_diff.png}
- \label{fig:dpCO2_2}
-\end{subfigure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\\[+0.2cm]
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{subfigure}{.49\textwidth}
- \centering
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/bio_fpart_CaCO3_clrbr.png}
-\end{subfigure}
-\begin{subfigure}{.49\textwidth}
- \centering
-\includegraphics[width=0.95\linewidth]{Final_figures/bio_fpart_CaCO3_clrbr_diff.png}
-\end{subfigure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\includegraphics[width=0.95\linewidth]{Final_figures/Fig_5.png}
 \caption{Vertical fluxes of particulate carbon (mmol C m$^{-2}$ d$^{-1}$), phosphorus (mmol P m$^{-2}$ d$^{-1}$), iron (mmol Fe m$^{-2}$ d$^{-1}$) and calcium carbonate (mmol CaCO$_3$ m$^{-2}$ d$^{-1}$) across the base of the surface layer. The right-hand column indicates the relative increase or decrease in ECOGEM, relative to BIOGEM (dimensionless).}
 \label{fig:particulates}
 \end{figure}
@@ -1064,71 +799,13 @@ Alkalinity (Figure~\ref{fig:basin_ALK}) also shows some clear differences betwee
 
 \begin{figure}[htp]
  \centering
- \includegraphics[width=0.5\linewidth]{Final_figures/3basins.png}
+ \includegraphics[width=0.4\linewidth]{Final_figures/Fig_6.png}
 \caption{Spatial definition of the three ocean basins used in Figures \ref{fig:basin_PO4} to \ref{fig:basin_O2}. Locations of the JGOFS time-series sites are indicated with blue dots.}
 \label{fig:basins}
 \end{figure}
 
 \begin{figure}[htp]
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Atlantic PO$_4$ - WOA (2009)}
- \includegraphics[width=0.95\linewidth]{Final_figures/OBSERVATIONS/Atlantic_p_an_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Atlantic PO$_4$ - cGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/BIOGEM/Atlantic_ocn_PO4_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Atlantic PO$_4$ - EcoGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/Atlantic_ocn_PO4_profile.png}
- \label{fig:nutrients2}
-\end{subfigure}
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Indian PO$_4$ - WOA (2009)}
- \includegraphics[width=0.95\linewidth]{Final_figures/OBSERVATIONS/Indian_p_an_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Indian PO$_4$ - cGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/BIOGEM/Indian_ocn_PO4_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Indian PO$_4$ - EcoGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/Indian_ocn_PO4_profile.png}
- \label{fig:nutrients2}
-\end{subfigure}
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Pacific PO$_4$ - WOA (2009)}
- \includegraphics[width=0.95\linewidth]{Final_figures/OBSERVATIONS/Pacific_p_an_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Pacific PO$_4$ - cGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/BIOGEM/Pacific_ocn_PO4_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Pacific PO$_4$ - EcoGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/Pacific_ocn_PO4_profile.png}
- \label{fig:nutrients2}
-\end{subfigure}
-\\[+0.2cm]
-\begin{subfigure}{.5\textwidth}
- \centering
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/ocn_PO4_profile_clrbr.png}
-\end{subfigure}
+\includegraphics[width=0.95\linewidth]{Final_figures/Fig_7.png}
 \caption{Basin-averaged meridional-depth distribution of phosphate (mmol P m$^{-3}$).}
 \label{fig:basin_PO4}
 \end{figure}
@@ -1136,47 +813,7 @@ Alkalinity (Figure~\ref{fig:basin_ALK}) also shows some clear differences betwee
 
 
 \begin{figure}[htp]
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Atlantic dFe - cGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/BIOGEM/Atlantic_ocn_TDFe_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Atlantic dFe - EcoGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/Atlantic_ocn_TDFe_profile.png}
- \label{fig:nutrients2}
-\end{subfigure}
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Indian dFe - cGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/BIOGEM/Indian_ocn_TDFe_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Indian dFe - EcoGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/Indian_ocn_TDFe_profile.png}
- \label{fig:nutrients2}
-\end{subfigure}
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Pacific dFe - cGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/BIOGEM/Pacific_ocn_TDFe_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Pacific dFe - EcoGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/Pacific_ocn_TDFe_profile.png}
- \label{fig:nutrients2}
-\end{subfigure}
-\\[+0.2cm]
-\begin{subfigure}{.5\textwidth}
- \centering
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/ocn_TDFe_profile_clrbr.png}
-\end{subfigure}
+\includegraphics[width=0.63\linewidth]{Final_figures/Fig_8.png}
 \caption{Basin-averaged meridional-depth distribution of total dissolved iron (mmol dFe m$^{-3}$).}
 \label{fig:basin_Fe}
 \end{figure}
@@ -1184,65 +821,7 @@ Alkalinity (Figure~\ref{fig:basin_ALK}) also shows some clear differences betwee
 
 
 \begin{figure}[htp]
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Atlantic DIC - GLODAPv2}
- \includegraphics[width=0.95\linewidth]{Final_figures/OBSERVATIONS/Atlantic_TCO2_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Atlantic DIC - cGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/BIOGEM/Atlantic_ocn_DIC_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Atlantic DIC - EcoGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/Atlantic_ocn_DIC_profile.png}
- \label{fig:nutrients2}
-\end{subfigure}
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Indian DIC - GLODAPv2}
- \includegraphics[width=0.95\linewidth]{Final_figures/OBSERVATIONS/Indian_TCO2_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Indian DIC - cGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/BIOGEM/Indian_ocn_DIC_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Indian DIC - EcoGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/Indian_ocn_DIC_profile.png}
- \label{fig:nutrients2}
-\end{subfigure}
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Pacific DIC - GLODAPv2}
- \includegraphics[width=0.95\linewidth]{Final_figures/OBSERVATIONS/Pacific_TCO2_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Pacific DIC - cGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/BIOGEM/Pacific_ocn_DIC_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Pacific DIC - EcoGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/Pacific_ocn_DIC_profile.png}
- \label{fig:nutrients2}
-\end{subfigure}
-\\[+0.2cm]
-\begin{subfigure}{.5\textwidth}
- \centering
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/ocn_DIC_profile_clrbr.png}
-\end{subfigure}
+\includegraphics[width=0.95\linewidth]{Final_figures/Fig_9.png}
 \caption{Basin-averaged meridional-depth distribution of DIC (mmol C m$^{-3}$).}
 \label{fig:basin_DIC}
 \end{figure}
@@ -1250,130 +829,14 @@ Alkalinity (Figure~\ref{fig:basin_ALK}) also shows some clear differences betwee
 
 
 \begin{figure}[htp]
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Atlantic O$_2$ - WOA (2009)}
- \includegraphics[width=0.95\linewidth]{Final_figures/OBSERVATIONS/Atlantic_o_an_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Atlantic O$_2$ - cGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/BIOGEM/Atlantic_ocn_O2_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Atlantic O$_2$ - EcoGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/Atlantic_ocn_O2_profile.png}
- \label{fig:nutrients2}
-\end{subfigure}
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Indian O$_2$ - WOA (2009)}
- \includegraphics[width=0.95\linewidth]{Final_figures/OBSERVATIONS/Indian_o_an_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Indian O$_2$ - cGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/BIOGEM/Indian_ocn_O2_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Indian O$_2$ - EcoGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/Indian_ocn_O2_profile.png}
- \label{fig:nutrients2}
-\end{subfigure}
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Pacific O$_2$ - WOA (2009)}
- \includegraphics[width=0.95\linewidth]{Final_figures/OBSERVATIONS/Pacific_o_an_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Pacific O$_2$ - cGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/BIOGEM/Pacific_ocn_O2_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Pacific O$_2$ - EcoGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/Pacific_ocn_O2_profile.png}
- \label{fig:nutrients2}
-\end{subfigure}
-\\[+0.2cm]
-\begin{subfigure}{.5\textwidth}
- \centering
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/ocn_O2_profile_clrbr.png}
-\end{subfigure}
+\includegraphics[width=0.95\linewidth]{Final_figures/Fig_10.png}
 \caption{Basin-averaged meridional-depth distribution of dissolved oxygen (mmol O$_2$ m$^{-3}$).}
 \label{fig:basin_O2}
 \end{figure}
 
 
 \begin{figure}[htp]
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Atlantic ALK - GLODAPv2}
- \includegraphics[width=0.95\linewidth]{Final_figures/OBSERVATIONS/Atlantic_TALK_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Atlantic Alkalinity - cGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/BIOGEM/Atlantic_ocn_ALK_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Atlantic Alkalinity - EcoGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/Atlantic_ocn_ALK_profile.png}
- \label{fig:nutrients2}
-\end{subfigure}
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Indian ALK - GLODAPv2}
- \includegraphics[width=0.95\linewidth]{Final_figures/OBSERVATIONS/Indian_TALK_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Indian Alkalinity - cGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/BIOGEM/Indian_ocn_ALK_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Indian Alkalinity - EcoGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/Indian_ocn_ALK_profile.png}
- \label{fig:nutrients2}
-\end{subfigure}
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Pacific ALK - GLODAPv2}
- \includegraphics[width=0.95\linewidth]{Final_figures/OBSERVATIONS/Pacific_TALK_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Pacific Alkalinity - cGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/BIOGEM/Pacific_ocn_ALK_profile.png}
- \label{fig:nutrients1}
-\end{subfigure}%
-\begin{subfigure}{.33\textwidth}
- \centering
- \caption{Pacific Alkalinity - EcoGEnIE}
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/Pacific_ocn_ALK_profile.png}
- \label{fig:nutrients2}
-\end{subfigure}
-\\[+0.2cm]
-\begin{subfigure}{.5\textwidth}
- \centering
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/ocn_ALK_profile_clrbr.png}
-\end{subfigure}
+\includegraphics[width=0.95\linewidth]{Final_figures/Fig_11.png}
 \caption{Basin-averaged meridional-depth distribution of alkalinity (meq m$^{-3}$).}
 \label{fig:basin_ALK}
 \end{figure}
@@ -1382,9 +845,10 @@ Alkalinity (Figure~\ref{fig:basin_ALK}) also shows some clear differences betwee
 \subsubsection{Time-series}
 
 Figures~\ref{fig:jgofs_po4} and~\ref{fig:jgofs_fe} compare the seasonal cycles of surface nutrients (phosphate and iron) at nine Joint Global Ocean Flux Study (JGOFS) sites.
+
  \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=16cm]{Final_figures/OBSERVATIONS/JGOFS_Phosphate.png}
+\includegraphics[width=\linewidth]{Final_figures/Fig_12.png}
 \caption{Annual cycle of surface PO$_4$ at 9 time-series sites in cGEnIE and EcoGEnIE. Red dots indicate climatological observations, while the lines represent modelled surface PO$_4$ concentrations. Locations of the time-series are indicated in Figure~\ref{fig:basins}.}
 \label{fig:jgofs_po4}
 \end{center}
@@ -1393,7 +857,7 @@ Figures~\ref{fig:jgofs_po4} and~\ref{fig:jgofs_fe} compare the seasonal cycles o
 
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=16cm]{Final_figures/OBSERVATIONS/JGOFS_Iron.png}
+\includegraphics[width=\linewidth]{Final_figures/Fig_13.png}
 \caption{Annual cycle of surface dissolved iron at 9 time-series sites in cGEnIE and EcoGEnIE. Red dots indicate climatological observations, while the 
 lines represent modelled surface iron concentrations. Locations of the time-series are indicated in Figure~\ref{fig:basins}.}
 \label{fig:jgofs_fe}
@@ -1412,37 +876,7 @@ Figure~\ref{fig:chl_prpr} reveals that EcoGEnIE shows some limited agreement wit
 Modelled primary production correctly increases from the oligotrophic gyres towards high latitudes and upwelling regions, but variability is much lower than in the satellite estimate. Specifically, the model and satellite estimates yield broadly similar estimates in the oligotrophic gyres, but the model does not attain the high values seen at higher latitudes and in coastal areas.
 
 \begin{figure}[htbp]
-\begin{subfigure}{.5\textwidth}
-\centering
- \caption{SeaWiFS Chlorophyll}
-\includegraphics[width=0.95\linewidth]{Final_figures/OBSERVATIONS/SeaWiFS_on_GEnIE.png}
-\end{subfigure}%
-\begin{subfigure}{.5\textwidth}
-\centering
- \caption{ECOGEM Chlorophyll}
-\includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/Surface_Chl_Biomass.png}
-\end{subfigure}%
-\\[+0.2cm]
-\begin{subfigure}{.5\textwidth}
- \centering
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/Surface_Chl_Biomass_clrbar.png}
-\end{subfigure}
-%%%%%
-\begin{subfigure}{.5\textwidth}
-\centering
- \caption{\citet{Yool:2013a} Pr. Production}
-\includegraphics[width=0.95\linewidth]{Final_figures/OBSERVATIONS/Composite_PP_on_GEnIE.png}
-\end{subfigure}%
-\begin{subfigure}{.5\textwidth}
-\centering
- \caption{ECOGEM Pr. Production}
-\includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/PrimaryProdn.png}
-\end{subfigure}%
-\\[+0.2cm]
-\begin{subfigure}{.5\textwidth}
- \centering
- \includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/PrimaryProdn_clrbar.png}
-\end{subfigure}
+\includegraphics[width=0.95\linewidth]{Final_figures/Fig_14.png}
 \caption{Satellite-derived (left) and modelled (right) surface chlorophyll~\textit{a} concentration (mg Chl m$^{-3}$) and depth-integrated primary production (mg C m$^{-2}$ d$^{-1}$). The satellite-derived estimate of primary production is a composite of three products \citep{Behrenfeld:1997,Carr:2006,Westberry:2008}, as in \citet[][their Figure~12]{Yool:2013a}.}
 \label{fig:chl_prpr}
 \end{figure}
@@ -1452,15 +886,7 @@ Figure~\ref{fig:surf_sizefrac} shows the modelled carbon biomass concentrations 
 Perhaps as expected, zooplankton size classes tend to mirror the biogeography of their phytoplankton prey. The smallest (1.9 $\mu$m) surviving size class is found primarily at low latitudes, although a highly variable population is found at higher latitudes. This population is presumably supported by grazing on the larger 6 $\mu$m size class (with very low efficiency dictated by the unfavourable predator-prey length ratio). Larger zooplankton size classes follow a similar pattern to the phytoplankton, moving from a cosmopolitan but homogenous distribution in the smaller size classes, towards spatially more variable distributions among the larger organisms.
 
 \begin{figure}[htbp]
-\begin{subfigure}{.66\textwidth}
- \centering
-\includegraphics[width=0.8\linewidth]{Final_figures/ECOGEM/SizeClass_C_Biomass.png}
-\end{subfigure} 
-\\[+0.2cm]
-\begin{subfigure}{.66\textwidth}
- \centering
-\includegraphics[width=0.8\linewidth]{Final_figures/ECOGEM/SizeClass_C_Biomass_clrbar.png}
-\end{subfigure}
+\includegraphics[width=0.63\linewidth]{Final_figures/Fig_15.png}
 \caption{Surface concentrations of carbon biomass in each population (mmol C m$^{-3}$).}
 \label{fig:surf_sizefrac}
 \end{figure}
@@ -1468,14 +894,7 @@ Perhaps as expected, zooplankton size classes tend to mirror the biogeography of
 The degree of nutrient limitation within each phytoplankton size class is shown in Figure~\ref{fig:surf_sizefrac_limitation}. The two-dimensional colour-scale indicates decreasing iron limitation from left to right, and decreasing phosphorus limitation from bottom to top. White is therefore nutrient replete, blue is phosphorus limited, red is iron limited, and magenta is phosphorus-iron co-limited. The figure demonstrates that the smallest size class is not nutrient limited in any region. The increasing saturation of the colour scale in larger size classes indicates an increasing degree of nutrient limitation. As expected, nutrient limitation is strongest in the highly stratified low latitudes. A stronger vertical supply of nutrients at higher latitudes is associated with weaker nutrient limitation, although nutrient limitation is still significant among the larger size classes. Consistent with observations \citep{Moore:2013}, phosphorus limitation is restricted to low latitudes. Iron limitation dominates in high latitude regions, especially among larger size classes. Among these larger groups, the upwelling zones appear to be characterised by iron-phosphorus co-limitation.
 
 \begin{figure}[htbp]
-\begin{subfigure}{.33\textwidth}
- \centering
-\includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/SizeClass_Limitation.png}
-\end{subfigure}
-\begin{subfigure}{.25\textwidth}
- \centering
-\includegraphics[width=0.95\linewidth]{Final_figures/ECOGEM/SizeClass_Limitation_clrbar.png}
-\end{subfigure}
+\includegraphics[width=0.55\linewidth]{Final_figures/Fig_16.png}
 \caption{Nutrient limitation in each phytoplankton population (dimensionless). The two-dimensional colour-scale indicates decreasing phosphorus limitation from left to right, and decreasing iron limitation from bottom to top. White is therefore nutrient replete, blue is phosphorus limited, red is iron limited, and magenta is phosphorus-iron co-limited.}
 \label{fig:surf_sizefrac_limitation}
 \end{figure}
@@ -1487,7 +906,7 @@ The seasonal cycles of phytoplankton chlorophyll~\textit{a} are compared to time
 
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=16cm]{Final_figures/OBSERVATIONS/JGOFS_Chlorophyll.png}
+\includegraphics[width=1.075\linewidth]{Final_figures/Fig_17.png}
 \caption{Annual cycle of surface chlorophyll~\textit{a} at nine JGOFS time-series sites. Red dots indicate climatological observations, while the black lines represents modelled total surface chlorophyll~\textit{a}. Coloured lines represent chlorophyll~\textit{a} in individual size classes (blue = small, red = large). Locations of the time-series are indicated in Figure~\ref{fig:basins}. Satellite estimates of chlorophyll~\textit{a} are shown in grey.}
 \label{fig:jgofs_chl}
 \end{center}
@@ -1497,7 +916,7 @@ The seasonal cycles of primary production in the surface layer are compared to t
 
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=16cm]{Final_figures/OBSERVATIONS/JGOFS_PrProduction.png}
+\includegraphics[width=\linewidth]{Final_figures/Fig_18.png}
 \caption{Annual cycle of surface primary production at nine JGOFS time-series sites. Red dots indicate climatological observations, while the black lines represents modelled total primary production. Locations of the time-series are indicated in Figure~\ref{fig:basins}.}
 \label{fig:jgofs_prpr}
 \end{center}
@@ -1510,7 +929,7 @@ Figure~\ref{fig:taylor} is a Taylor diagram comparing the two models in terms of
 
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=10cm]{Final_figures/Taylor.pdf}
+\includegraphics[width=0.5\linewidth]{Final_figures/Fig_19.png}
 \caption{Taylor diagram comparing cGEnIE (white dots) and EcoGEnIE (grey dots) to annual mean observation fields.}
 \label{fig:taylor}
 \end{center}
@@ -1751,10 +1170,10 @@ This work was supported by the European Research Council `PALEOGENiE' project (E
 %%% ALGORITHM
 %
 %\begin{algorithm}
-%\caption{…}
+%\caption{Â…}
 %\label{a1}
 %\begin{algorithmic}
-%…
+%Â…
 %\end{algorithmic}
 %\end{algorithm}
 %

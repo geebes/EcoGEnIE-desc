@@ -13,45 +13,45 @@ Name 2 in "Meyer, K. M. and L. R. Kump, and A. Ridgwell" has a comma at the end 
 while executing---line 1671 of file copernicus.bst
 Warning--missing publisher in Redfield:1934
 Warning--empty journal in Ridgwell:prep
-You've used 82 entries,
+You've used 81 entries,
             2811 wiz_defined-function locations,
-            1543 strings with 28430 characters,
-and the built_in function-call counts, 95840 in all, are:
-= -- 10487
-> -- 4504
+            1537 strings with 28156 characters,
+and the built_in function-call counts, 94545 in all, are:
+= -- 10346
+> -- 4438
 < -- 31
-+ -- 1992
-- -- 1428
-* -- 6134
-:= -- 9760
-add.period$ -- 82
-call.type$ -- 82
-change.case$ -- 644
-chr.to.int$ -- 79
-cite$ -- 249
-duplicate$ -- 9185
-empty$ -- 4529
-format.name$ -- 1676
-if$ -- 18989
++ -- 1963
+- -- 1407
+* -- 6049
+:= -- 9628
+add.period$ -- 81
+call.type$ -- 81
+change.case$ -- 635
+chr.to.int$ -- 78
+cite$ -- 246
+duplicate$ -- 9063
+empty$ -- 4471
+format.name$ -- 1652
+if$ -- 18733
 int.to.chr$ -- 4
 int.to.str$ -- 1
-missing$ -- 1045
-newline$ -- 255
-num.names$ -- 328
-pop$ -- 4274
+missing$ -- 1031
+newline$ -- 252
+num.names$ -- 324
+pop$ -- 4216
 preamble$ -- 1
-purify$ -- 640
+purify$ -- 631
 quote$ -- 0
-skip$ -- 5441
+skip$ -- 5368
 stack$ -- 0
-substring$ -- 3854
-swap$ -- 8086
+substring$ -- 3803
+swap$ -- 7977
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 726
+type$ -- 717
 warning$ -- 3
-while$ -- 400
+while$ -- 395
 width$ -- 0
-write$ -- 927
+write$ -- 916
 (There were 3 error messages)
